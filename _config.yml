@@ -1,0 +1,66 @@
+title: Abrar Mudhir
+email: abrarmudhir@outlook.com
+description: >-
+  Profile Page
+baseurl: ""
+url: "https://abrarmudhir.github.io/"
+analytics: true
+github_url:  https://github.com/abrarmudhir
+linkedin_url: https://www.linkedin.com/in/abrar-mudhir/
+
+markdown: kramdown
+
+# Build settings
+theme: just-the-docs
+plugins:
+  - jekyll-avatar
+  - jekyll-coffeescript
+  - jekyll-default-layout
+  - jekyll-email-protect
+  - jekyll-feed
+  - jekyll-github-metadata
+  - jekyll-mentions
+  - jekyll-optional-front-matter
+  - jekyll-paginate
+  - jekyll-readme-index
+  - jekyll-redirect-from
+  - jekyll-relative-links
+  - jekyll-sass-converter
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-titles-from-headings
+
+defaults:
+  -
+    scope:
+      type: posts
+      path: _posts
+    values:
+      isPost: true
+      layout: post
+  -
+    scope:
+      type: pages
+      path: _pages
+    values:
+      isPost: false
+      layout: default
+
+include: [_pages]
+
+exclude:
+  - .idea
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+port: 4001

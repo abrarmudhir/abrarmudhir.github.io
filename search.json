@@ -1,0 +1,12 @@
+---
+layout: null
+---
+[
+  {% for guide in site.guides %}
+    {
+      "title"    : "{{ guide.title }}",
+      "keywords" : "{{ guide.keywords }}",
+      "url"      : "{{ guide.url | relative_url }}"
+    }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]

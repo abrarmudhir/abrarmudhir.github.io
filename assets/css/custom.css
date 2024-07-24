@@ -1,0 +1,16 @@
+.experience-entry {
+  margin-bottom: 20px;
+}
+
+.experience-entry h2 {
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+.experience-entry p {
+  margin: 5px 0;
+}
+
+.experience-content {
+  margin-top: 10px;
+}
