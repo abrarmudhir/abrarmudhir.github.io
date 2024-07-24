@@ -8,7 +8,7 @@ isHome: false
 isPost: false
 ---
 
-## Experience
+## Experience 🦜🕸️
 
 <div class="posts">
   {% for post in site.posts %}

@@ -7,7 +7,7 @@ isHome: false
 isPost: false
 ---
 
-## Education 🦜️
+## Education 🦜️🎓
 
 <p style="text-align: left;">
   <strong>University College London, London, UK</strong>
