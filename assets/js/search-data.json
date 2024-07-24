@@ -1,93 +1,107 @@
 {"0": {
-    "doc": "Education",
+    "doc": "🎓 E|ducation",
     "title": "Education 🦜️🎓",
     "content": "University College London, London, UK M.Eng. (Hons) in Computer Science (2:1) SEP 2004 – JUN 2008 . | Emphasis on practical experience. Strong in software engineering, system design, and computational complexity. | Final year dissertation project: Investigation of correlated movement of exchange rates using neural networks. | . ",
-    "url": "/_pages/education.html#education-%EF%B8%8F",
+    "url": "/education/#education-%EF%B8%8F",
     
-    "relUrl": "/_pages/education.html#education-️"
+    "relUrl": "/education/#education-️"
   },"1": {
-    "doc": "Education",
+    "doc": "🎓 E|ducation",
     "title": "Certifications",
     "content": "Microsoft Azure Certifications APR 2022 – PRESENT . Associate (4): . | Data Engineer Associate (DP-203) | Data Scientist Associate (DP-100) | Database Administrator Associate (DP-300) | AI Engineer Associate (AI-102) | . Fundamentals (8): . | Azure Data Fundamentals (DP-900) | AI Fundamentals (AI-900) | Azure Fundamentals (AZ-900) | Microsoft 365 Fundamentals (MS-900) | Dynamics 365 Fundamentals (CRM) (MB-910) | Dynamics 365 Fundamentals (ERP) (MB-920) | Power Platform Fundamentals (PL-900) | Security, Compliance, and Identity Fundamentals (SC-900) | . | © 2024 - Abrar Mudhir | GitHub 🐙 | LinkedIn 🔗 | . ",
-    "url": "/_pages/education.html#certifications",
+    "url": "/education/#certifications",
     
-    "relUrl": "/_pages/education.html#certifications"
+    "relUrl": "/education/#certifications"
   },"2": {
-    "doc": "Education",
-    "title": "Education",
+    "doc": "🎓 E|ducation",
+    "title": "🎓 E|ducation",
     "content": " ",
-    "url": "/_pages/education.html",
+    "url": "/education/",
     
-    "relUrl": "/_pages/education.html"
+    "relUrl": "/education/"
   },"3": {
-    "doc": "Experience",
+    "doc": "🕸️ E|xperience",
     "title": "Experience 🦜🕸️",
     "content": "Rapid Addition Limited, London, UK Senior Developer, Trading Technology October 2014 – July 2016 . SKILLS: • Full Stack (Java, .NET (C#, ASP.NET) • FIX (Protocol/Engine, Certification) • Middleware (Microsoft BizTalk) • Cloud (Microsoft Azure) . Worked as a senior developer, implementing core functionalities for low-latency FIX engine libraries in both Java and C#. Contributed new full-stack ASIC reporting product, utilizing FIX protocol. Extended RA ShortCut – FIX for BizTalk, enhancing performance and resolving bugs. ACHIEVEMENTS: . | Project: RA FIX Engine - Improved Java and C# FIX engine libraries with new API features, reduced error rates through code reviews, and increased test coverage. Developed trading solutions, FIX, and FAST engines, streamlining processes, and enhancing stakeholder satisfaction. | Project: RA ASIC Short Reporting Tool - Implemented a Full-stack solution for submitting short-selling reports to ASIC, enhancing efficiency through optimized FIX protocol utilization. Utilized ASP.NET and C# for the front end and MSSQL for the back end, ensuring seamless deployment on Azure Cloud, and reducing deployment time. | Project: RA ShortCut – FIX for BizTalk - Enhanced core functionality, achieving measurable improvements in system performance and successfully resolving reported bugs. | . BlackRock, London, UK Associate, Senior Quant Developer of Model-Based Fixed Income August 2010 – July 2014 . SKILLS: • Data Engineering (Informatica, J2SE/JEE, JavaScript) • Quant Stack (MATLAB, SAS, R, C#) • BI (PowerBI, Tableau, SAP Business Objects) • Scheduling (Autosys) . Worked as a quant developer, implemented fixed-income investment models, optimizing efficiency, ensuring accurate data feeds, and managing the entire model lifecycle from development to production. ACHIEVEMENTS: . | Project: Common Alpha-Gen (CAGE) Platform - Developed core features to enable quant function encapsulation in SAS, R, and MATLAB. Executed the integration of task graphs with investment systems. | Project: Model Implementation - Collaborated on Model Implementation and Back-Testing with Quant analyst researchers. Implemented alpha, risk, and t-cost models in MATLAB, SAS, and R for a Fixed Income platform, improving model efficiency and accuracy. | Project: Data Management Platform - Engineered Data Management tools for efficient slicing and dicing of input data, delivering Tableau reports for front-office portfolio managers to enhance monthly attribution and investment dataset views. | . Client Knowledge Limited (now ICAP), London, UK Quantitative Developer, Managed Models May 2009 – August 2010 . SKILLS: • Full Stack (Java, JavaScript, Progress Apama CEP) • FIX (QuickFix, Client Onboarding, Testing) • Data Engineering (Data Modelling, SQL) • BI (SAP Business Objects BI 4. X). Worked as a quant developer and connectivity engineer, facilitating real-time market connectivity and high-frequency algorithmic trading. ACHIEVEMENTS: . | Project: Market Connectors - Designed and developed a low-latency framework to capture, receive, and replay real-time high-frequency data, reducing reliance on third-party market data systems. Developed adapters for CEP Engines enabling direct access to streaming market data using FIX technologies. Connected to various forex market data feeds and the Market News Dow Jones feed. | Project: Model Implementation - Collaborated with research analysts to implement quantitative models including Value at Risk (VaR) and FX trading algos in CEP engines (Progres Apama and Coral8). | . British Telecom, Adastral Park Ipswich, UK Rich Client User Interface Designer July 2007 – September 2007 . SKILLS: Full Stack (Java EE, JSPs, SIP Servlets, XML, HTML, CSS, JavaScript, AJAX, Web 2.0) . Sempra Energy, London, UK Financial Application Developer August 2006 – October 2006 . SKILLS: Full Stack (Excel VBA, Java, XML processing, HTML, CSS, JavaScript) . | © 2024 - Abrar Mudhir | GitHub 🐙 | LinkedIn 🔗 | . ",
     "url": "/experience/#experience-%EF%B8%8F",
     
     "relUrl": "/experience/#experience-️"
   },"4": {
-    "doc": "Experience",
-    "title": "Experience",
+    "doc": "🕸️ E|xperience",
+    "title": "🕸️ E|xperience",
     "content": " ",
     "url": "/experience/",
     
     "relUrl": "/experience/"
   },"5": {
-    "doc": "Profile",
-    "title": "Profile 👋",
+    "doc": "👋 P|rofile",
+    "title": "Profile 🦜👋",
     "content": "🤹🏿‍♂️ Life•Long•Learner | 🏄‍♂️ Data•Products | 🛠 Data•Engineering |🔬 Data•Science . As a versatile engineer with experience in financial services, I offer strong critical thinking skills, technical leadership, and adept project management capabilities. With a thorough understanding of algorithms, data wrangling, data engineering, data products, and analytics, I leverage my technical expertise in software engineering and data to craft innovative business solutions for corporate clients. ",
     "url": "/#profile-",
     
     "relUrl": "/#profile-"
   },"6": {
-    "doc": "Profile",
+    "doc": "👋 P|rofile",
     "title": "Resume",
     "content": "👇 You can download my latest resume in PDF format using the following link: . | Download CV (Last updated: 25-Jul-2024) | . ",
     "url": "/#resume",
     
     "relUrl": "/#resume"
   },"7": {
-    "doc": "Profile",
+    "doc": "👋 P|rofile",
     "title": "Contact me",
     "content": "Feel free to reach out via email: abrarmudhir@outlook.com. | © 2024 - Abrar Mudhir | GitHub 🐙 | LinkedIn 🔗 | . ",
     "url": "/#contact-me",
     
     "relUrl": "/#contact-me"
   },"8": {
-    "doc": "Profile",
-    "title": "Profile",
+    "doc": "👋 P|rofile",
+    "title": "👋 P|rofile",
     "content": " ",
     "url": "/",
     
     "relUrl": "/"
   },"9": {
-    "doc": "Organisations",
+    "doc": "🤹🏿‍♂️ L|earning",
+    "title": "Life • Long • Learning 🦜🤹🏿‍♂️",
+    "content": "Coming Soon . | © 2024 - Abrar Mudhir | GitHub 🐙 | LinkedIn 🔗 | . ",
+    "url": "/l3/#life--long--learning-%EF%B8%8F",
+    
+    "relUrl": "/l3/#life--long--learning-️"
+  },"10": {
+    "doc": "🤹🏿‍♂️ L|earning",
+    "title": "🤹🏿‍♂️ L|earning",
+    "content": " ",
+    "url": "/l3/",
+    
+    "relUrl": "/l3/"
+  },"11": {
+    "doc": "🔗 O|rganisations",
     "title": "Organisations 🦜🔗",
     "content": "Hibi . Helping families of children with additional needs to manage, coordinate &amp; navigate care. Overview . For the 1 in 6 families caring for children with developmental differences &amp; health conditions, the experience can be overwhelming, isolating and complex. A lack of support results in poor health outcomes and unnecessary costs to the health, care &amp; education systems. Hibi provides a platform that for the first time provides scalable support to manage, coordinate and navigate care. Industry . Hospitals and Health Care Company size . 2-10 employees Tech Stack . AWS, React Native, Javascript, Node.js . | © 2024 - Abrar Mudhir | GitHub 🐙 | LinkedIn 🔗 | . ",
     "url": "/organisations/#organisations-",
     
     "relUrl": "/organisations/#organisations-"
-  },"10": {
-    "doc": "Organisations",
-    "title": "Organisations",
+  },"12": {
+    "doc": "🔗 O|rganisations",
+    "title": "🔗 O|rganisations",
     "content": " ",
     "url": "/organisations/",
     
     "relUrl": "/organisations/"
-  },"11": {
-    "doc": "Projects",
+  },"13": {
+    "doc": "🛠️ P|rojects",
     "title": "Projects 🦜🛠️",
-    "content": ". | © 2024 - Abrar Mudhir | GitHub 🐙 | LinkedIn 🔗 | . ",
-    "url": "/_pages/projects.html#projects-%EF%B8%8F",
+    "content": "Coming Soon . | © 2024 - Abrar Mudhir | GitHub 🐙 | LinkedIn 🔗 | . ",
+    "url": "/projects/#projects-%EF%B8%8F",
     
-    "relUrl": "/_pages/projects.html#projects-️"
-  },"12": {
-    "doc": "Projects",
-    "title": "Projects",
+    "relUrl": "/projects/#projects-️"
+  },"14": {
+    "doc": "🛠️ P|rojects",
+    "title": "🛠️ P|rojects",
     "content": " ",
-    "url": "/_pages/projects.html",
+    "url": "/projects/",
     
-    "relUrl": "/_pages/projects.html"
+    "relUrl": "/projects/"
   }
 }
