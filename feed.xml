@@ -1,4 +1,30 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="https://abrarmudhir.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://abrarmudhir.github.io//" rel="alternate" type="text/html" /><updated>2024-07-24T13:51:29+00:00</updated><id>https://abrarmudhir.github.io//feed.xml</id><title type="html">Abrar Mudhir</title><subtitle>Profile Page</subtitle><entry><title type="html">Associate, Senior Quant Developer of Model-Based Fixed Income</title><link href="https://abrarmudhir.github.io//experience/2010/08/01/experience-blackrock.html" rel="alternate" type="text/html" title="Associate, Senior Quant Developer of Model-Based Fixed Income" /><published>2010-08-01T00:00:00+00:00</published><updated>2010-08-01T00:00:00+00:00</updated><id>https://abrarmudhir.github.io//experience/2010/08/01/experience-blackrock</id><content type="html" xml:base="https://abrarmudhir.github.io//experience/2010/08/01/experience-blackrock.html"><![CDATA[<p>Worked as a quant developer, implemented fixed-income investment models, optimizing efficiency, ensuring accurate data 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="https://abrarmudhir.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://abrarmudhir.github.io//" rel="alternate" type="text/html" /><updated>2024-07-24T14:05:02+00:00</updated><id>https://abrarmudhir.github.io//feed.xml</id><title type="html">Abrar Mudhir</title><subtitle>Profile Page</subtitle><entry><title type="html">Senior Developer, Trading Technology</title><link href="https://abrarmudhir.github.io//experience/2014/10/01/experience-rapid-addition-limited.html" rel="alternate" type="text/html" title="Senior Developer, Trading Technology" /><published>2014-10-01T00:00:00+00:00</published><updated>2014-10-01T00:00:00+00:00</updated><id>https://abrarmudhir.github.io//experience/2014/10/01/experience-rapid-addition-limited</id><content type="html" xml:base="https://abrarmudhir.github.io//experience/2014/10/01/experience-rapid-addition-limited.html"><![CDATA[<p>Worked as a senior developer, implementing core functionalities for low-latency FIX engine libraries in both Java 
+and C#. Contributed new full-stack ASIC reporting product, utilizing FIX protocol. 
+Extended RA ShortCut – FIX for BizTalk, enhancing performance and resolving bugs.</p>
+
+<p><strong>ACHIEVEMENTS</strong>:</p>
+<ul>
+  <li>
+    <blockquote>
+      <p><strong>Project: RA FIX Engine</strong> - Improved Java and C# FIX engine libraries with new API features, reduced error rates 
+    through code reviews, and increased test coverage. Developed trading solutions, FIX, and FAST engines, 
+    streamlining processes, and enhancing stakeholder satisfaction.</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Project: RA ASIC Short Reporting Tool</strong> - Implemented a Full-stack solution for submitting short-selling reports 
+    to ASIC, enhancing efficiency through optimized FIX protocol utilization. Utilized ASP.NET and C# for the front 
+    end and MSSQL for the back end, ensuring seamless deployment on Azure Cloud, and reducing deployment time.</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Project: RA ShortCut – FIX for BizTalk</strong> - Enhanced core functionality, achieving measurable improvements in 
+    system performance and successfully resolving reported bugs.</p>
+    </blockquote>
+  </li>
+</ul>]]></content><author><name></name></author><category term="experience" /><category term="experience" /><summary type="html"><![CDATA[Worked as a senior developer, implementing core functionalities for low-latency FIX engine libraries in both Java and C#. Contributed new full-stack ASIC reporting product, utilizing FIX protocol. Extended RA ShortCut – FIX for BizTalk, enhancing performance and resolving bugs.]]></summary></entry><entry><title type="html">Associate, Senior Quant Developer of Model-Based Fixed Income</title><link href="https://abrarmudhir.github.io//experience/2010/08/01/experience-blackrock.html" rel="alternate" type="text/html" title="Associate, Senior Quant Developer of Model-Based Fixed Income" /><published>2010-08-01T00:00:00+00:00</published><updated>2010-08-01T00:00:00+00:00</updated><id>https://abrarmudhir.github.io//experience/2010/08/01/experience-blackrock</id><content type="html" xml:base="https://abrarmudhir.github.io//experience/2010/08/01/experience-blackrock.html"><![CDATA[<p>Worked as a quant developer, implemented fixed-income investment models, optimizing efficiency, ensuring accurate data 
 feeds, and managing the entire model lifecycle from development to production.</p>
 
 <p><strong>ACHIEVEMENTS</strong>:</p>
