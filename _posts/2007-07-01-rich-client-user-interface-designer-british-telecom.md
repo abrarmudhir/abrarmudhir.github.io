@@ -9,5 +9,6 @@ link: 'https://www.bt.com/'
 skills: 'Full Stack (Java EE, JSPs, SIP Servlets, XML, HTML, CSS, JavaScript, AJAX, Web 2.0)'
 categories: experience
 isPost: true
+tags: [experience, full-stack, java, html, css, javascript]
 ---
 
