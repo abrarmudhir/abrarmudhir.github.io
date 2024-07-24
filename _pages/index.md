@@ -15,7 +15,7 @@ As a versatile engineer with experience in financial services, I offer strong cr
 
 # Resume 
 👇
-You can view and download my latest resume in PDF format using the following link:
+You can download my latest resume in PDF format using the following link:
 
 - [Download CV]({{ site.data.cv.cv.cv_pdf }}) (__Last updated__: __{{ site.data.cv.cv.last_update }}__)
 
