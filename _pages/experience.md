@@ -16,14 +16,14 @@ isPost: false
       <div class="experience-entry">
         <p style="display: flex; justify-content: space-between;">
           <span>
-            <strong>{{ post.company }}, {{ post.location }}</strong><br>
+            <strong><a href="{{ post.link }}" target="_blank">{{ post.company }}</a>, {{ post.location }}</strong><br>
             <em>{{ post.title }}</em>
           </span>
           <span>{{ post.date | date: "%B %Y" }} – {{ post.end-date | date: "%B %Y" }}</span>
         </p>
-        <ul>
-          <li>{{ post.skills }}</li>
-        </ul>
+        <p>
+          <strong>SKILLS: </strong><em>{{ post.skills }}</em>
+        </p>
         {{ post.content | markdownify }}
       </div>
     {% endif %}
