@@ -1,4 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="https://abrarmudhir.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://abrarmudhir.github.io//" rel="alternate" type="text/html" /><updated>2024-07-24T14:13:14+00:00</updated><id>https://abrarmudhir.github.io//feed.xml</id><title type="html">Abrar Mudhir</title><subtitle>Profile Page</subtitle><entry><title type="html">Senior Developer, Trading Technology</title><link href="https://abrarmudhir.github.io//experience/2014/10/01/experience-rapid-addition-limited.html" rel="alternate" type="text/html" title="Senior Developer, Trading Technology" /><published>2014-10-01T00:00:00+00:00</published><updated>2014-10-01T00:00:00+00:00</updated><id>https://abrarmudhir.github.io//experience/2014/10/01/experience-rapid-addition-limited</id><content type="html" xml:base="https://abrarmudhir.github.io//experience/2014/10/01/experience-rapid-addition-limited.html"><![CDATA[<p>Worked as a senior developer, implementing core functionalities for low-latency FIX engine libraries in both Java 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="https://abrarmudhir.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://abrarmudhir.github.io//" rel="alternate" type="text/html" /><updated>2024-07-24T15:09:44+00:00</updated><id>https://abrarmudhir.github.io//feed.xml</id><title type="html">Abrar Mudhir</title><subtitle>Profile Page</subtitle><entry><title type="html">Organisations Hibi</title><link href="https://abrarmudhir.github.io//organisations/2024/07/24/organisations-hibi.html" rel="alternate" type="text/html" title="Organisations Hibi" /><published>2024-07-24T00:00:00+00:00</published><updated>2024-07-24T00:00:00+00:00</updated><id>https://abrarmudhir.github.io//organisations/2024/07/24/organisations-hibi</id><content type="html" xml:base="https://abrarmudhir.github.io//organisations/2024/07/24/organisations-hibi.html"><![CDATA[<p>Helping families of children with additional needs to manage, coordinate &amp; navigate care.</p>
+
+<p><strong>JOBS</strong>:</p>
+<ul>
+  <li>
+    <blockquote>
+      <p><strong><a href="https://hibihealth.notion.site/Full-stack-Mobile-Developer-Hibi-780eb818aa2b4631814bc2d93b7a572c">Full-Stack Mobile Developer</a></strong></p>
+    </blockquote>
+    <ul>
+      <li>
+        <blockquote>
+          <p><strong>SKILLS</strong>: AWS, React Native, Javascript, Node.js</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+</ul>]]></content><author><name></name></author><category term="organisations" /><category term="companies" /><category term="health-tech" /><category term="AWS" /><category term="React Native" /><category term="Javascript" /><category term="Node.js" /><summary type="html"><![CDATA[Helping families of children with additional needs to manage, coordinate &amp; navigate care.]]></summary></entry><entry><title type="html">Senior Developer, Trading Technology</title><link href="https://abrarmudhir.github.io//experience/2014/10/01/experience-rapid-addition-limited.html" rel="alternate" type="text/html" title="Senior Developer, Trading Technology" /><published>2014-10-01T00:00:00+00:00</published><updated>2014-10-01T00:00:00+00:00</updated><id>https://abrarmudhir.github.io//experience/2014/10/01/experience-rapid-addition-limited</id><content type="html" xml:base="https://abrarmudhir.github.io//experience/2014/10/01/experience-rapid-addition-limited.html"><![CDATA[<p>Worked as a senior developer, implementing core functionalities for low-latency FIX engine libraries in both Java 
 and C#. Contributed new full-stack ASIC reporting product, utilizing FIX protocol. 
 Extended RA ShortCut – FIX for BizTalk, enhancing performance and resolving bugs.</p>
 
