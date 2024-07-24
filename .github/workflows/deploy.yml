@@ -34,7 +34,7 @@ jobs:
           bundle config set path 'vendor/bundle'
           bundle install
 
-      - name: Build the site
+      - name: Build Site
         run: bundle exec jekyll build
 
       - name: Deploy to GitHub Pages
