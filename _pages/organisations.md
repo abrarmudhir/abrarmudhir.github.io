@@ -8,7 +8,7 @@ isHome: false
 isPost: false
 ---
 
-## Organisations
+## Organisations 🔗
 
 <div class="posts">
   {% for post in site.posts %}
