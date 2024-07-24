@@ -2,9 +2,10 @@
 theme: just-the-docs
 layout: page
 data: organisations
-title: Organisations
+title: 🔗 O|rganisations
 permalink: /organisations/
 isHome: false
+nav_order: 3
 isPost: false
 ---
 

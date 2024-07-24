@@ -2,9 +2,10 @@
 theme: just-the-docs
 layout: page
 data: experience
-title: Experience
+title: 🕸️ E|xperience
 permalink: /experience/
 isHome: false
+nav_order: 6
 isPost: false
 ---
 

@@ -2,8 +2,10 @@
 theme: just-the-docs
 layout: default
 data: education
-title: Education
+title: 🎓 E|ducation
+permalink: /education/
 isHome: false
+nav_order: 2
 isPost: false
 ---
 

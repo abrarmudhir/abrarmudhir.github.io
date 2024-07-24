@@ -2,11 +2,15 @@
 theme: just-the-docs
 layout: default
 data: projects
-title: Projects
+title: 🛠️ P|rojects
+permalink: /projects/
 isHome: false
+nav_order: 4
 isPost: false
 ---
+
 ## Projects 🦜🛠️
+Coming Soon
 
 ---
 
