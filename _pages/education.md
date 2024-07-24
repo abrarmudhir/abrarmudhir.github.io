@@ -8,25 +8,34 @@ isPost: false
 ---
 
 ## Education 🦜️🎓
-
-<p style="text-align: left;">
-  <strong>University College London, London, UK</strong>
-  <span style="float: right;">SEP 2004 – JUN 2008</span>
-</p>
-<p style="margin: 0;">
-  <strong>M.Eng. (Hons) in Computer Science (2:1)</strong>
-</p>
-<ul>
-  <li>Emphasis on practical experience. Strong in software engineering, system design, and computational complexity.</li>
-  <li>Final year dissertation project: Investigation of correlated movement of exchange rates using neural networks.</li>
-</ul>
+<div class="education-entry">
+    <p style="display: flex; justify-content: space-between;">
+      <span>
+        <strong>University College London, London, UK</strong><br>
+        <em>M.Eng. (Hons) in Computer Science (2:1)</em>
+      </span>
+      <span>SEP 2004 – JUN 2008</span>
+    </p>
+    <p>
+        <ul>
+            <li>Emphasis on practical experience. Strong in software engineering, system design, and computational complexity.</li>
+            <li>Final year dissertation project: Investigation of correlated movement of exchange rates using neural networks.</li>
+        </ul>
+    </p>
+</div>
 
 ## Certifications
 
-<p style="text-align: left;">
-  <strong>Microsoft</strong>
-  <span style="float: right;">APR 2022 – PRESENT</span>
-</p>
+<div class="certifications-entry">
+    <p style="display: flex; justify-content: space-between;">
+      <span>
+        <strong>Microsoft</strong><br>
+        <em><a href="https://learn.microsoft.com/en-gb/users/abrarmudhir-6026/transcript/d82xosq0p1r8epj" target="_blank">Azure Certifications</a></em>
+      </span>
+      <span>APR 2022 – PRESENT</span>
+    </p>
+</div>
+
 **Associate (4):**
 - Data Engineer Associate (DP-203)
 - Data Scientist Associate (DP-100)
