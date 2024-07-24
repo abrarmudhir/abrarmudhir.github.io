@@ -1,5 +1,5 @@
-# Profile Page  👋
-[![Build and Deploy Site](https://github.com/abrarmudhir/abrarmudhir.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/abrarmudhir/abrarmudhir.github.io/actions/workflows/deploy.yml)
+# [Profile Page](https://abrarmudhir.github.io/)  👋
+[![Build Status](https://github.com/abrarmudhir/abrarmudhir.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/abrarmudhir/abrarmudhir.github.io/actions/workflows/deploy.yml)
 
 ## Install
 
