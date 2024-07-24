@@ -22,6 +22,8 @@ isPost: false
         {{ post.industry }}
         <h3>Company size</h3>
         {{ post.size }}
+        <h3>Tech Stack</h3>
+        {{ post.tech-stack }}
         <br />
         {{ post.content | markdownify }}
       </div>

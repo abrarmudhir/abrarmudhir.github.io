@@ -13,14 +13,11 @@ about: >-
       A lack of support results in poor health outcomes and unnecessary costs to the health, care & education systems. 
       
       Hibi provides a platform that for the first time provides scalable support to manage, coordinate and navigate care.
+tech-stack: AWS, React Native, Javascript, Node.js
 categories: organisations
 industry: Hospitals and Health Care
 size: 2-10 employees
 isPost: true
 tags: [companies, health-tech, AWS, React Native, Javascript, Node.js]
 ---
-
-### Jobs
-- > __[Full-Stack Mobile Developer](https://hibihealth.notion.site/Full-stack-Mobile-Developer-Hibi-780eb818aa2b4631814bc2d93b7a572c)__
-  - > __SKILLS__: AWS, React Native, Javascript, Node.js
 
