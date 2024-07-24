@@ -1,5 +1,6 @@
 ---
 title: Profile
+layout: default
 data: profile
 permalink: /
 theme: just-the-docs
