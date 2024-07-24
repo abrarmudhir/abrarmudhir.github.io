@@ -7,7 +7,7 @@ date: 2010-08-01
 end-date: 2014-07-01
 link: 'https://www.blackrock.com/uk'
 skills: >-
-      • Data Engineering (Informatic, J2SE/JEE, JavaScript) 
+      • Data Engineering (Informatica, J2SE/JEE, JavaScript) 
       • Quant Stack (MATLAB, SAS, R, C#) 
       • BI (PowerBI, Tableau, SAP Business Objects) 
       • Scheduling (Autosys)
