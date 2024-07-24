@@ -20,9 +20,7 @@ isPost: true
 tags: [companies, health-tech, AWS, React Native, Javascript, Node.js]
 ---
 
-Helping families of children with additional needs to manage, coordinate & navigate care.
-
-**JOBS**:
+### Jobs:
 - > __[Full-Stack Mobile Developer](https://hibihealth.notion.site/Full-stack-Mobile-Developer-Hibi-780eb818aa2b4631814bc2d93b7a572c)__
   - > __SKILLS__: AWS, React Native, Javascript, Node.js
 
