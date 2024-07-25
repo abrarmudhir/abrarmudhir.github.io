@@ -5,7 +5,7 @@ data: education
 title: 🎓 E|ducation
 permalink: /education/
 isHome: false
-nav_order: 2
+nav_order: 6
 isPost: false
 ---
 

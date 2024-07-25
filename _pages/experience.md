@@ -5,7 +5,7 @@ data: experience
 title: 🕸️ E|xperience
 permalink: /experience/
 isHome: false
-nav_order: 6
+nav_order: 2
 isPost: false
 ---
 
