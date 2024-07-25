@@ -12,9 +12,10 @@ isPost: false
 ## Profile 🦜👋
 🤹🏿‍♂️ Life•Long•Learner | 🏄‍♂️ Data•Products | 🛠 Data•Engineering |🔬 Data•Science
 
-As a lifelong learner and versatile engineer in financial services, I mix humor with a serious passion for tech and the environment. 
-I use my skills in algorithms, data wrangling, and project management to create impactful solutions. 
-Let's save the planet, one clever idea at a time!
+> As a lifelong learner and versatile engineer in financial services, I mix humor with a serious passion for tech and the 
+environment. I’m a people-first person who thrives on connecting and collaborating. Using my skills in algorithms, 
+data wrangling, and project management, I create impactful solutions that benefit both people and the planet. 
+Let’s save the world, one clever idea and genuine connection at a time!
 
 ## Resume 
 👇
