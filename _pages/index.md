@@ -12,7 +12,9 @@ isPost: false
 ## Profile 🦜👋
 🤹🏿‍♂️ Life•Long•Learner | 🏄‍♂️ Data•Products | 🛠 Data•Engineering |🔬 Data•Science
 
-As a versatile engineer with experience in financial services, I offer strong critical thinking skills, technical leadership, and adept project management capabilities. With a thorough understanding of algorithms, data wrangling, data engineering, data products, and analytics, I leverage my technical expertise in software engineering and data to craft innovative business solutions for corporate clients.
+As a lifelong learner and versatile engineer in financial services, I mix humor with a serious passion for tech and the environment. 
+I use my skills in algorithms, data wrangling, and project management to create impactful solutions. 
+Let's save the planet, one clever idea at a time!
 
 ## Resume 
 👇
