@@ -14,7 +14,7 @@ about: >-
       
       Hibi provides a platform that for the first time provides scalable support to manage, coordinate and navigate care.
 tech-stack: AWS, React Native, Javascript, Node.js
-categories: organisations
+categories: organisations-hidden
 industry: Hospitals and Health Care
 size: 2-10 employees
 isPost: true
