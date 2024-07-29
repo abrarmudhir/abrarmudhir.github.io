@@ -1,4 +1,154 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="https://abrarmudhir.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://abrarmudhir.github.io//" rel="alternate" type="text/html" /><updated>2024-07-27T08:51:45+00:00</updated><id>https://abrarmudhir.github.io//feed.xml</id><title type="html">Abrar Mudhir</title><subtitle>Profile Page</subtitle><entry><title type="html">Organisations Hibi</title><link href="https://abrarmudhir.github.io//organisations-hidden/2024/07/24/organisations-hibi.html" rel="alternate" type="text/html" title="Organisations Hibi" /><published>2024-07-24T00:00:00+00:00</published><updated>2024-07-24T00:00:00+00:00</updated><id>https://abrarmudhir.github.io//organisations-hidden/2024/07/24/organisations-hibi</id><content type="html" xml:base="https://abrarmudhir.github.io//organisations-hidden/2024/07/24/organisations-hibi.html"><![CDATA[]]></content><author><name></name></author><category term="organisations-hidden" /><category term="companies" /><category term="health-tech" /><category term="AWS" /><category term="React Native" /><category term="Javascript" /><category term="Node.js" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Organisations Illio</title><link href="https://abrarmudhir.github.io//organisations/2023/08/14/organisations-illio.html" rel="alternate" type="text/html" title="Organisations Illio" /><published>2023-08-14T00:00:00+00:00</published><updated>2023-08-14T00:00:00+00:00</updated><id>https://abrarmudhir.github.io//organisations/2023/08/14/organisations-illio</id><content type="html" xml:base="https://abrarmudhir.github.io//organisations/2023/08/14/organisations-illio.html"><![CDATA[]]></content><author><name></name></author><category term="organisations" /><category term="companies" /><category term="fintech-tech" /><category term="AWS" /><category term="React" /><category term="Python" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Senior Developer, Trading Technology</title><link href="https://abrarmudhir.github.io//experience/2014/10/01/experience-rapid-addition-limited.html" rel="alternate" type="text/html" title="Senior Developer, Trading Technology" /><published>2014-10-01T00:00:00+00:00</published><updated>2014-10-01T00:00:00+00:00</updated><id>https://abrarmudhir.github.io//experience/2014/10/01/experience-rapid-addition-limited</id><content type="html" xml:base="https://abrarmudhir.github.io//experience/2014/10/01/experience-rapid-addition-limited.html"><![CDATA[<p>Worked as a senior developer, implementing core functionalities for low-latency FIX engine libraries in both Java 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="https://abrarmudhir.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://abrarmudhir.github.io//" rel="alternate" type="text/html" /><updated>2024-07-29T09:38:17+00:00</updated><id>https://abrarmudhir.github.io//feed.xml</id><title type="html">Abrar Mudhir</title><subtitle>Profile Page</subtitle><entry><title type="html">Organisations Hibi</title><link href="https://abrarmudhir.github.io//organisations-hidden/2024/07/24/organisations-hibi.html" rel="alternate" type="text/html" title="Organisations Hibi" /><published>2024-07-24T00:00:00+00:00</published><updated>2024-07-24T00:00:00+00:00</updated><id>https://abrarmudhir.github.io//organisations-hidden/2024/07/24/organisations-hibi</id><content type="html" xml:base="https://abrarmudhir.github.io//organisations-hidden/2024/07/24/organisations-hibi.html"><![CDATA[]]></content><author><name></name></author><category term="organisations-hidden" /><category term="companies" /><category term="health-tech" /><category term="AWS" /><category term="React Native" /><category term="Javascript" /><category term="Node.js" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Senior Data Engineer</title><link href="https://abrarmudhir.github.io//experience/2023/08/14/experience-illio.html" rel="alternate" type="text/html" title="Senior Data Engineer" /><published>2023-08-14T00:00:00+00:00</published><updated>2023-08-14T00:00:00+00:00</updated><id>https://abrarmudhir.github.io//experience/2023/08/14/experience-illio</id><content type="html" xml:base="https://abrarmudhir.github.io//experience/2023/08/14/experience-illio.html"><![CDATA[<p>Led the architecture and implementation of AWS-based ETL pipelines and Analytics platform, designing and developing 
+data integrations and products.</p>
+
+<p><strong>ACHIEVEMENTS</strong>:</p>
+<ul>
+  <li>
+    <blockquote>
+      <p><strong>Technical Leadership &amp; Team Development</strong> - Built the data function from the ground up, hiring and developing a 
+    team that included a mid-level data engineer and a data scientist. Provided technical leadership, coaching, 
+    and mentorship.</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Project: Serverless Data Pipelines</strong> - Implementing cloud-native ETL pipelines and a Data Analytics and Insights 
+    platform by leveraging key AWS services and Apache Airflow for Orchestration.</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Project: Data Integrations and APIs</strong> - Building data integrations with market data providers and brokers. 
+    Building data APIs using a microservices architecture, deploying Docker and Kubernetes for container 
+    orchestration. Leveraging Fast API and Functions as a Service on AWS Lambda with API Gateway for efficient and 
+    modular API development.</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Project: Analytics and Insights</strong> - Building an analytics and insights framework to facilitate faster 
+    time-to-market of Pythonic functions. Implementing analytics for Equities, FX, and Fund/ETF asset classes, 
+    focusing on financial markets and client multi-asset portfolios, including Cryptocurrencies.</p>
+    </blockquote>
+  </li>
+</ul>]]></content><author><name></name></author><category term="experience" /><category term="experience" /><summary type="html"><![CDATA[Led the architecture and implementation of AWS-based ETL pipelines and Analytics platform, designing and developing data integrations and products.]]></summary></entry><entry><title type="html">Organisations Illio</title><link href="https://abrarmudhir.github.io//organisations/2023/08/14/organisations-illio.html" rel="alternate" type="text/html" title="Organisations Illio" /><published>2023-08-14T00:00:00+00:00</published><updated>2023-08-14T00:00:00+00:00</updated><id>https://abrarmudhir.github.io//organisations/2023/08/14/organisations-illio</id><content type="html" xml:base="https://abrarmudhir.github.io//organisations/2023/08/14/organisations-illio.html"><![CDATA[]]></content><author><name></name></author><category term="organisations" /><category term="companies" /><category term="fintech-tech" /><category term="AWS" /><category term="React" /><category term="Python" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Vice President - Regional Team Lead of SFI Alpha Generation</title><link href="https://abrarmudhir.github.io//experience/2021/08/01/experience-blackrock.html" rel="alternate" type="text/html" title="Vice President - Regional Team Lead of SFI Alpha Generation" /><published>2021-08-01T00:00:00+00:00</published><updated>2021-08-01T00:00:00+00:00</updated><id>https://abrarmudhir.github.io//experience/2021/08/01/experience-blackrock</id><content type="html" xml:base="https://abrarmudhir.github.io//experience/2021/08/01/experience-blackrock.html"><![CDATA[<p>Lead engineer for the investment model platform, focusing on team development and people management. 
+Collaborated with the Fixed Income team to implement and back-test alpha models, and built front-office solutions for 
+pre-trade, trade capture, and reporting.</p>
+
+<p><strong>ACHIEVEMENTS</strong>:</p>
+<ul>
+  <li>
+    <blockquote>
+      <p><strong>Technical Leadership &amp; Team Development</strong> - Mentored and developed a team of engineers, including 3 Senior 
+    Quant developers, fostering their career growth and technical skills.</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>BAU: Model Implementation</strong> - Collaborated with Quant analysts on model implementation using the Pythonic alpha 
+    platform. Enhanced the alpha framework with back-testing support.</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Project: Aladdin Alpha Platform (Dynamic Flow)</strong> - Led the development of Aladdin Alpha Platform, emphasizing 
+    scalable design and reusability. Integrated with Snowflake for enhanced efficiency.</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Project: Defence in Depth</strong> - Executed a comprehensive security upgrade for six major investment applications, 
+    redesigning components for secure architectures. Implemented secure APIs across diverse languages, including .NET, 
+    MATLAB, Perl, Python, and Java.</p>
+    </blockquote>
+  </li>
+</ul>]]></content><author><name></name></author><category term="experience" /><category term="experience" /><summary type="html"><![CDATA[Lead engineer for the investment model platform, focusing on team development and people management. Collaborated with the Fixed Income team to implement and back-test alpha models, and built front-office solutions for pre-trade, trade capture, and reporting.]]></summary></entry><entry><title type="html">Full Stack Developer - LONG TERM CONTRACT (LTC 12 MONTHS)</title><link href="https://abrarmudhir.github.io//experience/2020/01/01/experience-atlantis-solutions.html" rel="alternate" type="text/html" title="Full Stack Developer - LONG TERM CONTRACT (LTC 12 MONTHS)" /><published>2020-01-01T00:00:00+00:00</published><updated>2020-01-01T00:00:00+00:00</updated><id>https://abrarmudhir.github.io//experience/2020/01/01/experience-atlantis-solutions</id><content type="html" xml:base="https://abrarmudhir.github.io//experience/2020/01/01/experience-atlantis-solutions.html"><![CDATA[<p>Worked on a twelve-month contract with the European Space Agency (ESA), contributing to the Advanced Research in 
+Telecommunications Systems Management Information System (ARTES MIS) project.</p>
+
+<p><strong>ACHIEVEMENTS</strong>:</p>
+<ul>
+  <li>
+    <blockquote>
+      <p><strong>Project: ARTES MIS</strong> - Introduced a Java-based full-stack application to manage 350+ research and development 
+    activities within the ARTES MIS project for the TIA Directorate. Deployment on Kubernetes.</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>BAU: Best Practices Rollout</strong> - Created secure, clean code on ESA cloud infrastructure, providing user training, 
+    and resolving technical issues. Migrated applications to a common environment for tools harmonization across TIA, 
+    contributing to knowledge exchange with team members and IT professionals.</p>
+    </blockquote>
+  </li>
+</ul>]]></content><author><name></name></author><category term="experience" /><category term="experience" /><summary type="html"><![CDATA[Worked on a twelve-month contract with the European Space Agency (ESA), contributing to the Advanced Research in Telecommunications Systems Management Information System (ARTES MIS) project.]]></summary></entry><entry><title type="html">Senior Consultant, Professional Services - CONTRACT</title><link href="https://abrarmudhir.github.io//experience/2019/03/01/experience-goldensource-limited.html" rel="alternate" type="text/html" title="Senior Consultant, Professional Services - CONTRACT" /><published>2019-03-01T00:00:00+00:00</published><updated>2019-03-01T00:00:00+00:00</updated><id>https://abrarmudhir.github.io//experience/2019/03/01/experience-goldensource-limited</id><content type="html" xml:base="https://abrarmudhir.github.io//experience/2019/03/01/experience-goldensource-limited.html"><![CDATA[<p>Worked as a Technical SME and Project Manager, handling budgeting, forecasting, stakeholder communication, and planning. 
+Managed a team of five in migrating Golden Source to a cloud-hosted environment and led the upgrade of the legacy 
+Security Master and Pricing product.</p>
+
+<p><strong>ACHIEVEMENTS</strong>:</p>
+<ul>
+  <li>
+    <blockquote>
+      <p><strong>Project: M&amp;G Prudential, Lite Security Master, and Pricing</strong> - Golden Source Upgrade - Delivered technical 
+    architecture advice and crafted functional and business requirements, technical solutions, and architecture 
+    documentation as a Technical SME and BA.</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>BAU: Best Practices Rollout</strong> - Successfully advocated for and implemented DevOps practices and tools, 
+    enhancing Continuous Integration/Delivery (CI/CD), and streamlining delivery and regression testing.</p>
+    </blockquote>
+  </li>
+</ul>]]></content><author><name></name></author><category term="experience" /><category term="experience" /><summary type="html"><![CDATA[Worked as a Technical SME and Project Manager, handling budgeting, forecasting, stakeholder communication, and planning. Managed a team of five in migrating Golden Source to a cloud-hosted environment and led the upgrade of the legacy Security Master and Pricing product.]]></summary></entry><entry><title type="html">Associate, Senior Data Engineer of Aladdin Core Data</title><link href="https://abrarmudhir.github.io//experience/2017/11/01/experience-blackrock.html" rel="alternate" type="text/html" title="Associate, Senior Data Engineer of Aladdin Core Data" /><published>2017-11-01T00:00:00+00:00</published><updated>2017-11-01T00:00:00+00:00</updated><id>https://abrarmudhir.github.io//experience/2017/11/01/experience-blackrock</id><content type="html" xml:base="https://abrarmudhir.github.io//experience/2017/11/01/experience-blackrock.html"><![CDATA[<p>Worked as a Senior Data Engineer, served internal investment teams, and fulfilled data product needs.</p>
+
+<p><strong>ACHIEVEMENTS</strong>:</p>
+<ul>
+  <li>
+    <blockquote>
+      <p><strong>Project: Large Datasets Pipelines</strong> - Increased data processing efficiency through the development of PySpark 
+    and Scala data pipelines, effectively managing large datasets on the Hadoop Distributed File System (HDFS).</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Project: Python Web Scrappers</strong> - Enhanced data ingestion from public sources by contributing to Python and 
+    Java scrapers for efficient crawling.</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Project: Decommissioning of Data Management Platform (DMP)</strong> - Re-architected J2EE monolithic data platform 
+    into Python microservices for enhanced scalability. Developed flexible data models and pipelines, creating 
+    an internal Data Lake for efficient storage and accessibility of datasets from multiple sources.</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Project: Decommissioning of MALT Refinery, Timeseries MIS</strong> - Revamped time-series data catalog management, 
+    replacing a C# desktop app with an advanced web application. Employed Angular for the front end and Java Spring 
+    Boot for the back end, achieving improved accessibility and usability.</p>
+    </blockquote>
+  </li>
+</ul>]]></content><author><name></name></author><category term="experience" /><category term="experience" /><summary type="html"><![CDATA[Worked as a Senior Data Engineer, served internal investment teams, and fulfilled data product needs.]]></summary></entry><entry><title type="html">Senior Technical Consultant, Professional Services</title><link href="https://abrarmudhir.github.io//experience/2016/07/01/experience-goldensource-limited.html" rel="alternate" type="text/html" title="Senior Technical Consultant, Professional Services" /><published>2016-07-01T00:00:00+00:00</published><updated>2016-07-01T00:00:00+00:00</updated><id>https://abrarmudhir.github.io//experience/2016/07/01/experience-goldensource-limited</id><content type="html" xml:base="https://abrarmudhir.github.io//experience/2016/07/01/experience-goldensource-limited.html"><![CDATA[<p>Worked as a senior technical consultant and SME and led GoldenSource implementations for clients. Led a 4-person team 
+to validate intraday pricing rates, curves, and surfaces in a Reference and Market Data Project. 
+Led a 4-month Fundamental Review of the Trading Book (FRTB) Proof of Concept (POC).</p>
+
+<p><strong>ACHIEVEMENTS</strong>:</p>
+<ul>
+  <li>
+    <blockquote>
+      <p><strong>Project: Siemens Financial Services, Market Data Solution Implementation</strong> - Built a reusable Murex connector and 
+    R analytics library with potential for sale to other clients. Utilized WebFOCUS (GS Insight) for BI reports, 
+    enhancing data accuracy and reporting efficiency. Deployment and management on Kubernetes.</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Project: ICBC Standard Bank, Fundamental Review of Trading PoC</strong> - Integrated C language libraries for scenario 
+    generation, enabling stress testing and systematic output storage in Golden Source Risk Master Data Model.</p>
+    </blockquote>
+  </li>
+</ul>]]></content><author><name></name></author><category term="experience" /><category term="experience" /><summary type="html"><![CDATA[Worked as a senior technical consultant and SME and led GoldenSource implementations for clients. Led a 4-person team to validate intraday pricing rates, curves, and surfaces in a Reference and Market Data Project. Led a 4-month Fundamental Review of the Trading Book (FRTB) Proof of Concept (POC).]]></summary></entry><entry><title type="html">Senior Developer, Trading Technology</title><link href="https://abrarmudhir.github.io//experience/2014/10/01/experience-rapid-addition-limited.html" rel="alternate" type="text/html" title="Senior Developer, Trading Technology" /><published>2014-10-01T00:00:00+00:00</published><updated>2014-10-01T00:00:00+00:00</updated><id>https://abrarmudhir.github.io//experience/2014/10/01/experience-rapid-addition-limited</id><content type="html" xml:base="https://abrarmudhir.github.io//experience/2014/10/01/experience-rapid-addition-limited.html"><![CDATA[<p>Worked as a senior developer, implementing core functionalities for low-latency FIX engine libraries in both Java 
 and C#. Contributed new full-stack ASIC reporting product, utilizing FIX protocol. 
 Extended RA ShortCut – FIX for BizTalk, enhancing performance and resolving bugs.</p>
 
@@ -49,23 +199,4 @@ feeds, and managing the entire model lifecycle from development to production.</
     investment dataset views.</p>
     </blockquote>
   </li>
-</ul>]]></content><author><name></name></author><category term="experience" /><category term="experience" /><category term="data-engineering" /><summary type="html"><![CDATA[Worked as a quant developer, implemented fixed-income investment models, optimizing efficiency, ensuring accurate data feeds, and managing the entire model lifecycle from development to production.]]></summary></entry><entry><title type="html">Quantitative Developer, Managed Models</title><link href="https://abrarmudhir.github.io//experience/2009/05/01/experience-client-knowledge.html" rel="alternate" type="text/html" title="Quantitative Developer, Managed Models" /><published>2009-05-01T00:00:00+00:00</published><updated>2009-05-01T00:00:00+00:00</updated><id>https://abrarmudhir.github.io//experience/2009/05/01/experience-client-knowledge</id><content type="html" xml:base="https://abrarmudhir.github.io//experience/2009/05/01/experience-client-knowledge.html"><![CDATA[<p>Worked as a quant developer and connectivity engineer, facilitating real-time market connectivity and
-high-frequency algorithmic trading.</p>
-
-<p><strong>ACHIEVEMENTS</strong>:</p>
-<ul>
-  <li>
-    <blockquote>
-      <p><strong>Project: Market Connectors</strong> - Designed and developed a low-latency framework to capture, receive, and replay 
-    real-time high-frequency data, reducing reliance on third-party market data systems. Developed adapters for CEP 
-    Engines enabling direct access to streaming market data using FIX technologies. Connected to various forex market 
-    data feeds and the Market News Dow Jones feed.</p>
-    </blockquote>
-  </li>
-  <li>
-    <blockquote>
-      <p><strong>Project: Model Implementation</strong> - Collaborated with research analysts to implement quantitative models 
-    including Value at Risk (VaR) and FX trading algos in CEP engines (Progres Apama and Coral8).</p>
-    </blockquote>
-  </li>
-</ul>]]></content><author><name></name></author><category term="experience" /><category term="experience" /><category term="full-stack" /><category term="java" /><category term="html" /><category term="css" /><category term="javascript" /><summary type="html"><![CDATA[Worked as a quant developer and connectivity engineer, facilitating real-time market connectivity and high-frequency algorithmic trading.]]></summary></entry><entry><title type="html">Rich Client User Interface Designer</title><link href="https://abrarmudhir.github.io//experience/2007/07/01/experience-british-telecom.html" rel="alternate" type="text/html" title="Rich Client User Interface Designer" /><published>2007-07-01T00:00:00+00:00</published><updated>2007-07-01T00:00:00+00:00</updated><id>https://abrarmudhir.github.io//experience/2007/07/01/experience-british-telecom</id><content type="html" xml:base="https://abrarmudhir.github.io//experience/2007/07/01/experience-british-telecom.html"><![CDATA[]]></content><author><name></name></author><category term="experience" /><category term="experience" /><category term="full-stack" /><category term="java" /><category term="html" /><category term="css" /><category term="javascript" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Financial Application Developer</title><link href="https://abrarmudhir.github.io//experience/2006/08/01/experience-sempra-energy.html" rel="alternate" type="text/html" title="Financial Application Developer" /><published>2006-08-01T00:00:00+00:00</published><updated>2006-08-01T00:00:00+00:00</updated><id>https://abrarmudhir.github.io//experience/2006/08/01/experience-sempra-energy</id><content type="html" xml:base="https://abrarmudhir.github.io//experience/2006/08/01/experience-sempra-energy.html"><![CDATA[]]></content><author><name></name></author><category term="experience" /><category term="experience" /><category term="full-stack" /><category term="java" /><category term="html" /><category term="css" /><category term="javascript" /><summary type="html"><![CDATA[]]></summary></entry></feed>
+</ul>]]></content><author><name></name></author><category term="experience" /><category term="experience" /><category term="data-engineering" /><summary type="html"><![CDATA[Worked as a quant developer, implemented fixed-income investment models, optimizing efficiency, ensuring accurate data feeds, and managing the entire model lifecycle from development to production.]]></summary></entry></feed>
