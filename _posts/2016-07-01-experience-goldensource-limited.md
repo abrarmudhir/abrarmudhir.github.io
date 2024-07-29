@@ -21,7 +21,8 @@ Led a 4-month Fundamental Review of the Trading Book (FRTB) Proof of Concept (PO
 **ACHIEVEMENTS**:
 - > __Project: Siemens Financial Services, Market Data Solution Implementation__ - Built a reusable Murex connector and 
       R analytics library with potential for sale to other clients. Utilized WebFOCUS (GS Insight) for BI reports, 
-      enhancing data accuracy and reporting efficiency. Deployment and management on Kubernetes.
-- > __Project: ICBC Standard Bank, Fundamental Review of Trading PoC__ - Integrated C language libraries for scenario 
-      generation, enabling stress testing and systematic output storage in Golden Source Risk Master Data Model.
+      enhancing data accuracy and reporting efficiency.
+- > __Project: ICBC Standard Bank, Fundamental Review of Trading PoC__ - Integrated C libraries for scenario generation, 
+      enabling stress testing and output storage in the Golden Source Risk Master Data Model. Supported FRTB, 
+      showcasing advanced risk management.
 

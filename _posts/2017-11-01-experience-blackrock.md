@@ -21,9 +21,9 @@ Worked as a Senior Data Engineer, served internal investment teams, and fulfille
 **ACHIEVEMENTS**:
 - > __Project: Large Datasets Pipelines__ - Increased data processing efficiency through the development of PySpark 
       and Scala data pipelines, effectively managing large datasets on the Hadoop Distributed File System (HDFS).
-- > __Project: Python Web Scrappers__ - Created a generic scraping framework using Java and Spring, which enabled 
-      the rapid development and prototyping of new scrapers through reusable components. Contributed to Python and 
-      Java scrapers to improve data ingestion from public sources and optimize crawling efficiency.
+- > __Project: Python Web Scrappers__ - Created a Java and Spring-based scraping framework, enabling rapid prototyping 
+      of new scrapers with reusable components. Enhanced data ingestion and crawling efficiency using Python 
+      and Java scrapers.
 - > __Project: Decommissioning of Data Management Platform (DMP)__ - Re-architected J2EE monolithic data platform 
       into Python microservices for enhanced scalability. Developed flexible data models and pipelines, creating 
       an internal Data Lake for efficient storage and accessibility of datasets from multiple sources.

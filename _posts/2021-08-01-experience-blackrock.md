@@ -24,9 +24,11 @@ pre-trade, trade capture, and reporting.
 **ACHIEVEMENTS**:
 - > __Technical Leadership & Team Development__ - Mentored and developed a team of engineers, including 3 Senior 
       Quant developers, fostering their career growth and technical skills.
-- > __BAU: Model Implementation__ - Worked closely with Quant Analysts to implement various models on the Pythonic 
-      alpha platform, including alpha, transaction cost, risk models, and optimizers. Enhanced the alpha framework 
-      with robust back-testing capabilities and integrated INTEX Wrapper APIs for analysis of mortgage-backed assets.
+- > __BAU: Model Implementation__ - Worked with Quant Analysts to implement and enhance various models on the Pythonic 
+      alpha platform, including alpha, transaction cost, risk models, and optimizers. Managed cross-team 
+      implementations for Equities, Macro, Credit (structured), and Innovation, ensuring successful deployment across 
+      different asset classes. Enhanced the alpha framework with robust back-testing capabilities. Integrated INTEX 
+      Wrapper APIs for analysis of mortgage-backed assets.
 - > __Project: Aladdin Alpha Platform (Dynamic Flow)__ - Led the development of Aladdin Alpha Platform, emphasizing 
       scalable design and reusability. Integrated with Snowflake for enhanced efficiency.
 - > __Project: Defence in Depth__ - Executed a comprehensive security upgrade for six major investment applications, 
