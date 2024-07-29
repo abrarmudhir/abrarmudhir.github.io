@@ -22,10 +22,10 @@ isPost: false
           </span>
           <span>{{ post.date | date: "%B %Y" }} – {{ post.end-date | date: "%B %Y" }}</span>
         </p>
+        {{ post.content | markdownify }}
         <p>
           <strong>SKILLS: </strong><em>{{ post.skills }}</em>
         </p>
-        {{ post.content | markdownify }}
       </div>
     {% endif %}
   {% endfor %}
