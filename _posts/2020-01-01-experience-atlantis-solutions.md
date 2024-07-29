@@ -21,8 +21,8 @@ Worked on a twelve-month contract with the European Space Agency (ESA), contribu
 Telecommunications Systems Management Information System (ARTES MIS) project.
 
 **ACHIEVEMENTS**:
-- > __Project: ARTES MIS__ - Introduced a Java-based full-stack application to manage 350+ research and development 
-      activities within the ARTES MIS project for the TIA Directorate. Deployment on Kubernetes.
+- > __Project: ARTES MIS__ - Developed a Java and Spring Boot backend API, along with a JSF front-end application, 
+      to manage 350+ research and development activities within the ARTES MIS project for the TIA Directorate.
 - > __BAU: Best Practices Rollout__ - Created secure, clean code on ESA cloud infrastructure, providing user training, 
       and resolving technical issues. Migrated applications to a common environment for tools harmonization across TIA, 
       contributing to knowledge exchange with team members and IT professionals.
