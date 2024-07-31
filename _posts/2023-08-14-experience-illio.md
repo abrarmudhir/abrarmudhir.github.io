@@ -4,7 +4,7 @@ title: 'Senior Data Engineer'
 company: 'illio Technology Ltd'
 location: 'London, UK'
 date: 2023-08-14
-end-date: 2024-08-01
+end-date: 2024-07-31
 link: 'https://www.illio.com/'
 skills: >-
       • Data Engineering on AWS (AWS Glue (ETL, Crawlers, Catalog, Workflow), Apache Airflow, Python, Pandas, SQL Alchemy, Fast API, Lambda, PostgreSQL, Data Lake - S3) 
