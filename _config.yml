@@ -35,10 +35,19 @@ defaults:
   -
     scope:
       type: posts
-      path: _posts
+      path: "_posts/experience"
     values:
       isPost: true
       layout: post
+      category: experience
+  -
+    scope:
+      type: posts
+      path: "_posts/organisations"
+    values:
+      isPost: true
+      layout: post
+      category: organisations
   -
     scope:
       type: pages
