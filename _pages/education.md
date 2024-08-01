@@ -8,6 +8,7 @@ isHome: false
 nav_order: 6
 isPost: false
 ---
+<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
 ## Education 🦜️🎓
 <div class="education-entry">

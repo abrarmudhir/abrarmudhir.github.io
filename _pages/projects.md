@@ -8,6 +8,7 @@ isHome: false
 nav_order: 4
 isPost: false
 ---
+<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
 ## Projects 🦜🛠️
 Coming Soon

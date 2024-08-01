@@ -8,6 +8,7 @@ nav_order: 1
 isHome: true
 isPost: false
 ---
+<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
 ## Profile 🦜👋
 🤹🏿‍♂️ Life•Long•Learner | 🏄‍♂️ Data•Products | 🛠 Data•Engineering |🔬 Data•Science

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 'Full Stack Developer - LONG TERM CONTRACT (LTC 12 MONTHS)'
-company: 'Atlantis Solutions BV for ESA - European Space Agency'
+title: 'Full Stack Developer'
+company: 'Atlantis Solutions for ESA'
 location: 'Didcot, UK'
 date: 2020-01-01
 end-date: 2021-01-01

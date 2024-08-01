@@ -1,3 +1,30 @@
+body {
+  font-family: Inter, Helvetica, Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, Segoe UI Symbol, Android Emoji, EmojiSymbols, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Noto Sans, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Inter, Helvetica, Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, Segoe UI Symbol, Android Emoji, EmojiSymbols, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Noto Sans, sans-serif;
+}
+
+p, li, a, span, div {
+  font-family: Inter, Helvetica, Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, Segoe UI Symbol, Android Emoji, EmojiSymbols, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Noto Sans, sans-serif;
+}
+
+a {
+  color: #06C1FF; /* Set link color to #06C1FF */
+  text-decoration: none; /* Remove underline from links */
+}
+
+a:hover, a:focus {
+  color: #0398d4; /* Slightly darker blue on hover and focus */
+  text-decoration: underline; /* Underline links on hover for better UX */
+}
+
+a:visited {
+  color: #06C1FF; /* Ensure visited links retain the same color */
+}
+
+
 .experience-entry {
   margin-bottom: 20px;
 }
@@ -14,3 +41,64 @@
 .experience-content {
   margin-top: 10px;
 }
+
+.collapsible {
+  background-color: #f1f1f1; /* Light grey background */
+  color: #333; /* Dark grey text for contrast */
+  cursor: pointer;
+  padding: 10px 15px; /* Adjusted padding */
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 16px; /* Font size */
+  font-weight: 600; /* Bold font */
+  border-radius: 4px; /* Rounded corners */
+  margin: 0; /* No margin between buttons */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+.collapsible:hover {
+  background-color: #e0e0e0; /* Slightly darker grey on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+.active, .collapsible:hover {
+  background-color: #bdbdbd; /* Even darker grey when active or hovered */
+}
+
+.collapsible:after {
+  content: '\002B'; /* Plus sign for collapsed state */
+  color: #333; /* Dark grey color for the sign */
+  font-weight: bold;
+  float: right;
+  margin-left: 10px; /* Space between text and the plus sign */
+}
+
+.collapsible.active:after {
+  content: "\2212";
+}
+
+.collapsible-content {
+  padding: 10px 15px; /* Uniform padding for content */
+  display: none;
+  overflow: hidden;
+  background-color: #f8f9fa; /* Light grey background for content */
+  border-radius: 4px; /* Rounded corners for content */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for content */
+}
+
+.collapsible-content-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 2px 5px; /* Adjusted padding for header */
+  background-color: #f1f1f1; /* Light grey background */
+}
+
+.collapsible-section {
+  margin-bottom: 20px; /* Space between sections */
+  border-bottom: 1px solid #e0e0e0; /* Light grey border */
+  padding-bottom: 10px; /* Padding for bottom of each section */
+}
+
