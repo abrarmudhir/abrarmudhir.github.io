@@ -2,7 +2,7 @@
 theme: just-the-docs
 layout: page
 data: experience
-title: 🕸️ E|xperience
+title: 🕸️ Experience
 permalink: /experience/
 isHome: false
 nav_order: 2

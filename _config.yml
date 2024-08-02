@@ -50,6 +50,14 @@ defaults:
       category: organisations
   -
     scope:
+      type: posts
+      path: "_posts/qanda"
+    values:
+      isPost: true
+      layout: post
+      category: qanda
+  -
+    scope:
       type: pages
       path: _pages
     values:

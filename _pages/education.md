@@ -2,7 +2,7 @@
 theme: just-the-docs
 layout: default
 data: education
-title: 🎓 E|ducation
+title: 🎓 Education
 permalink: /education/
 isHome: false
 nav_order: 6

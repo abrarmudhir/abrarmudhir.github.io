@@ -1,5 +1,5 @@
 ---
-title: 👋 P|rofile
+title: 👋 Profile
 layout: default
 data: profile
 permalink: /

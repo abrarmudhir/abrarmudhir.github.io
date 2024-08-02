@@ -2,7 +2,7 @@
 theme: just-the-docs
 layout: default
 data: projects
-title: 🛠️ P|rojects
+title: 🛠️ Projects
 permalink: /projects/
 isHome: false
 nav_order: 4
