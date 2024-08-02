@@ -17,11 +17,14 @@ about: >-
       Our culture is founded on trust, pragmatism, and velocity.
 
       We have a huge opportunity in front of us and are looking for exceptional people to join us.
-tech-stack: React, Typescript, Python, Graph databases, LLM toolkits
+tech-stack: React, TypeScript, Python, Render, Github, Axiom, Twilio, AWS, OpenAI, Anthropic, Supabase, Neo4j, Posthog
 categories: organisations
 industry: Software Development
 size: 2-10 employees
+specialties: >-
+      Fintech, AI Infra, SaaS 
 isPost: true
+careers: 'https://seadotdev.notion.site/Careers-b452eb57bef64ccdad8e1c3240316dab'
 tags: [companies, software]
 ---
 

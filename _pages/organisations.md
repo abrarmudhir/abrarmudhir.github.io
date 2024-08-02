@@ -19,7 +19,11 @@ isPost: false
         <div class="organisation-entry">
           <button type="button" class="collapsible">
               <p class="collapsible-content-header">
-                  <a href="{{ post.website }}" target="_blank">{{ post.company }}</a>
+                  <span>
+                    <a href="{{ post.website }}" target="_blank">{{ post.company }}</a><br>
+                    <a href="{{ post.careers }}" target="_blank">Jobs</a>
+                  </span>
+                  <span>{{ post.date | date: "%d %B %Y" }}</span>
               </p>
           </button>
           <div class="collapsible-content">
@@ -33,6 +37,8 @@ isPost: false
               {{ post.size }}
               <h3>Tech Stack</h3>
               {{ post.tech-stack }}
+              <h3>Specialties</h3>
+              {{ post.specialties }}
               <br />
               {{ post.content | markdownify }}
             </div>

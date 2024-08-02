@@ -13,10 +13,13 @@ about: >-
 
       Our modular wealth platform is designed to support wealth firms, online platforms, family offices, asset or 
       fund managers with time saving analytics, user friendly visualizations and personalized portfolio Insights.
-tech-stack: AWS, Kotlin, AWS, Python
+tech-stack: AWS, Kotlin, Python
 categories: organisations
 industry: Financial Services
 size: 11-50 employees
+specialties: >-
+      Fintech, Wealth Management, Analytics
+careers: 'https://www.illio.com/contact-us'
 isPost: true
 tags: [companies, fintech-tech, AWS, React, Python]
 ---
