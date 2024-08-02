@@ -9,6 +9,8 @@ github_url:  https://github.com/abrarmudhir
 linkedin_url: https://www.linkedin.com/in/abrar-mudhir/
 
 markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
 
 # Build settings
 theme: just-the-docs
@@ -30,6 +32,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-titles-from-headings
   - jekyll-head
+  - jekyll-include-cache # for using include_relative
 
 defaults:
   -
@@ -64,7 +67,8 @@ defaults:
       isPost: false
       layout: default
 
-include: [_pages]
+include:
+  - _pages
 
 exclude:
   - .idea

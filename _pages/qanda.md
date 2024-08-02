@@ -60,6 +60,14 @@ isPost: false
             {{ post.question }}
             <h3>Answer</h3>
             {{ post.answer | markdownify }}
+            {% if post.script %}
+              <h3>Script</h3>
+              {% highlight python %}
+              {% include {{ post.script }} %}
+              {% endhighlight %}
+            {% else %}
+              <p><small>No script field found.</small></p>
+            {% endif %}
             <p><small>Date Added: {{ post.date | date: "%d %B %Y" }}</small></p>
           </div>
         </div>
