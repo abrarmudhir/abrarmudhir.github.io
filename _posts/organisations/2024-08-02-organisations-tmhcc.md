@@ -14,7 +14,7 @@ about: >-
       industry, as many of our approximately 4,300 employees are industry-leading experts. Tokio Marine HCC is part of 
       Tokio Marine, a premier global company with a market cap of approximately $61 billion.
   
-tech-stack: AWS, C#, .NET, SQL, Python, FastAPI, Flask, HTMX, React, Angular, Snowflake
+tech-stack: AWS, C#, .NET, SQL, Python, FastAPI, Flask, HTMX, React, Angular, Snowflake, Terraform 
 categories: organisations
 industry: Insurance
 size: 1,001-5,000 employees
