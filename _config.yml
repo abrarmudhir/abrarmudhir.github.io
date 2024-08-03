@@ -89,6 +89,6 @@ exclude:
 
 port: 4001
 
-favicon_ico: /assets/img/favicon.ico
+favicon_ico: /assets/img/icons/favicon.ico
 
 search_enabled: true
