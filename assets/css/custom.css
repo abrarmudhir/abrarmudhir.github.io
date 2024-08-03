@@ -102,3 +102,6 @@ a:visited {
   padding-bottom: 10px; /* Padding for bottom of each section */
 }
 
+.site-footer {
+  display: none;
+}
