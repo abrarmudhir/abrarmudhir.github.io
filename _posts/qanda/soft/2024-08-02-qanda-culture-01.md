@@ -48,6 +48,7 @@ answer: >-
   experiences make me a strong fit for Your’s Innovation team, and I am excited about the opportunity to be 
   part of a company that values innovation and excellence.
 
-categories: soft-skills
-type: Culture Fit
+categories: qanda
+type: soft-skills
+topic: Culture Fit
 ---

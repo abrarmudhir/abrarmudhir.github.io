@@ -9,6 +9,7 @@ answer: >-
   root of the number for efficiency.
   
 script: py/is_prime.py
-categories: technical-skills
-type: Python
+categories: qanda
+type: technical-skills
+topic: Python
 ---

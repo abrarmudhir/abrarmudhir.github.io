@@ -56,6 +56,7 @@ answer: >-
   These design patterns help in creating scalable, maintainable, and flexible codebases by addressing common design 
   issues and providing standardized solutions.
 
-categories: technical-skills
-type: Design Patterns
+categories: qanda
+type: technical-skills
+topic: Design Patterns
 ---

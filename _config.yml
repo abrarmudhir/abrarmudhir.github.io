@@ -67,6 +67,8 @@ defaults:
       isPost: false
       layout: default
 
+permalink: /:categories/:year/:month/:day/:title/
+
 include:
   - _pages
 
@@ -86,3 +88,7 @@ exclude:
   - vendor/ruby/
 
 port: 4001
+
+favicon_ico: /assets/img/favicon.ico
+
+search_enabled: true

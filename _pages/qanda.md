@@ -17,10 +17,10 @@ isPost: false
 <div class="posts">
   {% assign displayed_types = "" %}
   {% for post in site.posts %}
-    {% if post.categories contains 'soft-skills' %}
-      {% unless displayed_types contains post.type %}
-        <h3>{{ post.type }}</h3>
-        {% assign displayed_types = displayed_types | append: post.type | append: "," %}
+    {% if post.type contains 'soft-skills' %}
+      {% unless displayed_types contains post.topic %}
+        <h3>{{ post.topic }}</h3>
+        {% assign displayed_types = displayed_types | append: post.topic | append: "," %}
       {% endunless %}
       <div class="question-entry">
         <button type="button" class="collapsible">
@@ -45,10 +45,10 @@ isPost: false
 <div class="posts">
   {% assign displayed_types = "" %}
   {% for post in site.posts %}
-    {% if post.categories contains 'technical-skills' %}
-      {% unless displayed_types contains post.type %}
-        <h3>{{ post.type }}</h3>
-        {% assign displayed_types = displayed_types | append: post.type | append: "," %}
+    {% if post.type contains 'technical-skills' %}
+      {% unless displayed_types contains post.topic %}
+        <h3>{{ post.topic }}</h3>
+        {% assign displayed_types = displayed_types | append: post.topic | append: "," %}
       {% endunless %}
       <div class="question-entry">
         <button type="button" class="collapsible">

@@ -12,6 +12,7 @@ answer: >-
                various projects, including financial market data.
   - **Project: Analytics and Insights**: Built an analytics and insights framework using Pythonic functions for financial markets and multi-asset portfolios.
   
-categories: technical-skills
-type: Python
+categories: qanda
+type: technical-skills
+topic: Python
 ---

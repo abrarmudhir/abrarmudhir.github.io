@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+
 <!-- Social icons section -->
 <p align="left">
    Made with ❤️ by {{ site.title }} &copy; {{ site.time | date: '%Y' }}  >   

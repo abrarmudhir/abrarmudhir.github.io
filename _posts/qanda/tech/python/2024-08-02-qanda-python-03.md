@@ -32,6 +32,7 @@ answer: >-
   Both conventions help in managing access to methods and are part of Python's flexible approach to encapsulation. 
   The choice between a single or double underscore depends on the level of access restriction required.
 
-categories: technical-skills
-type: Python
+categories: qanda
+type: technical-skills
+topic: Python
 ---

@@ -50,6 +50,7 @@ answer: >-
   - **Reduced Risk of Bugs**: By adhering to SOLID principles, developers can avoid common pitfalls and 
                     design issues that often lead to bugs and inconsistencies in the software.
 
-categories: technical-skills
-type: Design Patterns
+categories: qanda
+type: technical-skills
+topic: Design Patterns
 ---

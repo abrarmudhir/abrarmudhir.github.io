@@ -80,6 +80,7 @@ answer: >-
   A robust testing strategy typically involves a combination of these types of tests and tools to ensure 
     comprehensive coverage and high-quality software.
 
-categories: technical-skills
-type: Testing
+categories: qanda
+type: technical-skills
+topic: Testing
 ---

@@ -29,6 +29,7 @@ answer: >-
   These tools have been integral to my roles in data engineering, financial modeling, and application development, 
   enabling efficient data handling, scalable application design, and effective data integration solutions.
 
-categories: technical-skills
-type: Python
+categories: qanda
+type: technical-skills
+topic: Python
 ---

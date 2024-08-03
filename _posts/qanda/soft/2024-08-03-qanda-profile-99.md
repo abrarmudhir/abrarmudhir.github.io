@@ -16,6 +16,7 @@ answer: >-
 
     In addition to my technical skills, I have a proven track record in improving processes and ensuring successful 
   project outcomes. My ability to adapt to new challenges and drive innovation has been a key factor in my career success.
-categories: soft-skills
-type: Profile
+categories: qanda
+type: soft-skills
+topic: Profile
 ---

@@ -40,6 +40,7 @@ answer: >-
   By combining these approaches to owning problems and working effectively in a team, I contribute to a collaborative
   and solution-oriented work environment, leading to successful project outcomes and a positive team experience.
 
-categories: soft-skills
-type: Teamwork
+categories: qanda
+type: soft-skills
+topic: Teamwork
 ---
