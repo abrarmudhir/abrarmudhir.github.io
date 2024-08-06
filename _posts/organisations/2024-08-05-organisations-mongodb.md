@@ -13,18 +13,18 @@ about: >-
       the growing requirements for today's wide variety of modern applications, all in a unified and consistent user 
       experience. 
   
-      MongoDB has tens of thousands of customers in over 100 countries. The MongoDB database platform has been 
+        MongoDB has tens of thousands of customers in over 100 countries. The MongoDB database platform has been 
       downloaded hundreds of millions of times since 2007, and there have been millions of builders trained through 
       MongoDB University courses. To learn more, visit mongodb.com.
   
-      MongoDB, Inc., together with its subsidiaries, provides general purpose database platform worldwide. 
+        MongoDB, Inc., together with its subsidiaries, provides general purpose database platform worldwide. 
       The company provides MongoDB Atlas, a hosted multi-cloud database-as-a-service solution; 
       MongoDB Enterprise Advanced, a commercial database server for enterprise customers to run in the cloud, 
       on-premises, or in a hybrid environment; and Community Server, a free-to-download version of its database,
       which includes the functionality that developers need to get started with MongoDB. It offers professional 
       services comprising consulting and training.
 
-      The company was formerly known as 10gen, Inc. and changed its name to MongoDB, Inc. in August 2013. 
+        The company was formerly known as 10gen, Inc. and changed its name to MongoDB, Inc. in August 2013. 
       MongoDB, Inc. was incorporated in 2007 and is headquartered in New York, New York.
   
 founded: 2007
