@@ -19,7 +19,7 @@ about: >-
       (*As of June 2024. Defined as capital committed since inception)
   
 founded: 2011
-ceo: Symon Drake-Brockman
+ceo: Symon Roderick DRAKE-BROCKMAN
 tech-stack: Python
 categories: organisations
 industry: Financial Services
