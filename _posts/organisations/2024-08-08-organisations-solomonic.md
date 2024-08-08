@@ -30,7 +30,7 @@ industry: Legal Services
 size: 11-50 employees
 specialties: >-
       Litigation Analytics, Litigation Data, Commercial Litigation, and Litigation Intelligence
-careers: 'https://pembertonam.com/careers/'
+careers: 'https://www.solomonic.co.uk/careers'
 isPost: true
 tags: [companies, legal]
 ---
