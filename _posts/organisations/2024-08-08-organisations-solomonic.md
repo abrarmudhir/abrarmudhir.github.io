@@ -24,7 +24,7 @@ about: >-
   
 founded: 2017
 ceo: Edward Bird
-tech-stack: MongoDB, S3, Graph databases, SQL
+tech-stack: Software engineer,  Full-stack, Typescript, Serverless,  Node.js, Big data,  Web scraping, React, Tailwind, Legal tech, Product, AWS, MongoDB, Terraform, Cypress, TDD, APIs
 categories: organisations
 industry: Legal Services
 size: 11-50 employees
