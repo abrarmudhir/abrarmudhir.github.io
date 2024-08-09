@@ -29,12 +29,22 @@ isPost: false
           <div class="collapsible-content">
             <div class="experience-entry">
               {{ post.overview }}
-              <h3>Overview</h3>
-              {{ post.about }}
-              <h3>Industry</h3>
-              {{ post.industry }}
-              <h3>Company size</h3>
-              {{ post.size }}
+              <h3>About the Company</h3>
+              <table>
+                <tr>
+                  <th>Industry</th>
+                  <th>Founded</th>
+                  <th>Employees</th>
+                  <th>CEO</th>
+                </tr>
+                <tr>
+                  <td>{{ post.industry }}</td>
+                  <td>{{ post.founded }}</td>
+                  <td>{{ post.size | number_with_delimiter: "," }}</td>
+                  <td>{{ post.ceo }}</td>
+                </tr>
+              </table>
+              {{ post.about | markdownify }}
               <h3>Tech Stack</h3>
               {{ post.tech-stack }}
               <h3>Specialties</h3>

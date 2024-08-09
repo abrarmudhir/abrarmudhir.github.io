@@ -275,6 +275,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   http_parser.rb (~> 0.6.0)
+  jekyll
   jekyll-feed (~> 0.12)
   jekyll-include-cache
   just-the-docs
