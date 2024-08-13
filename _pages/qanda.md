@@ -12,17 +12,31 @@ isPost: false
 
 ## Q & A 🦜🗣️
 
+<div id="topic-filters">
+  <a href="#" class="badge badge-info" data-topic="all">All Topics</a>
+  {% assign unique_topics = "" %}
+  {% for post in site.posts %}
+    {% if post.topic %}
+      {% unless unique_topics contains post.topic %}
+        <a href="#" class="badge badge-info" data-topic="{{ post.topic }}">{{ post.topic }}</a>
+        {% assign unique_topics = unique_topics | append: post.topic | append: "," %}
+      {% endunless %}
+    {% endif %}
+  {% endfor %}
+</div>
+
+
 ### Softies ✨
 
-<div class="posts">
+<div class="posts" id="soft-skills-posts">
   {% assign displayed_types = "" %}
   {% for post in site.posts %}
     {% if post.type contains 'soft-skills' %}
       {% unless displayed_types contains post.topic %}
-        <h3>{{ post.topic }}</h3>
+        <h3 class="topic-header">{{ post.topic }}</h3>
         {% assign displayed_types = displayed_types | append: post.topic | append: "," %}
       {% endunless %}
-      <div class="question-entry">
+      <div class="question-entry" data-topic="{{ post.topic }}">
         <button type="button" class="collapsible">
             <p class="collapsible-content-header">{{ post.title }}</p>
         </button>
@@ -42,15 +56,15 @@ isPost: false
 
 ### Techies 👨‍💻
 
-<div class="posts">
+<div class="posts" id="technical-skills-posts">
   {% assign displayed_types = "" %}
   {% for post in site.posts %}
     {% if post.type contains 'technical-skills' %}
       {% unless displayed_types contains post.topic %}
-        <h3>{{ post.topic }}</h3>
+        <h3 class="topic-header">{{ post.topic }}</h3>
         {% assign displayed_types = displayed_types | append: post.topic | append: "," %}
       {% endunless %}
-      <div class="question-entry">
+      <div class="question-entry" data-topic="{{ post.topic }}">
         <button type="button" class="collapsible">
             <p class="collapsible-content-header">{{ post.title }}</p>
         </button>
