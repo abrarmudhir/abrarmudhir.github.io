@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     var coll = document.getElementsByClassName("collapsible");
     for (var i = 0; i < coll.length; i++) {
-        // Ensure all sections start expanded
         coll[i].classList.add("active");
         var content = coll[i].nextElementSibling;
         content.style.display = "block";
@@ -17,18 +16,14 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Function to filter posts by topic and show/hide sections
     function filterPostsByTopic(selectedTopic) {
-        console.log("Filtering by topic:", selectedTopic); // Debugging output
+        console.log("Filtering by topic:", selectedTopic);
         var softSkillsPosts = document.querySelectorAll('#soft-skills-posts .question-entry');
         var techSkillsPosts = document.querySelectorAll('#technical-skills-posts .question-entry');
         var softSkillsSection = document.getElementById('soft-skills-posts');
         var techSkillsSection = document.getElementById('technical-skills-posts');
 
-        var softSkillsVisible = false;
-        var techSkillsVisible = false;
-
-        function filterPosts(posts, section) {
+        function filterPosts(posts) {
             var visibleCount = 0;
             posts.forEach(function(post) {
                 var topic = post.getAttribute('data-topic');
@@ -39,23 +34,17 @@ document.addEventListener("DOMContentLoaded", function() {
                     post.style.display = 'none';
                 }
             });
-            // Show or hide the section based on the visibility of its posts
-            if (visibleCount > 0) {
-                section.style.display = 'block';
-                return true;
-            } else {
-                section.style.display = 'none';
-                return false;
-            }
+            return visibleCount > 0;
         }
 
-        softSkillsVisible = filterPosts(softSkillsPosts, softSkillsSection);
-        techSkillsVisible = filterPosts(techSkillsPosts, techSkillsSection);
+        var showSoftSkills = filterPosts(softSkillsPosts);
+        var showTechSkills = filterPosts(techSkillsPosts);
+
+        softSkillsSection.style.display = showSoftSkills ? 'block' : 'none';
+        techSkillsSection.style.display = showTechSkills ? 'block' : 'none';
     }
 
-    // Add event listeners to topic badges
-    var topicBadges = document.querySelectorAll('#topic-filters a');
-    topicBadges.forEach(function(badge) {
+    document.querySelectorAll('#topic-filters a').forEach(function(badge) {
         badge.addEventListener('click', function(event) {
             event.preventDefault();
             var selectedTopic = this.getAttribute('data-topic');
@@ -63,5 +52,5 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    console.log("Event listeners added to topic badges"); // Debugging output
+    console.log("Event listeners added to topic badges");
 });
