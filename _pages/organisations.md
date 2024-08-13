@@ -36,12 +36,14 @@ isPost: false
                   <th>Founded</th>
                   <th>Employees</th>
                   <th>CEO</th>
+                  <th>Links</th>
                 </tr>
                 <tr>
                   <td>{{ post.industry }}</td>
                   <td>{{ post.founded }}</td>
                   <td>{{ post.size | number_with_delimiter: "," }}</td>
                   <td>{{ post.ceo }}</td>
+                  <td><a href="{{ post.linkedin }}" target="_blank">linkedIn</a> | <a href="{{ post.orgchart }}" target="_blank">org</a></td>
                 </tr>
               </table>
               {{ post.about | markdownify }}
