@@ -18,5 +18,5 @@ answer: >-
   project outcomes. My ability to adapt to new challenges and drive innovation has been a key factor in my career success.
 categories: qanda
 type: soft-skills
-topic: Profile
+topic: Soft Skills
 ---

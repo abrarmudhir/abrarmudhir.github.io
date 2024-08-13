@@ -50,5 +50,5 @@ answer: >-
 
 categories: qanda
 type: soft-skills
-topic: Culture Fit
+topic: Soft Skills
 ---

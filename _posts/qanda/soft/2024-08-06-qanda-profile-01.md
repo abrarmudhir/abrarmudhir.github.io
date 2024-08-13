@@ -22,6 +22,6 @@ answer: >-
 
 categories: qanda
 type: soft-skills
-topic: Profile
+topic: Soft Skills
 ---
 

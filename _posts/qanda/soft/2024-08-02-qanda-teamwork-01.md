@@ -42,5 +42,5 @@ answer: >-
 
 categories: qanda
 type: soft-skills
-topic: Teamwork
+topic: Soft Skills
 ---
