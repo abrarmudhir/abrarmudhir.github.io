@@ -126,10 +126,10 @@ a:visited {
 
 .read-more-content {
     display: block;
-    max-height: 3.6em; /* Adjust based on line-height to show approx 2 lines */
     overflow: hidden;
     position: relative;
-    line-height: 1.8em; /* Line height used to calculate max-height */
+    line-height: 1.5em;
+    max-height: 4.5em;
 }
 
 .read-more-content.expanded {
