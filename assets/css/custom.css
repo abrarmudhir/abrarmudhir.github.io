@@ -128,9 +128,8 @@ a:visited {
     display: block;
     overflow: hidden;
     position: relative;
-    line-height: 1.5em; /* Adjust the line-height if needed */
-    max-height: 3em; /* About 2 lines of text */
-    transition: max-height 0.3s ease;
+    line-height: 1.5em;
+    max-height: 4.5em;
 }
 
 .read-more-content.expanded {
