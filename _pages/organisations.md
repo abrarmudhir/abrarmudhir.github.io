@@ -42,8 +42,8 @@ isPost: false
                   <td>{{ post.industry }}</td>
                   <td>{{ post.founded }}</td>
                   <td>{{ post.size | number_with_delimiter: "," }}</td>
-                  <td>{{ post.ceo }}</td>
-                  <td><a href="{{ post.linkedin }}" target="_blank">linkedIn</a> | <a href="{{ post.orgchart }}" target="_blank">org</a></td>
+                  <td><a href="{{ post.ceo-link }}" target="_blank">{{ post.ceo }}</a></td>
+                  <td><a href="{{ post.linkedin }}" target="_blank">linkedIn</a> | <a href="{{ post.orgchart }}" target="_blank">org-chart</a> | <a href="{{ post.companies-house }}" target="_blank">uk companies-house</a></td>
                 </tr>
               </table>
               <div class="read-more-content">
