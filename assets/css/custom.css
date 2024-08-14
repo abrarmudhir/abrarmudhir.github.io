@@ -123,3 +123,26 @@ a:visited {
 .site-footer {
   display: none;
 }
+
+.read-more-content {
+    display: block;
+    max-height: 3.6em; /* Adjust based on line-height to show approx 2 lines */
+    overflow: hidden;
+    position: relative;
+    line-height: 1.8em; /* Line height used to calculate max-height */
+}
+
+.read-more-content.expanded {
+    max-height: none;
+}
+
+.read-more-link {
+    display: inline-block;
+    margin-top: 0.5em;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.read-more-link:hover {
+    text-decoration: underline;
+}

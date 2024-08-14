@@ -46,7 +46,10 @@ isPost: false
                   <td><a href="{{ post.linkedin }}" target="_blank">linkedIn</a> | <a href="{{ post.orgchart }}" target="_blank">org</a></td>
                 </tr>
               </table>
-              {{ post.about | markdownify }}
+              <div class="read-more-content">
+                {{ post.about | markdownify }}
+              </div>
+              <a href="#" class="read-more-link">Read more</a>
               <h3>Tech Stack</h3>
               {{ post.tech-stack }}
               <h3>Specialties</h3>

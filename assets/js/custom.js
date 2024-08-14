@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+    // Handle collapsible sections
     var coll = document.getElementsByClassName("collapsible");
     for (var i = 0; i < coll.length; i++) {
         coll[i].classList.add("active");
@@ -16,6 +17,28 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
+    // Handle "Read more" functionality
+    var readMoreLinks = document.querySelectorAll('.read-more-link');
+    readMoreLinks.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            var content = this.previousElementSibling;
+            content.classList.toggle('expanded');
+            if (content.classList.contains('expanded')) {
+                this.textContent = "Read less";
+            } else {
+                this.textContent = "Read more";
+            }
+        });
+    });
+
+    // Initially hide the extended content for "Read more"
+    var readMoreContent = document.querySelectorAll('.read-more-content');
+    readMoreContent.forEach(function(content) {
+        content.style.display = "block";
+    });
+
+    // Filter posts by topic
     function filterPostsByTopic(selectedTopic) {
         console.log("Filtering by topic:", selectedTopic);
         var softSkillsPosts = document.querySelectorAll('#soft-skills-posts .question-entry');
@@ -44,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
         techSkillsSection.style.display = showTechSkills ? 'block' : 'none';
     }
 
+    // Add event listeners to topic filters
     document.querySelectorAll('#topic-filters a').forEach(function(badge) {
         badge.addEventListener('click', function(event) {
             event.preventDefault();
