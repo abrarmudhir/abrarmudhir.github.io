@@ -32,10 +32,10 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Initially set the max-height for "Read more"
+    // Initially hide the extended content for "Read more"
     var readMoreContent = document.querySelectorAll('.read-more-content');
     readMoreContent.forEach(function(content) {
-        content.style.maxHeight = "3em"; // Show about 2 lines
+        content.style.display = "block";
     });
 
     // Filter posts by topic
