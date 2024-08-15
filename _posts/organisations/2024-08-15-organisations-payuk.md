@@ -2,7 +2,7 @@
 layout: post
 company: 'Pay.UK'
 location: 'London, England'
-date: 2024-08-14
+date: 2024-08-15
 website: 'https://www.wearepay.uk/'
 linkedin: 'https://www.linkedin.com/company/pay-uk/about/'
 orgchart: 'https://theorg.com/org/pay-uk'
