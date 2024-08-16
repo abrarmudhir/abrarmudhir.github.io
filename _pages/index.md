@@ -18,10 +18,9 @@ environment. I’m a people-first person who thrives on connecting and collabora
 data wrangling, and project management, I create impactful solutions that benefit both people and the planet. 
 Let’s save the world, one clever idea and genuine connection at a time!
 
-## Resume 
-👇
+## Resume
 You can download my latest resume in PDF format using the following link:
-<p><span><a href="{{ site.data.files.cv.pdf }}" target="_blank">Download CV</a> (Last updated: {{ site.data.files.cv.last_update }})<br></span></p>
+👉 <p><span><a href="{{ site.data.files.cv.pdf }}" target="_blank">Download CV</a> (Last updated: {{ site.data.files.cv.last_update }})<br></span></p>
 
 
 ## Contact me
