@@ -21,8 +21,8 @@ Let’s save the world, one clever idea and genuine connection at a time!
 ## Resume 
 👇
 You can download my latest resume in PDF format using the following link:
+<p><span><a href="{{ site.data.files.cv.pdf }}" target="_blank">Download CV</a> (Last updated: {{ site.data.files.cv.last_update }})<br></span></p>
 
-- [Download CV]({{ site.data.files.cv.pdf }}) (__Last updated__: __{{ site.data.files.cv.last_update }}__)
 
 ## Contact me
 Feel free to reach out via email: [abrarmudhir@outlook.com](mailto:abrarmudhir@outlook.com).
