@@ -31,7 +31,7 @@ about: >-
 founded: 1832
 ceo: David Higgerson
 ceo-link: https://www.linkedin.com/in/david-higgerson-93701bb
-tech-stack: Redshift, ETL, AWS, CI/CD, OLAP, Data Mart, Data Warehouse, Data Models, IAM, RBAC, Apache Airflow
+tech-stack: Redshift, ETL, AWS, CI/CD, OLAP, Kimball, Data Mart, Data Warehouse, Data Models, IAM, RBAC, Apache Airflow
 categories: organisations
 industry: Technology, Information and Media
 size: 2,108
