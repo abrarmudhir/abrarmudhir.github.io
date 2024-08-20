@@ -55,7 +55,7 @@ industry: Oil and Gas
 size: 12,000
 specialties: >-
      Shipping and Chartering, Supply chain management, Oil and Petroleum products, Critical metals and minerals , 
-    Carbon management, Energy, Supply chain management, Power trading, Renewables, Commodity trading, and Logistics
+     Carbon management, Energy, Supply chain management, Power trading, Renewables, Commodity trading, and Logistics
 isPost: true
 tags: [companies, publishing]
 ---
