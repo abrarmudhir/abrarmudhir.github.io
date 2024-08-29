@@ -2,10 +2,12 @@
 layout: post
 company: 'Pemberton Asset Management'
 location: 'London, England'
-date: 2024-08-13
+date: 2024-08-29
 website: 'https://www.pembertonam.com'
 linkedin: 'https://www.linkedin.com/company/pemberton-asset-management'
 orgchart: 'https://theorg.com/org/pemberton-asset-management-group'
+careers: 'https://pembertonam.com/careers/'
+companies-house: 'https://find-and-update.company-information.service.gov.uk/company/OE028903'
 overview: >-
       Leading Alternative Credit Strategies.
 about: >-
@@ -33,13 +35,13 @@ about: >-
   
 founded: 2011
 ceo: Symon Roderick DRAKE-BROCKMAN
+ceo-link: https://www.linkedin.com/in/symon-drake-brockman-57625334/
 tech-stack: Python
 categories: organisations
 industry: Financial Services
 size: 200
 specialties: >-
       European Private Debt, Direct Lending, Corporate Loans, Credit, Working Capital Finance, NAV Financing, Risk Sharing Transactions, and CLOs
-careers: 'https://pembertonam.com/careers/'
 isPost: true
 tags: [companies, fintech]
 ---
