@@ -35,7 +35,7 @@ isPost: false
         <strong>Microsoft</strong><br>
         <em><a href="https://learn.microsoft.com/en-gb/users/abrarmudhir-6026/transcript/d82xosq0p1r8epj" target="_blank">Azure Certifications</a></em>
       </span>
-      <span>APR 2022 – PRESENT</span>
+      <span>April 2022 – PRESENT</span>
     </p>
 </div>
 
