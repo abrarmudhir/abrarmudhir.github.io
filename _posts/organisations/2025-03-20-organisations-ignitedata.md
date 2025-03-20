@@ -18,6 +18,15 @@ about: >-
       applications, such as EDC. Providing seamless, secure transfer of clinical data, Archer is the global EHR-to-EDC 
       solution for modern clinical trials.<br /><br />
   
+      Company Overview: <br /><br />
+      IgniteData specializes in transforming patient data for clinical trials through their cloud-based Virtual 
+      Research Assistant, Archer. Archer automates the transfer of clinical data from Electronic Health Records (EHR) 
+      to Electronic Data Capture (EDC) systems, enhancing data quality and productivity.<br /><br />
+  
+      Recent Developments: <br /><br />
+      In June 2024, IgniteData secured an $8 million seed investment to accelerate growth and innovation, 
+      positioning the company for expanded impact in the data integration sector.
+  
 founded: 2014
 ceo: Zach Taft
 ceo-link: https://www.linkedin.com/in/zachtaft/
