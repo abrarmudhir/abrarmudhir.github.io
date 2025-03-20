@@ -21,7 +21,7 @@ about: >-
 founded: 2014
 ceo: Zach Taft
 ceo-link: https://www.linkedin.com/in/zachtaft/
-tech-stack: AWS, Azure, GCP, SQL, Python, JavaScript 
+tech-stack: Databricks, Delta Lake, Unity Catalog, ML Flow, Azure Data Factory, Python, FastAPI, Pydantic, Pytest, PostgreSQL
 categories: organisations
 industry: Technology, Information and Internet
 size: 11-50
