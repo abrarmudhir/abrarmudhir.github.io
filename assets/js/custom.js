@@ -1,30 +1,25 @@
 document.addEventListener("DOMContentLoaded", function () {
   // =========================
-  // Collapsible Q&A sections (scoped so it won't break JTD sidebar +/-)
+  // Collapsible Q&A sections (ONLY inside your Q&A lists)
   // =========================
-  var qaRoot =
-    document.getElementById("main-content") ||
-    document.querySelector(".main-content") ||
-    document;
+  var postsRoot =
+    document.querySelector("#soft-skills-posts") ||
+    document.querySelector("#technical-skills-posts");
 
-  // IMPORTANT: only target *buttons* with .collapsible (your Q&A uses <button class="collapsible">)
-  var coll = qaRoot.querySelectorAll("button.collapsible");
+  // If either exists, scope to the whole document but only match the Q&A structure
+  var qaButtons = document.querySelectorAll(".posts .question-entry > button.collapsible");
 
-  for (var i = 0; i < coll.length; i++) {
-    var btn = coll[i];
+  qaButtons.forEach(function (btn) {
     var content = btn.nextElementSibling;
-    if (!content) continue;
+    if (!content) return;
 
-    // Default: collapsed (do NOT force open)
+    // Default: collapsed
     btn.classList.remove("active");
     content.style.display = "none";
 
     btn.addEventListener("click", function (event) {
       event.preventDefault();
-      this.classList.toggle("active");
-
-      var content = this.nextElementSibling;
-      if (!content) return;
+      btn.classList.toggle("active");
 
       if (content.style.display === "block") {
         content.style.display = "none";
@@ -32,13 +27,12 @@ document.addEventListener("DOMContentLoaded", function () {
         content.style.display = "block";
       }
     });
-  }
+  });
 
   // =========================
   // "Read more" functionality
   // =========================
-  var readMoreLinks = document.querySelectorAll(".read-more-link");
-  readMoreLinks.forEach(function (link) {
+  document.querySelectorAll(".read-more-link").forEach(function (link) {
     link.addEventListener("click", function (event) {
       event.preventDefault();
       var content = this.previousElementSibling;
@@ -51,8 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  var readMoreContent = document.querySelectorAll(".read-more-content");
-  readMoreContent.forEach(function (content) {
+  document.querySelectorAll(".read-more-content").forEach(function (content) {
     content.style.display = "block";
   });
 
@@ -60,13 +53,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // Filter posts by topic
   // =========================
   function filterPostsByTopic(selectedTopic) {
-    console.log("Filtering by topic:", selectedTopic);
-    var softSkillsPosts = document.querySelectorAll(
-      "#soft-skills-posts .question-entry"
-    );
-    var techSkillsPosts = document.querySelectorAll(
-      "#technical-skills-posts .question-entry"
-    );
+    var softSkillsPosts = document.querySelectorAll("#soft-skills-posts .question-entry");
+    var techSkillsPosts = document.querySelectorAll("#technical-skills-posts .question-entry");
     var softSkillsSection = document.getElementById("soft-skills-posts");
     var techSkillsSection = document.getElementById("technical-skills-posts");
 
@@ -94,23 +82,17 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll("#topic-filters a").forEach(function (badge) {
     badge.addEventListener("click", function (event) {
       event.preventDefault();
-      var selectedTopic = this.getAttribute("data-topic");
-      filterPostsByTopic(selectedTopic);
+      filterPostsByTopic(this.getAttribute("data-topic"));
     });
   });
 
-  console.log("Event listeners added to topic badges");
-
   // =========================
-  // Collapsible sidebar toggle (Just-the-Docs menu button)
+  // Desktop sidebar collapse toggle (YOUR button, not JTD's)
   // =========================
-  var menuBtn = document.getElementById("menu-button");
-  if (menuBtn) {
-    menuBtn.addEventListener("click", function () {
+  var sidebarToggle = document.querySelector(".am-sidebar-toggle");
+  if (sidebarToggle) {
+    sidebarToggle.addEventListener("click", function () {
       document.body.classList.toggle("sidebar-collapsed");
     });
-    console.log("Sidebar toggle wired to #menu-button");
-  } else {
-    console.warn("Sidebar toggle: #menu-button not found");
   }
 });
