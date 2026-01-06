@@ -150,3 +150,57 @@ a:visited {
 .side-bar { width: 240px; }
 .site-nav .nav-list { padding-left: 0; }
 .site-nav .nav-list-link { padding-left: 0; }
+
+
+:root {
+  --am-sidebar-width: 240px; /* change this number only */
+}
+
+/* Fix sidebar to the left and control its width */
+.side-bar {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: var(--am-sidebar-width) !important;
+  height: 100vh !important;
+  overflow-y: auto;
+}
+
+/* Make the rest of the page respect the sidebar width */
+.main,
+.main-header {
+  margin-left: var(--am-sidebar-width) !important;
+  width: calc(100% - var(--am-sidebar-width)) !important;
+}
+
+/* Flush-left nav items (remove default indentation/padding) */
+.site-nav .nav-list {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+  list-style: none !important;
+}
+.site-nav .nav-list-link {
+  padding-left: 0 !important;
+}
+
+body.sidebar-collapsed .side-bar {
+  width: 56px !important;  /* collapsed width */
+}
+
+body.sidebar-collapsed .main,
+body.sidebar-collapsed .main-header {
+  margin-left: 56px !important;
+  width: calc(100% - 56px) !important;
+}
+
+/* Hide nav text when collapsed (keep icons/emoji visible) */
+body.sidebar-collapsed .site-nav .nav-list-link {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+/* Optional: hide the site title text when collapsed */
+body.sidebar-collapsed .site-title {
+  display: none;
+}
