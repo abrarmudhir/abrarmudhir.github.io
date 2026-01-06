@@ -147,3 +147,6 @@ a:visited {
     text-decoration: underline;
 }
 
+.side-bar { width: 240px; }
+.site-nav .nav-list { padding-left: 0; }
+.site-nav .nav-list-link { padding-left: 0; }
