@@ -7,7 +7,7 @@ website: 'https://www.brevanhoward.com/'
 linkedin: 'https://www.linkedin.com/company/brevan-howard/about/'
 orgchart: 'https://theorg.com/org/brevanhoward'
 careers: 'https://wd3.myworkdaysite.com/recruiting/brevanhoward/BH_ExternalCareers?locations=4ab1b69da77b10010f03497d2f990000'
-companies-house: 'https://find-and-update.company-information.service.gov.uk/company/OC302636
+companies-house: 'https://find-and-update.company-information.service.gov.uk/company/OC302636'
 overview: >-
       Founded in 2002, Brevan Howard is a leading global alternative investment management platform, specialising in 
       global macro. We manage assets for institutional investors around the world including sovereign wealth funds, 
