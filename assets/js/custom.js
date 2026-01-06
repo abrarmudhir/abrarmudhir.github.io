@@ -77,4 +77,15 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     console.log("Event listeners added to topic badges");
+
+    // ===== Collapsible sidebar toggle (Just-the-Docs menu button) =====
+    var menuBtn = document.getElementById("menu-button");
+    if (menuBtn) {
+        menuBtn.addEventListener("click", function() {
+            document.body.classList.toggle("sidebar-collapsed");
+        });
+        console.log("Sidebar toggle wired to #menu-button");
+    } else {
+        console.warn("Sidebar toggle: #menu-button not found");
+    }
 });
