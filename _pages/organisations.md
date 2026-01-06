@@ -64,8 +64,6 @@ isPost: false
   {% endfor %}
 </div>
 
-<script src="{{ '/assets/js/custom.js' | relative_url }}"></script>
-
 ---
 
 {% include footer.md %}

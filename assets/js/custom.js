@@ -1,37 +1,40 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // =========================
-  // Collapsible Q&A sections (ONLY inside your Q&A lists)
-  // =========================
-  var postsRoot =
-    document.querySelector("#soft-skills-posts") ||
-    document.querySelector("#technical-skills-posts");
+  // ==========================================================
+  // 1) Q&A / Experience collapsibles (ONLY in main page content)
+  //    (Won't touch Just-the-Docs sidebar +/- buttons)
+  // ==========================================================
+  var mainContent =
+    document.getElementById("main-content") ||
+    document.querySelector(".main-content");
 
-  // If either exists, scope to the whole document but only match the Q&A structure
-  var qaButtons = document.querySelectorAll(".posts .question-entry > button.collapsible");
+  if (mainContent) {
+    // Only your content-area collapsibles
+    var contentCollapsibles = mainContent.querySelectorAll("button.collapsible");
 
-  qaButtons.forEach(function (btn) {
-    var content = btn.nextElementSibling;
-    if (!content) return;
+    contentCollapsibles.forEach(function (btn) {
+      var content = btn.nextElementSibling;
+      if (!content || !content.classList.contains("collapsible-content")) return;
 
-    // Default: collapsed
-    btn.classList.remove("active");
-    content.style.display = "none";
+      // Default collapsed
+      btn.classList.remove("active");
+      content.style.display = "none";
 
-    btn.addEventListener("click", function (event) {
-      event.preventDefault();
-      btn.classList.toggle("active");
+      btn.addEventListener("click", function (event) {
+        event.preventDefault();
+        btn.classList.toggle("active");
 
-      if (content.style.display === "block") {
-        content.style.display = "none";
-      } else {
-        content.style.display = "block";
-      }
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
     });
-  });
+  }
 
-  // =========================
-  // "Read more" functionality
-  // =========================
+  // ==========================================================
+  // 2) Read more
+  // ==========================================================
   document.querySelectorAll(".read-more-link").forEach(function (link) {
     link.addEventListener("click", function (event) {
       event.preventDefault();
@@ -49,9 +52,9 @@ document.addEventListener("DOMContentLoaded", function () {
     content.style.display = "block";
   });
 
-  // =========================
-  // Filter posts by topic
-  // =========================
+  // ==========================================================
+  // 3) Topic filtering (Q&A page only)
+  // ==========================================================
   function filterPostsByTopic(selectedTopic) {
     var softSkillsPosts = document.querySelectorAll("#soft-skills-posts .question-entry");
     var techSkillsPosts = document.querySelectorAll("#technical-skills-posts .question-entry");
@@ -79,20 +82,18 @@ document.addEventListener("DOMContentLoaded", function () {
     if (techSkillsSection) techSkillsSection.style.display = showTechSkills ? "block" : "none";
   }
 
-  document.querySelectorAll("#topic-filters a").forEach(function (badge) {
-    badge.addEventListener("click", function (event) {
-      event.preventDefault();
-      filterPostsByTopic(this.getAttribute("data-topic"));
-    });
-  });
-
-  // =========================
-  // Desktop sidebar collapse toggle (YOUR button, not JTD's)
-  // =========================
-  var sidebarToggle = document.querySelector(".am-sidebar-toggle");
-  if (sidebarToggle) {
-    sidebarToggle.addEventListener("click", function () {
-      document.body.classList.toggle("sidebar-collapsed");
+  var topicFilters = document.getElementById("topic-filters");
+  if (topicFilters) {
+    topicFilters.querySelectorAll("a[data-topic]").forEach(function (badge) {
+      badge.addEventListener("click", function (event) {
+        event.preventDefault();
+        filterPostsByTopic(this.getAttribute("data-topic"));
+      });
     });
   }
+
+  // ==========================================================
+  // 4) IMPORTANT: do NOT bind anything to #menu-button.
+  //    That's Just-the-Docs' own nav/menu control.
+  // ==========================================================
 });
