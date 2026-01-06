@@ -40,17 +40,17 @@ p, li, a, span, div {
 }
 
 a {
-  color: #06C1FF; /* Set link color to #06C1FF */
-  text-decoration: none; /* Remove underline from links */
+  color: #06C1FF;
+  text-decoration: none;
 }
 
 a:hover, a:focus {
-  color: #0398d4; /* Slightly darker blue on hover and focus */
-  text-decoration: underline; /* Underline links on hover for better UX */
+  color: #0398d4;
+  text-decoration: underline;
 }
 
 a:visited {
-  color: #06C1FF; /* Ensure visited links retain the same color */
+  color: #06C1FF;
 }
 
 /* =========================
@@ -79,63 +79,63 @@ a:visited {
    ========================= */
 
 .collapsible {
-  background-color: #f1f1f1; /* Light grey background */
-  color: #333; /* Dark grey text for contrast */
+  background-color: #f1f1f1;
+  color: #333;
   cursor: pointer;
-  padding: 10px 15px; /* Adjusted padding */
+  padding: 10px 15px;
   width: 100%;
   border: none;
   text-align: left;
   outline: none;
-  font-size: 16px; /* Font size */
-  font-weight: 600; /* Bold font */
-  border-radius: 4px; /* Rounded corners */
-  margin: 0; /* No margin between buttons */
-  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 4px;
+  margin: 0;
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .collapsible:hover {
-  background-color: #e0e0e0; /* Slightly darker grey on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+  background-color: #e0e0e0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .active, .collapsible:hover {
-  background-color: #bdbdbd; /* Even darker grey when active or hovered */
+  background-color: #bdbdbd;
 }
 
 .collapsible:after {
-  content: '\002B'; /* Plus sign for collapsed state */
-  color: #333; /* Dark grey color for the sign */
+  content: '\002B';
+  color: #333;
   font-weight: bold;
   float: right;
-  margin-left: 10px; /* Space between text and the plus sign */
+  margin-left: 10px;
 }
 
 .collapsible.active:after {
-  content: "\2212"; /* Minus sign for expanded state */
+  content: "\2212";
 }
 
 .collapsible-content {
-  padding: 10px 15px; /* Uniform padding for content */
+  padding: 10px 15px;
   display: none;
   overflow: hidden;
-  background-color: #f8f9fa; /* Light grey background for content */
-  border-radius: 4px; /* Rounded corners for content */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for content */
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .collapsible-content-header {
   display: flex;
   justify-content: space-between;
   margin: 0;
-  padding: 2px 5px; /* Adjusted padding for header */
-  background-color: #f1f1f1; /* Light grey background */
+  padding: 2px 5px;
+  background-color: #f1f1f1;
 }
 
 .collapsible-section {
-  margin-bottom: 20px; /* Space between sections */
-  border-bottom: 1px solid #e0e0e0; /* Light grey border */
-  padding-bottom: 10px; /* Padding for bottom of each section */
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
 }
 
 /* =========================
@@ -170,11 +170,12 @@ a:visited {
 }
 
 /* =========================
-   Sidebar + layout (fixed sidebar / auto-width header)
+   Sidebar + layout (fixed sidebar / full width main)
    ========================= */
 
 :root {
   --am-sidebar-width: 240px; /* change this number only */
+  --am-sidebar-width-collapsed: 56px;
 }
 
 /* Fix sidebar to the left and control its width */
@@ -185,6 +186,7 @@ a:visited {
   width: var(--am-sidebar-width) !important;
   height: 100vh !important;
   overflow-y: auto;
+  overflow-x: hidden !important;
 
   /* make collapse clearly visible */
   z-index: 2000;
@@ -192,33 +194,80 @@ a:visited {
   border-right: 1px solid #e0e0e0;
 }
 
+/* Ensure the header area inside the sidebar is visible and clickable */
+.side-bar .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 2100;
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Make the menu (collapse) button obvious */
+#menu-button {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+#menu-button:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
 /* Make the rest of the page respect the sidebar width */
 .main,
 .main-header {
   margin-left: var(--am-sidebar-width) !important;
   width: calc(100% - var(--am-sidebar-width)) !important;
+  max-width: none !important;
 }
 
-/* Add padding to nav list + remove default indentation */
-.site-nav .nav-list {
-  padding: 8px 12px !important; /* requested padding */
-  margin-left: 0 !important;
+/* =========================
+   NAV PADDING (FIXED)
+   ========================= */
+
+/* Container padding (left menu block) */
+.side-bar .site-nav .nav-list {
+  padding: 10px 12px !important;
+  margin: 0 !important;
   list-style: none !important;
 }
-.site-nav .nav-list-link {
-  padding-left: 0 !important;
+
+/* Individual link padding (left indentation you want) */
+.side-bar .site-nav .nav-list .nav-list-item > .nav-list-link {
+  display: block !important;
+  padding: 8px 12px !important; /* LEFT PADDING HERE */
+  margin: 0 !important;
+  border-radius: 6px;
 }
 
-/* Add padding to main content + make it use full available width */
-.main-content-wrap {
-  padding: 16px 24px !important; /* requested padding */
-  max-width: none !important;     /* remove theme max-width */
+/* Nice hover */
+.side-bar .site-nav .nav-list .nav-list-item > .nav-list-link:hover {
+  background: rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+}
+
+/* =========================
+   MAIN CONTENT PADDING + 100% WIDTH
+   ========================= */
+
+.main .main-content-wrap {
+  padding: 16px 24px !important;
   width: 100% !important;
-}
-
-.main-content {
   max-width: none !important;
+}
+
+.main .main-content-wrap .main-content {
   width: 100% !important;
+  max-width: none !important;
 }
 
 .main-header {
@@ -230,32 +279,51 @@ a:visited {
    ========================= */
 
 body.sidebar-collapsed .side-bar {
-  width: 56px !important; /* collapsed width */
-  overflow-x: hidden !important;
-}
-
-/* Hide nav when collapsed (makes the collapse actually obvious) */
-body.sidebar-collapsed #site-nav {
-  display: none !important;
-}
-
-/* Centre the menu button in collapsed header */
-body.sidebar-collapsed .site-header {
-  justify-content: center;
-}
-
-body.sidebar-collapsed #menu-button {
-  margin-left: 0 !important;
+  width: var(--am-sidebar-width-collapsed) !important;
 }
 
 /* Shift main content to match collapsed sidebar width */
 body.sidebar-collapsed .main,
 body.sidebar-collapsed .main-header {
-  margin-left: 56px !important;
-  width: calc(100% - 56px) !important;
+  margin-left: var(--am-sidebar-width-collapsed) !important;
+  width: calc(100% - var(--am-sidebar-width-collapsed)) !important;
+}
+
+/* Hide nav when collapsed */
+body.sidebar-collapsed #site-nav {
+  display: none !important;
+}
+
+/* Centre the menu button in collapsed header */
+body.sidebar-collapsed .side-bar .site-header {
+  justify-content: center;
 }
 
 /* Optional: hide the site title text when collapsed */
 body.sidebar-collapsed .site-title {
   display: none !important;
+}
+
+/* Desktop sidebar toggle button (your own) */
+.am-sidebar-toggle {
+  position: fixed;
+  top: 12px;
+  left: calc(var(--am-sidebar-width) + 12px);
+  z-index: 3000;
+
+  width: 40px;
+  height: 40px;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.am-sidebar-toggle:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* When sidebar is collapsed, move the toggle left too */
+body.sidebar-collapsed .am-sidebar-toggle {
+  left: calc(var(--am-sidebar-width-collapsed) + 12px);
 }
