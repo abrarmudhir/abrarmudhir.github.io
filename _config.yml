@@ -2,18 +2,20 @@ title: Abrar Mudhir
 email: abrarmudhir@outlook.com
 description: >-
   Profile Page
+
 baseurl: ""
 url: "https://abrarmudhir.github.io/"
 analytics: true
-github_url:  https://github.com/abrarmudhir
-linkedin_url: https://www.linkedin.com/in/abrar-mudhir/
+
+github_url: "https://github.com/abrarmudhir"
+linkedin_url: "https://www.linkedin.com/in/abrar-mudhir/"
+
+theme: just-the-docs
 
 markdown: kramdown
 kramdown:
   syntax_highlighter: rouge
 
-# Build settings
-theme: just-the-docs
 plugins:
   - jekyll-avatar
   - jekyll-coffeescript
@@ -32,35 +34,31 @@ plugins:
   - jekyll-sitemap
   - jekyll-titles-from-headings
   - jekyll-head
-  - jekyll-include-cache # for using include_relative
+  - jekyll-include-cache
 
 defaults:
-  -
-    scope:
+  - scope:
       type: posts
       path: "_posts/experience"
     values:
       isPost: true
       layout: post
       category: experience
-  -
-    scope:
+  - scope:
       type: posts
       path: "_posts/organisations"
     values:
       isPost: true
       layout: post
       category: organisations
-  -
-    scope:
+  - scope:
       type: posts
       path: "_posts/qanda"
     values:
       isPost: true
       layout: post
       category: qanda
-  -
-    scope:
+  - scope:
       type: pages
       path: _pages
     values:
@@ -88,7 +86,5 @@ exclude:
   - vendor/ruby/
 
 port: 4001
-
 favicon_ico: /assets/img/icons/favicon.ico
-
 search_enabled: true
