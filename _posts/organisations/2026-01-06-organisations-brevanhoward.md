@@ -22,10 +22,12 @@ about: >-
 
       We have over 1050 team members, 145+ Portfolio Managers*, and 9 Hubs with offices in London, New York, Geneva, 
       Jersey, Hong Kong, Abu Dhabi, Singapore, Bengaluru, and Austin.<br /><br />
+
 founded: 2002
 ceo: Aron Landy
 ceo-link: https://www.linkedin.com/in/aron-landy-b1b2364/
-tech-stack: Python
+tech-stack: >- 
+      Python
 categories: organisations
 industry: Investment Management
 size: 1,001-5,000
@@ -34,4 +36,3 @@ specialties: >-
 isPost: true
 tags: [companies, investment]
 ---
-
