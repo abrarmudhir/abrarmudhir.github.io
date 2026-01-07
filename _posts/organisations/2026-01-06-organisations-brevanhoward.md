@@ -11,7 +11,7 @@ companies-house: 'https://find-and-update.company-information.service.gov.uk/com
 overview: >-
       Founded in 2002, Brevan Howard is a leading global alternative investment management platform, specialising in 
       global macro. We manage assets for institutional investors around the world including sovereign wealth funds, 
-      corporate and public pension plans, foundations and endowments.<br /><br /> 
+      corporate and public pension plans, foundations and endowments.<br /><br />
 
       We have over 1,050 team members and more than 145 portfolio managers with global offices including London, 
       New York, Geneva, Jersey, Hong Kong, Austin, Abu Dhabi-ADGM, Bengaluru and Singapore.
