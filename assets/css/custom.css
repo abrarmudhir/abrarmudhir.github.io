@@ -523,18 +523,38 @@ body {
   }
 }
 
-/* Remove / override those rules (no commented junk) */
-.main-content-wrap {
-  width: 100% !important;
-  max-width: 100% !important;  /* use 100% not none */
-  box-sizing: border-box !important;
+/* Let the theme handle widths; just prevent horizontal scroll */
+.main-content-wrap,
+.main-content {
   overflow-x: hidden !important;
 }
 
-/* If you also had the same pattern elsewhere, keep it consistent */
-.main-content {
-  width: 100% !important;
-  max-width: 100% !important;
-  box-sizing: border-box !important;
+/* Force long content (links, code-ish text, tables) to wrap instead of overflowing */
+.main-content-wrap,
+.main-content,
+.main-content-wrap * ,
+.main-content * {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Code blocks: wrap instead of horizontal scroll */
+.main-content pre,
+.main-content code {
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
   overflow-x: hidden !important;
 }
+
+/* Tables: wrap and stay within the container */
+.main-content table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.main-content th,
+.main-content td {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
