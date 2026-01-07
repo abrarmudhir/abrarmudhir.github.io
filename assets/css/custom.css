@@ -328,8 +328,12 @@ body.sidebar-collapsed .am-sidebar-toggle {
   left: calc(var(--am-sidebar-width-collapsed) + 12px);
 }
 
-/* Hide the default text title if it still appears */
-.site-header > .site-title.lh-tight:not(:has(img)) {
-  display: none !important;
+.site-logo {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+  height: 28px;              /* controls logo height */
+  width: 180px;              /* controls visible logo width */
 }
+
 
