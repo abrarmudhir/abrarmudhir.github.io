@@ -259,19 +259,34 @@ a:visited {
    MAIN CONTENT PADDING + 100% WIDTH
    ========================= */
 
+.main,
+.main .main-content-wrap,
+.main-content-wrap {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+.main .main-content,
+.main-content {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+/* Your padding (desktop) */
 .main .main-content-wrap {
-  padding: 16px 24px !important;
-  width: 100% !important;
-  max-width: none !important;
+  padding: 0 48px !important;
 }
 
-.main .main-content-wrap .main-content {
-  width: 100% !important;
-  max-width: none !important;
+/* Optional: nicer responsive padding */
+@media (max-width: 900px) {
+  .main .main-content-wrap {
+    padding: 0 20px !important;
+  }
 }
-
-.main-header {
-  max-width: none !important;
+@media (max-width: 500px) {
+  .main .main-content-wrap {
+    padding: 0 12px !important;
+  }
 }
 
 /* =========================
@@ -360,3 +375,13 @@ body.sidebar-collapsed .am-sidebar-toggle {
 .site-header {
   padding: 0 !important;
 }
+
+.side-bar .site-nav {
+  padding-top: 0 !important;
+}
+
+.side-bar .site-nav {
+  padding-top: 0 !important;
+}
+
+body.sidebar-collapsed #site-nav { display:none !important; }
