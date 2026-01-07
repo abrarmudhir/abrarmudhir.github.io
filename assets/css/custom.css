@@ -259,13 +259,6 @@ a:visited {
    MAIN CONTENT PADDING + 100% WIDTH
    ========================= */
 
-.main,
-.main .main-content-wrap,
-.main-content-wrap {
-  width: 100% !important;
-  max-width: none !important;
-}
-
 .main .main-content,
 .main-content {
   width: 100% !important;
