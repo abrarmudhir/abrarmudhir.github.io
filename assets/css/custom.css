@@ -446,3 +446,79 @@ body.sidebar-collapsed .side-bar {
 body.sidebar-collapsed #menu-button {
   pointer-events: auto;
 }
+
+
+/* =========================================================
+   MAIN CONTENT: fit screen, no horizontal scroll, wrap text
+   ========================================================= */
+
+/* Make sure everything can shrink (prevents overflow in flex layouts) */
+.main,
+.main-header,
+.main-content-wrap,
+.main-content,
+main {
+  min-width: 0 !important;
+}
+
+/* Ensure main content never exceeds viewport width */
+.main,
+.main-header {
+  max-width: 100vw !important;
+}
+
+/* Main content wrap: full width + safe padding + no x-overflow */
+.main-content-wrap {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;         /* key */
+  padding: 0 48px !important;            /* keep your padding */
+}
+
+/* Content area should also not overflow */
+.main-content {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+/* Hard stop: never allow page-wide horizontal scroll */
+html,
+body {
+  overflow-x: hidden !important;
+}
+
+/* Wrap long strings/URLs/code so they don't force horizontal scroll */
+.main-content,
+.main-content * {
+  overflow-wrap: anywhere !important;
+  word-break: break-word !important;
+}
+
+/* Tables are the usual culprit: keep them usable without page scrolling */
+.main-content .table-wrapper {
+  max-width: 100% !important;
+  overflow-x: auto !important; /* table scrolls, not the whole page */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Code blocks: wrap instead of horizontal scrolling */
+.main-content pre,
+.main-content code {
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+}
+
+/* Responsive padding so it still fits on smaller screens */
+@media (max-width: 900px) {
+  .main-content-wrap {
+    padding: 0 20px !important;
+  }
+}
+@media (max-width: 500px) {
+  .main-content-wrap {
+    padding: 0 12px !important;
+  }
+}
