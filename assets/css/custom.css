@@ -522,3 +522,19 @@ body {
     padding: 0 12px !important;
   }
 }
+
+/* Remove / override those rules (no commented junk) */
+.main-content-wrap {
+  width: 100% !important;
+  max-width: 100% !important;  /* use 100% not none */
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+}
+
+/* If you also had the same pattern elsewhere, keep it consistent */
+.main-content {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+}
