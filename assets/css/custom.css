@@ -385,3 +385,64 @@ body.sidebar-collapsed .am-sidebar-toggle {
 }
 
 body.sidebar-collapsed #site-nav { display:none !important; }
+
+/* =========================
+   Collapsible sidebar state
+   Hide whole sidebar, keep ONLY the menu button visible
+   ========================= */
+
+/* Collapsed = sidebar gone */
+body.sidebar-collapsed .side-bar {
+  width: 0 !important;
+  min-width: 0 !important;
+  overflow: visible !important; /* allow fixed button to remain visible */
+  border-right: 0 !important;
+  background: transparent !important;
+}
+
+/* Hide everything inside sidebar... */
+body.sidebar-collapsed .side-bar .site-title,
+body.sidebar-collapsed .side-bar #site-nav,
+body.sidebar-collapsed .side-bar .site-footer {
+  display: none !important;
+}
+
+/* ...but keep the menu button visible by pinning it to the viewport */
+body.sidebar-collapsed #menu-button {
+  position: fixed !important;
+  top: 12px !important;
+  left: 12px !important;
+  z-index: 3000 !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+
+  /* optional: make it feel like a floating button */
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Main content uses full width when sidebar is collapsed */
+body.sidebar-collapsed .main,
+body.sidebar-collapsed .main-header {
+  margin-left: 0 !important;
+  width: 100% !important;
+}
+
+/* Main content padding stays consistent */
+body.sidebar-collapsed .main-content-wrap {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+/* (Optional) prevent the hidden sidebar from capturing clicks */
+body.sidebar-collapsed .side-bar {
+  pointer-events: none;
+}
+body.sidebar-collapsed #menu-button {
+  pointer-events: auto;
+}
