@@ -31,10 +31,26 @@
     content.style.display = isOpen ? "block" : "none";
   }
 
+  function normalisePathname(pathname) {
+    // "/experience/" -> "/experience"
+    // "/" -> ""
+    if (!pathname) return "";
+    if (pathname.length > 1 && pathname.endsWith("/")) return pathname.slice(0, -1);
+    return pathname;
+  }
+
+  function shouldExpandByDefault() {
+    const p = normalisePathname(window.location.pathname || "");
+    // ✅ expand by default on these pages
+    return p === "/experience" || p === "/organisations";
+  }
+
   // ============================================
   // Bind everything (safe to call multiple times)
   // ============================================
   function init() {
+    const expandByDefault = shouldExpandByDefault();
+
     // ============================================
     // 1) Initialise page-content collapsibles
     // ============================================
@@ -49,8 +65,9 @@
       const content = findNextCollapsibleContent(btn);
       if (!content) return;
 
-      // Default collapsed
-      setCollapsed(btn, content, false);
+      // ✅ Experience + Organisations: expanded by default
+      // Other pages: collapsed by default
+      setCollapsed(btn, content, expandByDefault);
     });
 
     // ============================================
@@ -116,7 +133,7 @@
 
     // ============================================
     // 5) Desktop sidebar collapse (keep JTD mobile nav-open)
-    // - bind robustly, even if header is injected late
+    // - bind robustly, even if header/nav is injected late
     // ============================================
     const menuBtn = document.getElementById("menu-button");
     if (menuBtn && menuBtn.dataset.amBound !== "1") {
