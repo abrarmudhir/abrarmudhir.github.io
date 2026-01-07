@@ -332,8 +332,8 @@ body.sidebar-collapsed .am-sidebar-toggle {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left center;
-  height: 32px;              /* controls logo height */
-  width: 140px;              /* controls visible logo width */
+  height: 96px;              /* controls logo height */
+  width: 160px;              /* controls visible logo width */
 }
 
 
