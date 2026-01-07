@@ -336,4 +336,27 @@ body.sidebar-collapsed .am-sidebar-toggle {
   width: 160px;              /* controls visible logo width */
 }
 
+.site-nav {
+  padding-top: 0 !important;
+}
 
+@media (min-width: 50rem) {
+  .site-nav {
+    padding-top: 0 !important;
+  }
+}
+
+/* Remove top margin from headings in main content */
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4,
+.main-content h5,
+.main-content h6,
+.main-content #toctitle {
+  margin-top: 0 !important;
+}
+
+.site-header {
+  padding: 0 !important;
+}
