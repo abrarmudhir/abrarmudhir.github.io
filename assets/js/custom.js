@@ -45,10 +45,51 @@
     return p === "/experience" || p === "/organisations";
   }
 
+  function getStoredTheme() {
+    return localStorage.getItem("am-theme");
+  }
+
+  function getPreferredTheme() {
+    if (getStoredTheme()) return getStoredTheme();
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  }
+
+  function setTheme(theme) {
+    const nextTheme = theme === "dark" ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", nextTheme);
+    document.querySelectorAll(".am-theme-toggle").forEach((button) => {
+      const isDark = nextTheme === "dark";
+      button.setAttribute("aria-pressed", String(isDark));
+      button.setAttribute("aria-label", isDark ? "Switch to light theme" : "Switch to dark theme");
+      button.title = isDark ? "Switch to light theme" : "Switch to dark theme";
+    });
+  }
+
+  function initThemeToggle() {
+    setTheme(getPreferredTheme());
+
+    if (document.querySelector(".am-theme-toggle")) return;
+
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "am-theme-toggle";
+    button.addEventListener("click", function () {
+      const currentTheme = document.documentElement.getAttribute("data-theme") || "light";
+      const nextTheme = currentTheme === "dark" ? "light" : "dark";
+      localStorage.setItem("am-theme", nextTheme);
+      setTheme(nextTheme);
+    });
+
+    document.body.appendChild(button);
+    setTheme(getPreferredTheme());
+  }
+
   // ============================================
   // Bind everything (safe to call multiple times)
   // ============================================
   function init() {
+    initThemeToggle();
+
     const expandByDefault = shouldExpandByDefault();
 
     // ============================================
@@ -95,28 +136,48 @@
     // ============================================
     // 4) Topic filters (Q&A) (bind once)
     // ============================================
-    function filterPostsByTopic(selectedTopic) {
-      const softPosts = document.querySelectorAll("#soft-skills-posts .question-entry");
-      const techPosts = document.querySelectorAll("#technical-skills-posts .question-entry");
-      const softSection = document.getElementById("soft-skills-posts");
-      const techSection = document.getElementById("technical-skills-posts");
+    function filterQanda() {
+      const activeFilter = document.querySelector("#topic-filters [data-topic].is-active");
+      const selectedTopic = activeFilter ? activeFilter.getAttribute("data-topic") : "all";
+      const searchInput = document.getElementById("qanda-search");
+      const query = searchInput ? searchInput.value.trim().toLowerCase() : "";
+      const sections = document.querySelectorAll(".qanda-section");
+      const emptyState = document.getElementById("qanda-empty");
+      let totalVisible = 0;
 
-      function apply(posts) {
-        let visible = 0;
+      sections.forEach((section) => {
+        const posts = section.querySelectorAll(".question-entry");
+        const headers = section.querySelectorAll(".topic-header");
+        const visibleTopics = new Set();
+        let sectionVisible = 0;
+
         posts.forEach((post) => {
-          const topic = post.getAttribute("data-topic");
-          const show = selectedTopic === "all" || topic === selectedTopic;
-          post.style.display = show ? "block" : "none";
-          if (show) visible++;
+          const topic = post.getAttribute("data-topic") || "";
+          const title = post.getAttribute("data-title") || "";
+          const question = post.getAttribute("data-question") || "";
+          const answer = post.getAttribute("data-answer") || "";
+          const haystack = `${topic} ${title} ${question} ${answer}`.toLowerCase();
+          const matchesTopic = selectedTopic === "all" || topic === selectedTopic;
+          const matchesQuery = !query || haystack.includes(query);
+          const show = matchesTopic && matchesQuery;
+
+          post.hidden = !show;
+          if (show) {
+            visibleTopics.add(topic);
+            sectionVisible += 1;
+          }
         });
-        return visible > 0;
-      }
 
-      const showSoft = apply(softPosts);
-      const showTech = apply(techPosts);
+        headers.forEach((header) => {
+          const topic = header.getAttribute("data-topic") || "";
+          header.hidden = !visibleTopics.has(topic);
+        });
 
-      if (softSection) softSection.style.display = showSoft ? "block" : "none";
-      if (techSection) techSection.style.display = showTech ? "block" : "none";
+        section.hidden = sectionVisible === 0;
+        totalVisible += sectionVisible;
+      });
+
+      if (emptyState) emptyState.hidden = totalVisible !== 0;
     }
 
     const topicFilters = document.getElementById("topic-filters");
@@ -126,9 +187,19 @@
       topicFilters.querySelectorAll("a[data-topic]").forEach((badge) => {
         badge.addEventListener("click", function (event) {
           event.preventDefault();
-          filterPostsByTopic(this.getAttribute("data-topic"));
+          topicFilters.querySelectorAll("[data-topic]").forEach((item) => {
+            item.classList.toggle("is-active", item === this);
+          });
+          filterQanda();
         });
       });
+    }
+
+    const qandaSearch = document.getElementById("qanda-search");
+    if (qandaSearch && qandaSearch.dataset.amBound !== "1") {
+      qandaSearch.dataset.amBound = "1";
+      qandaSearch.addEventListener("input", filterQanda);
+      filterQanda();
     }
 
     // ============================================

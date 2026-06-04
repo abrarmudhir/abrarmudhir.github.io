@@ -10,23 +10,33 @@ isPost: false
 ---
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
-## Profile 🦜👋
-🤹🏿‍♂️ Life•Long•Learner | 🏄‍♂️ Data•Products | 🛠 Data•Engineering |🔬 Data•Science
+<div class="am-page">
+  <header class="am-page-hero">
+    <p class="am-page-eyebrow">Profile</p>
+    <h1>Abrar Mudhir</h1>
+    <p class="am-page-summary">Life-long learner, data product builder, data engineer, and applied data science practitioner.</p>
+  </header>
 
-> As a lifelong learner and versatile engineer in financial services, I mix humor with a serious passion for tech and the 
-environment. I’m a people-first person who thrives on connecting and collaborating. Using my skills in algorithms, 
-data wrangling, and project management, I create impactful solutions that benefit both people and the planet. 
-Let’s save the world, one clever idea and genuine connection at a time!
+  <section class="am-card">
+    <h2>About</h2>
+    <p>As a lifelong learner and versatile engineer in financial services, I mix humour with a serious passion for tech and the environment. I am a people-first person who thrives on connecting and collaborating.</p>
+    <p>Using my skills in algorithms, data wrangling, and project management, I create impactful solutions that benefit both people and the planet.</p>
+  </section>
 
-## Resume 
-👇
-You can download my latest resume in PDF format using the following link:
-<p><span><a href="{{ site.data.files.cv.pdf }}" target="_blank">Download CV</a> (Last updated: {{ site.data.files.cv.last_update }})<br></span></p>
+  <section class="am-card-grid">
+    <div class="am-card">
+      <h2>Resume</h2>
+      <p>Download my latest CV in PDF format.</p>
+      <p><a class="am-action-link" href="{{ site.data.files.cv.pdf }}" target="_blank">Download CV</a></p>
+      <p class="am-muted">Last updated: {{ site.data.files.cv.last_update }}</p>
+    </div>
 
-
-## Contact me
-Feel free to reach out via email: [abrarmudhir@outlook.com](mailto:abrarmudhir@outlook.com).
-
----
+    <div class="am-card">
+      <h2>Contact</h2>
+      <p>Feel free to reach out by email.</p>
+      <p><a class="am-action-link" href="mailto:abrarmudhir@outlook.com">abrarmudhir@outlook.com</a></p>
+    </div>
+  </section>
+</div>
 
 {% include footer.md %}

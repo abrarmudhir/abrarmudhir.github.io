@@ -1,2 +1,10 @@
+<script>
+  (function () {
+    var storedTheme = localStorage.getItem("am-theme");
+    var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    var theme = storedTheme || (prefersDark ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", theme);
+  })();
+</script>
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 <script defer src="{{ '/assets/js/custom.js' | relative_url }}"></script>
