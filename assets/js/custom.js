@@ -84,11 +84,41 @@
     setTheme(getPreferredTheme());
   }
 
+  function initSearchResultNavigation() {
+    if (document.__am_search_result_navigation_bound) return;
+    document.__am_search_result_navigation_bound = true;
+
+    document.addEventListener(
+      "click",
+      function (event) {
+        const link = event.target.closest("#search-results a.search-result[href]");
+        if (!link) return;
+
+        if (
+          event.defaultPrevented ||
+          event.button !== 0 ||
+          event.metaKey ||
+          event.ctrlKey ||
+          event.shiftKey ||
+          event.altKey ||
+          link.target === "_blank"
+        ) {
+          return;
+        }
+
+        event.preventDefault();
+        window.location.assign(link.href);
+      },
+      true
+    );
+  }
+
   // ============================================
   // Bind everything (safe to call multiple times)
   // ============================================
   function init() {
     initThemeToggle();
+    initSearchResultNavigation();
 
     const expandByDefault = shouldExpandByDefault();
 
