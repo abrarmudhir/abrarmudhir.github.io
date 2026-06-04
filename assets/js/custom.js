@@ -113,12 +113,42 @@
     );
   }
 
+  function setSidebarCollapsed(isCollapsed) {
+    document.body.classList.toggle("sidebar-collapsed", isCollapsed);
+
+    document.querySelectorAll("#menu-button, .am-sidebar-float-toggle").forEach((button) => {
+      button.setAttribute("aria-pressed", String(isCollapsed));
+      button.setAttribute("aria-label", isCollapsed ? "Show menu" : "Hide menu");
+      button.title = isCollapsed ? "Show menu" : "Hide menu";
+    });
+  }
+
+  function initFloatingSidebarToggle() {
+    if (document.querySelector(".am-sidebar-float-toggle")) return;
+
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "am-sidebar-float-toggle";
+    button.setAttribute("aria-label", "Show menu");
+    button.setAttribute("aria-pressed", "true");
+    button.innerHTML =
+      '<svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>';
+
+    button.addEventListener("click", function (event) {
+      event.preventDefault();
+      setSidebarCollapsed(false);
+    });
+
+    document.body.appendChild(button);
+  }
+
   // ============================================
   // Bind everything (safe to call multiple times)
   // ============================================
   function init() {
     initThemeToggle();
     initSearchResultNavigation();
+    initFloatingSidebarToggle();
 
     const expandByDefault = shouldExpandByDefault();
 
@@ -243,21 +273,17 @@
       // Capture phase so we still run even if JTD handlers run too
       menuBtn.addEventListener(
         "click",
-        function () {
+        function (event) {
           const isDesktop = window.matchMedia("(min-width: 50rem)").matches;
 
           // Desktop: toggle your custom collapse class
           if (isDesktop) {
-            document.body.classList.toggle("sidebar-collapsed");
-
-            // keep aria-pressed sane
-            const pressed =
-              menuBtn.getAttribute("aria-pressed") === "true" ? "false" : "true";
-            menuBtn.setAttribute("aria-pressed", pressed);
+            event.preventDefault();
+            event.stopImmediatePropagation();
+            setSidebarCollapsed(!document.body.classList.contains("sidebar-collapsed"));
           }
 
-          // Do NOT preventDefault/stopPropagation:
-          // JTD still controls mobile (nav-open) behaviour.
+          // Mobile still falls through to Just-the-Docs nav-open behaviour.
         },
         true
       );
