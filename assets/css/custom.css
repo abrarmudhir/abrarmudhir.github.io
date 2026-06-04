@@ -2001,3 +2001,80 @@ body {
   }
 }
 
+/* Final content overflow guard: fill available width without creating right scroll. */
+@media (min-width: 50.001rem) {
+  .main,
+  .main-header,
+  html.search-active .main,
+  body:not(.sidebar-collapsed) .main,
+  body:not(.sidebar-collapsed) .main-header {
+    width: auto !important;
+    max-width: none !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  body.sidebar-collapsed .main,
+  body.sidebar-collapsed .main-header,
+  body.sidebar-collapsed.search-active .main {
+    width: auto !important;
+    max-width: none !important;
+    margin-right: 0 !important;
+  }
+
+  .main-content-wrap {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+}
+
+.main-content,
+.main-content main,
+.am-page,
+.am-list-page,
+.am-list-page .collapsible,
+.am-list-page .collapsible-content {
+  box-sizing: border-box !important;
+  max-width: 100% !important;
+}
+
+.am-list-page .collapsible {
+  width: 100% !important;
+  overflow: hidden !important;
+}
+
+.am-list-page .collapsible-content-header {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+.am-list-page .collapsible-content-header > span {
+  min-width: 0 !important;
+  overflow-wrap: anywhere !important;
+}
+
+.am-list-page .collapsible-content-header > span:last-child {
+  flex: 0 1 auto !important;
+  max-width: 14rem !important;
+  text-align: right !important;
+  white-space: normal !important;
+}
+
+.am-list-page .collapsible-content {
+  overflow-x: hidden !important;
+}
+
+.am-list-page .collapsible-content blockquote {
+  box-sizing: border-box !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 12px !important;
+}
+
+.main-content p[align="left"] {
+  max-width: 100% !important;
+  overflow-wrap: anywhere !important;
+}
+
