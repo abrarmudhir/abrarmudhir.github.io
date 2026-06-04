@@ -10,84 +10,102 @@ isPost: false
 ---
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
-## Q & A 🦜🗣️
+<div class="qanda-page">
+  <header class="qanda-hero">
+    <p class="qanda-eyebrow">Interview notes</p>
+    <h1>Q&A</h1>
+    <p class="qanda-summary">Browse practical interview answers by topic, or search for a specific scenario, technology, or pattern.</p>
+  </header>
 
-<div id="topic-filters">
-  <a href="#" class="badge badge-info" data-topic="all">All Topics</a>
-  {% assign unique_topics = "" %}
-  {% for post in site.posts %}
-    {% if post.topic %}
-      {% unless unique_topics contains post.topic %}
-        <a href="#" class="badge badge-info" data-topic="{{ post.topic }}">{{ post.topic }}</a>
-        {% assign unique_topics = unique_topics | append: post.topic | append: "," %}
-      {% endunless %}
-    {% endif %}
-  {% endfor %}
-</div>
+  <div class="qanda-controls" aria-label="Q&A filters">
+    <label class="qanda-search" for="qanda-search">
+      <span>Search questions</span>
+      <input id="qanda-search" type="search" placeholder="Search AWS, migration, SOLID, testing..." autocomplete="off">
+    </label>
 
+    <nav id="topic-filters" class="qanda-topic-filters" aria-label="Topic filters">
+      <a href="#" class="qanda-filter is-active" data-topic="all">All Topics</a>
+      {% assign unique_topics = "" %}
+      {% for post in site.posts %}
+        {% if post.topic %}
+          {% unless unique_topics contains post.topic %}
+            <a href="#" class="qanda-filter" data-topic="{{ post.topic }}">{{ post.topic }}</a>
+            {% assign unique_topics = unique_topics | append: post.topic | append: "," %}
+          {% endunless %}
+        {% endif %}
+      {% endfor %}
+    </nav>
+  </div>
 
-### Softies ✨
+  <section class="qanda-section" id="soft-skills-posts" aria-labelledby="soft-skills-title">
+    <div class="qanda-section-header">
+      <p class="qanda-section-kicker">Softies</p>
+      <h2 id="soft-skills-title">Soft Skills</h2>
+    </div>
 
-<div class="posts" id="soft-skills-posts">
-  {% assign displayed_types = "" %}
-  {% for post in site.posts %}
-    {% if post.type contains 'soft-skills' %}
-      {% unless displayed_types contains post.topic %}
-        <h3 class="topic-header">{{ post.topic }}</h3>
-        {% assign displayed_types = displayed_types | append: post.topic | append: "," %}
-      {% endunless %}
-      <div class="question-entry" data-topic="{{ post.topic }}">
-        <button type="button" class="collapsible">
-            <p class="collapsible-content-header">{{ post.title }}</p>
-        </button>
-        <div class="collapsible-content">
-          <div class="answer-entry">
-            <h3>Question</h3>
-            {{ post.question }}
-            <h3>Answer</h3>
-            {{ post.answer | markdownify }}
-            <p><small>Date Added: {{ post.date | date: "%d %B %Y" }}</small></p>
+    {% assign displayed_types = "" %}
+    {% for post in site.posts %}
+      {% if post.type contains 'soft-skills' %}
+        {% unless displayed_types contains post.topic %}
+          <h3 class="topic-header" data-topic="{{ post.topic }}">{{ post.topic }}</h3>
+          {% assign displayed_types = displayed_types | append: post.topic | append: "," %}
+        {% endunless %}
+        <div class="question-entry" data-topic="{{ post.topic }}" data-title="{{ post.title | escape }}" data-question="{{ post.question | escape }}" data-answer="{{ post.answer | strip_html | strip_newlines | escape }}">
+          <button type="button" class="collapsible">
+            <span class="collapsible-content-header">{{ post.title }}</span>
+          </button>
+          <div class="collapsible-content">
+            <div class="answer-entry">
+              <h3>Question</h3>
+              {{ post.question }}
+              <h3>Answer</h3>
+              {{ post.answer | markdownify }}
+              <p><small>Date Added: {{ post.date | date: "%d %B %Y" }}</small></p>
+            </div>
           </div>
         </div>
-      </div>
-    {% endif %}
-  {% endfor %}
-</div>
+      {% endif %}
+    {% endfor %}
+  </section>
 
-### Techies 👨‍💻
+  <section class="qanda-section" id="technical-skills-posts" aria-labelledby="technical-skills-title">
+    <div class="qanda-section-header">
+      <p class="qanda-section-kicker">Techies</p>
+      <h2 id="technical-skills-title">Technical Skills</h2>
+    </div>
 
-<div class="posts" id="technical-skills-posts">
-  {% assign displayed_types = "" %}
-  {% for post in site.posts %}
-    {% if post.type contains 'technical-skills' %}
-      {% unless displayed_types contains post.topic %}
-        <h3 class="topic-header">{{ post.topic }}</h3>
-        {% assign displayed_types = displayed_types | append: post.topic | append: "," %}
-      {% endunless %}
-      <div class="question-entry" data-topic="{{ post.topic }}">
-        <button type="button" class="collapsible">
-            <p class="collapsible-content-header">{{ post.title }}</p>
-        </button>
-        <div class="collapsible-content">
-          <div class="answer-entry">
-            <h3>Question</h3>
-            {{ post.question }}
-            <h3>Answer</h3>
-            {{ post.answer | markdownify }}
-            {% if post.script %}
-              <h3>Script</h3>
-              {% highlight python %}
-              {% include {{ post.script }} %}
-              {% endhighlight %}
-            {% else %}
-              <p><small>No script field found.</small></p>
-            {% endif %}
-            <p><small>Date Added: {{ post.date | date: "%d %B %Y" }}</small></p>
+    {% assign displayed_types = "" %}
+    {% for post in site.posts %}
+      {% if post.type contains 'technical-skills' %}
+        {% unless displayed_types contains post.topic %}
+          <h3 class="topic-header" data-topic="{{ post.topic }}">{{ post.topic }}</h3>
+          {% assign displayed_types = displayed_types | append: post.topic | append: "," %}
+        {% endunless %}
+        <div class="question-entry" data-topic="{{ post.topic }}" data-title="{{ post.title | escape }}" data-question="{{ post.question | escape }}" data-answer="{{ post.answer | strip_html | strip_newlines | escape }}">
+          <button type="button" class="collapsible">
+            <span class="collapsible-content-header">{{ post.title }}</span>
+          </button>
+          <div class="collapsible-content">
+            <div class="answer-entry">
+              <h3>Question</h3>
+              {{ post.question }}
+              <h3>Answer</h3>
+              {{ post.answer | markdownify }}
+              {% if post.script %}
+                <h3>Script</h3>
+                {% highlight python %}
+                {% include {{ post.script }} %}
+                {% endhighlight %}
+              {% endif %}
+              <p><small>Date Added: {{ post.date | date: "%d %B %Y" }}</small></p>
+            </div>
           </div>
         </div>
-      </div>
-    {% endif %}
-  {% endfor %}
+      {% endif %}
+    {% endfor %}
+  </section>
+
+  <p class="qanda-empty" id="qanda-empty" hidden>No matching Q&A entries found.</p>
 </div>
 
 {% include footer.md %}
