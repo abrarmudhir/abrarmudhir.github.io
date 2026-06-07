@@ -4,6 +4,7 @@ title: 'Senior Data Engineer - CONTRACT'
 company: 'EDF Trading'
 location: 'London, UK'
 date: 2025-05-01
+end-date: 2026-02-01
 link: 'https://www.edftrading.com/'
 skills: >-
       - Data Engineering (Python, SQL, Spark, Hadoop, Polars, Pandas)
