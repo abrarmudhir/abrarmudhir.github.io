@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Quant Developer'
+title: 'Quantitative Developer'
 company: 'Brevan Howard Asset Management'
 location: 'London, UK'
 date: 2026-02-01
