@@ -15,13 +15,28 @@ isPost: false
     <p class="am-page-eyebrow">Research notes</p>
     <h1>Organisations</h1>
     <p class="am-page-summary">Company profiles, hiring links, operating context, technology notes, and useful research links.</p>
+    <div class="organisations-controls" aria-label="Organisation filters">
+      <div class="organisations-controls-copy">
+        <p class="organisations-controls-eyebrow">Browse by sector</p>
+        <p class="organisations-controls-title">Filter organisations by industry</p>
+      </div>
+      <label class="organisations-filter" for="industry-filter">
+        <span>Industry</span>
+        <div class="organisations-filter-select-wrap">
+          <select id="industry-filter">
+            <option value="all">All industries</option>
+          </select>
+        </div>
+      </label>
+      <p class="organisations-filter-status" id="industry-filter-status">Showing all organisations</p>
+    </div>
   </header>
 
   <div class="posts am-list-page">
     {% for post in site.posts %}
       {% if post.categories contains 'organisations' %}
         {% unless post.categories contains 'organisations-hidden' %}
-          <div class="organisation-entry">
+          <div class="organisation-entry" data-industry="{{ post.industry | slugify }}" data-industry-label="{{ post.industry | escape }}">
             <button type="button" class="collapsible">
               <span class="collapsible-content-header">
                 <span>
@@ -73,5 +88,57 @@ isPost: false
     {% endfor %}
   </div>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const filter = document.getElementById("industry-filter");
+    const status = document.getElementById("industry-filter-status");
+
+    if (!filter || !status) return;
+
+    const entries = Array.from(document.querySelectorAll(".organisation-entry"));
+    const industries = new Map();
+
+    entries.forEach((entry) => {
+      const value = entry.dataset.industry;
+      const label = entry.dataset.industryLabel;
+
+      if (value && label && !industries.has(value)) {
+        industries.set(value, label);
+      }
+    });
+
+    Array.from(industries.entries())
+      .sort((a, b) => a[1].localeCompare(b[1]))
+      .forEach(([value, label]) => {
+        const option = document.createElement("option");
+        option.value = value;
+        option.textContent = label;
+        filter.appendChild(option);
+      });
+
+    const updateFilter = () => {
+      const selected = filter.value;
+      let visibleCount = 0;
+
+      entries.forEach((entry) => {
+        const matches = selected === "all" || entry.dataset.industry === selected;
+        entry.hidden = !matches;
+        if (matches) visibleCount += 1;
+      });
+
+      if (selected === "all") {
+        status.textContent = `Showing all organisations (${visibleCount})`;
+        return;
+      }
+
+      const selectedLabel = filter.options[filter.selectedIndex]?.textContent || "selected industry";
+      status.textContent = `Showing ${visibleCount} organisation${visibleCount === 1 ? "" : "s"} in ${selectedLabel}`;
+    };
+
+    filter.addEventListener("change", updateFilter);
+    updateFilter();
+  });
+</script>
 
 {% include footer.md %}
