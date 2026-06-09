@@ -779,6 +779,36 @@ html[data-theme="dark"] .company-facts-links a:focus {
     background-color 0.16s ease;
 }
 
+.organisations-filter input {
+  width: 100%;
+  min-height: 56px;
+  padding: 14px 16px;
+  border: 1px solid rgba(6, 193, 255, 0.18);
+  border-radius: 14px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(245, 250, 253, 0.92)),
+    var(--am-bg);
+  color: var(--am-text);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+  outline: none;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.88),
+    0 10px 24px rgba(6, 193, 255, 0.08);
+  transition:
+    border-color 0.16s ease,
+    box-shadow 0.16s ease,
+    transform 0.16s ease,
+    background-color 0.16s ease;
+}
+
+.organisations-filter input::placeholder {
+  color: var(--am-text-muted);
+  font-weight: 600;
+}
+
+.organisations-filter input:focus,
 .organisations-filter select:focus {
   border-color: var(--am-link);
   box-shadow:
@@ -787,6 +817,7 @@ html[data-theme="dark"] .company-facts-links a:focus {
   transform: translateY(-2px);
 }
 
+.organisations-filter input:hover,
 .organisations-filter select:hover {
   border-color: rgba(6, 193, 255, 0.28);
   background-color: var(--am-surface);
@@ -837,6 +868,21 @@ html[data-theme="dark"] .organisations-filter select {
     0 12px 28px rgba(0, 0, 0, 0.22);
 }
 
+html[data-theme="dark"] .organisations-filter input {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0)),
+    #111821;
+  border-color: rgba(88, 199, 255, 0.18);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    0 12px 28px rgba(0, 0, 0, 0.22);
+}
+
+html[data-theme="dark"] .organisations-filter input::placeholder {
+  color: rgba(199, 213, 227, 0.72);
+}
+
+html[data-theme="dark"] .organisations-filter input:hover,
 html[data-theme="dark"] .organisations-filter select:hover {
   border-color: rgba(88, 199, 255, 0.32);
   background-color: #17212b;
