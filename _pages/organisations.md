@@ -64,9 +64,15 @@ isPost: false
                     <td>{{ post.size | number_with_delimiter: "," }}</td>
                     <td><a href="{{ post.ceo-link }}" target="_blank">{{ post.ceo }}</a></td>
                     <td class="company-facts-links">
+                      {% if post.linkedin %}
                       <a href="{{ post.linkedin }}" target="_blank">LinkedIn</a>
+                      {% endif %}
+                      {% if post.orgchart %}
                       <a href="{{ post.orgchart }}" target="_blank">Org chart</a>
+                      {% endif %}
+                      {% if post.companies-house %}
                       <a href="{{ post.companies-house }}" target="_blank">Companies House</a>
+                      {% endif %}
                     </td>
                   </tr>
                 </table>
