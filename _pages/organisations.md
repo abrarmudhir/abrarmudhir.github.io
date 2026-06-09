@@ -18,8 +18,12 @@ isPost: false
     <div class="organisations-controls" aria-label="Organisation filters">
       <div class="organisations-controls-copy">
         <p class="organisations-controls-eyebrow">Browse by sector</p>
-        <p class="organisations-controls-title">Filter organisations by industry</p>
+        <p class="organisations-controls-title">Filter organisations by industry or search by name</p>
       </div>
+      <label class="organisations-filter" for="name-filter">
+        <span>Name</span>
+        <input id="name-filter" type="search" placeholder="Search organisation name..." autocomplete="off">
+      </label>
       <label class="organisations-filter" for="industry-filter">
         <span>Industry</span>
         <div class="organisations-filter-select-wrap">
@@ -36,7 +40,7 @@ isPost: false
     {% for post in site.posts %}
       {% if post.categories contains 'organisations' %}
         {% unless post.categories contains 'organisations-hidden' %}
-          <div class="organisation-entry" data-industry="{{ post.industry | slugify }}" data-industry-label="{{ post.industry | escape }}">
+          <div class="organisation-entry" data-industry="{{ post.industry | slugify }}" data-industry-label="{{ post.industry | escape }}" data-company="{{ post.company | downcase | escape }}">
             <button type="button" class="collapsible">
               <span class="collapsible-content-header">
                 <span>
@@ -97,10 +101,11 @@ isPost: false
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
+    const nameFilter = document.getElementById("name-filter");
     const filter = document.getElementById("industry-filter");
     const status = document.getElementById("industry-filter-status");
 
-    if (!filter || !status) return;
+    if (!nameFilter || !filter || !status) return;
 
     const entries = Array.from(document.querySelectorAll(".organisation-entry"));
     const industries = new Map();
@@ -124,25 +129,37 @@ isPost: false
       });
 
     const updateFilter = () => {
+      const query = nameFilter.value.trim().toLowerCase();
       const selected = filter.value;
       let visibleCount = 0;
 
       entries.forEach((entry) => {
-        const matches = selected === "all" || entry.dataset.industry === selected;
+        const matchesIndustry = selected === "all" || entry.dataset.industry === selected;
+        const companyName = entry.dataset.company || "";
+        const matchesName = query === "" || companyName.includes(query);
+        const matches = matchesIndustry && matchesName;
         entry.hidden = !matches;
         if (matches) visibleCount += 1;
       });
 
-      if (selected === "all") {
+      if (selected === "all" && query === "") {
         status.textContent = `Showing all organisations (${visibleCount})`;
         return;
       }
 
       const selectedLabel = filter.options[filter.selectedIndex]?.textContent || "selected industry";
-      status.textContent = `Showing ${visibleCount} organisation${visibleCount === 1 ? "" : "s"} in ${selectedLabel}`;
+      const nameLabel = query ? ` matching "${query}"` : "";
+
+      if (selected === "all") {
+        status.textContent = `Showing ${visibleCount} organisation${visibleCount === 1 ? "" : "s"}${nameLabel}`;
+        return;
+      }
+
+      status.textContent = `Showing ${visibleCount} organisation${visibleCount === 1 ? "" : "s"} in ${selectedLabel}${nameLabel}`;
     };
 
     filter.addEventListener("change", updateFilter);
+    nameFilter.addEventListener("input", updateFilter);
     updateFilter();
   });
 </script>
