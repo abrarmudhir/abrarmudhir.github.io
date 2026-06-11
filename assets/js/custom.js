@@ -262,6 +262,142 @@
       filterQanda();
     }
 
+    function filterLearning() {
+      const activeFilter = document.querySelector("#l3-topic-filters [data-topic].is-active");
+      const selectedTopic = activeFilter ? activeFilter.getAttribute("data-topic") : "all";
+      const searchInput = document.getElementById("l3-search");
+      const query = searchInput ? searchInput.value.trim().toLowerCase() : "";
+      const sections = document.querySelectorAll(".l3-section");
+      const emptyState = document.getElementById("l3-empty");
+      let totalVisible = 0;
+
+      sections.forEach((section) => {
+        const posts = section.querySelectorAll(".learning-entry");
+        const headers = section.querySelectorAll(".learning-topic-header");
+        const visibleGroups = new Set();
+        let sectionVisible = 0;
+
+        posts.forEach((post) => {
+          const topic = post.getAttribute("data-topic") || "";
+          const domain = post.getAttribute("data-domain") || "";
+          const track = post.getAttribute("data-track") || "";
+          const subtrack = post.getAttribute("data-subtrack") || "";
+          const group = post.getAttribute("data-group") || "";
+          const title = post.getAttribute("data-title") || "";
+          const body = post.getAttribute("data-body") || "";
+          const haystack = `${topic} ${domain} ${track} ${subtrack} ${title} ${body}`.toLowerCase();
+          const matchesTopic = selectedTopic === "all" || topic === selectedTopic;
+          const matchesQuery = !query || haystack.includes(query);
+          const show = matchesTopic && matchesQuery;
+
+          post.hidden = !show;
+          if (show) {
+            visibleGroups.add(group);
+            sectionVisible += 1;
+          }
+        });
+
+        headers.forEach((header) => {
+          const group = header.getAttribute("data-group") || "";
+          header.hidden = !visibleGroups.has(group);
+        });
+
+        section.hidden = sectionVisible === 0;
+        totalVisible += sectionVisible;
+      });
+
+      if (emptyState) emptyState.hidden = totalVisible !== 0;
+    }
+
+    const learningFilters = document.getElementById("l3-topic-filters");
+    if (learningFilters && learningFilters.dataset.amBound !== "1") {
+      learningFilters.dataset.amBound = "1";
+      const domainToggle = document.getElementById("l3-filter-domain-toggle");
+      const domainPanel = document.getElementById("l3-filter-domain-panel");
+      const trackToggle = document.getElementById("l3-filter-track-toggle");
+      const trackPanel = document.getElementById("l3-filter-track-panel");
+      const subtrackToggle = document.getElementById("l3-filter-subtrack-toggle");
+      const subtrackPanel = document.getElementById("l3-filter-subtrack-panel");
+
+      function setMenuState(toggle, panel, expanded) {
+        if (!toggle || !panel) return;
+        toggle.setAttribute("aria-expanded", String(expanded));
+        panel.hidden = !expanded;
+      }
+
+      learningFilters.querySelectorAll("[data-topic]").forEach((badge) => {
+        badge.addEventListener("click", function (event) {
+          if (this.tagName === "A") event.preventDefault();
+          learningFilters.querySelectorAll("[data-topic]").forEach((item) => {
+            item.classList.toggle("is-active", item === this);
+          });
+          if (domainToggle && this !== domainToggle) {
+            setMenuState(domainToggle, domainPanel, false);
+            setMenuState(trackToggle, trackPanel, false);
+            setMenuState(subtrackToggle, subtrackPanel, false);
+          }
+          filterLearning();
+        });
+      });
+
+      if (!document.__am_learning_menu_bound) {
+        document.__am_learning_menu_bound = true;
+
+        document.addEventListener("click", function (event) {
+          const toggle = event.target.closest(
+            "#l3-filter-domain-toggle, #l3-filter-track-toggle, #l3-filter-subtrack-toggle"
+          );
+          if (!toggle) return;
+
+          event.preventDefault();
+
+          const currentDomainToggle = document.getElementById("l3-filter-domain-toggle");
+          const currentDomainPanel = document.getElementById("l3-filter-domain-panel");
+          const currentTrackToggle = document.getElementById("l3-filter-track-toggle");
+          const currentTrackPanel = document.getElementById("l3-filter-track-panel");
+          const currentSubtrackToggle = document.getElementById("l3-filter-subtrack-toggle");
+          const currentSubtrackPanel = document.getElementById("l3-filter-subtrack-panel");
+
+          const setCurrentMenuState = (currentToggle, currentPanel, expanded) => {
+            if (!currentToggle || !currentPanel) return;
+            currentToggle.setAttribute("aria-expanded", String(expanded));
+            currentPanel.hidden = !expanded;
+          };
+
+          if (toggle.id === "l3-filter-domain-toggle") {
+            const next = toggle.getAttribute("aria-expanded") !== "true";
+            setCurrentMenuState(currentDomainToggle, currentDomainPanel, next);
+            if (!next) {
+              setCurrentMenuState(currentTrackToggle, currentTrackPanel, false);
+              setCurrentMenuState(currentSubtrackToggle, currentSubtrackPanel, false);
+            }
+            return;
+          }
+
+          if (toggle.id === "l3-filter-track-toggle") {
+            const next = toggle.getAttribute("aria-expanded") !== "true";
+            setCurrentMenuState(currentTrackToggle, currentTrackPanel, next);
+            if (!next) {
+              setCurrentMenuState(currentSubtrackToggle, currentSubtrackPanel, false);
+            }
+            return;
+          }
+
+          if (toggle.id === "l3-filter-subtrack-toggle") {
+            const next = toggle.getAttribute("aria-expanded") !== "true";
+            setCurrentMenuState(currentSubtrackToggle, currentSubtrackPanel, next);
+          }
+        });
+      }
+    }
+
+    const learningSearch = document.getElementById("l3-search");
+    if (learningSearch && learningSearch.dataset.amBound !== "1") {
+      learningSearch.dataset.amBound = "1";
+      learningSearch.addEventListener("input", filterLearning);
+      filterLearning();
+    }
+
     // ============================================
     // 5) Desktop sidebar collapse (keep JTD mobile nav-open)
     // - bind robustly, even if header/nav is injected late
