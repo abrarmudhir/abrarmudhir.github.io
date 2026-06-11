@@ -68,6 +68,10 @@ a:visited {
   --am-link: #06c1ff;
   --am-link-hover: #0398d4;
   --am-shadow: rgba(0, 0, 0, 0.12);
+  --am-code-bg: linear-gradient(180deg, #fbfcfe 0%, #f3f6fb 100%);
+  --am-code-border: rgba(36, 41, 47, 0.08);
+  --am-code-text: #1f2937;
+  --am-code-inline-bg: rgba(15, 23, 42, 0.06);
 }
 
 html[data-theme="dark"] {
@@ -81,6 +85,10 @@ html[data-theme="dark"] {
   --am-link: #58c7ff;
   --am-link-hover: #8bd8ff;
   --am-shadow: rgba(0, 0, 0, 0.42);
+  --am-code-bg: linear-gradient(180deg, #111822 0%, #0b1118 100%);
+  --am-code-border: rgba(139, 216, 255, 0.14);
+  --am-code-text: #dce7f3;
+  --am-code-inline-bg: rgba(88, 199, 255, 0.12);
 }
 
 html[data-theme="dark"],
@@ -1291,6 +1299,93 @@ html[data-theme="dark"] .qanda-section .collapsible-content {
   border-color: var(--am-border);
 }
 
+.learning-entry-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 14px;
+}
+
+.learning-entry-meta span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 4px 10px;
+  border: 1px solid rgba(6, 193, 255, 0.18);
+  border-radius: 999px;
+  background: rgba(6, 193, 255, 0.08);
+  color: #0a84b5;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+html[data-theme="dark"] .learning-entry-meta span {
+  border-color: rgba(88, 199, 255, 0.24);
+  background: rgba(88, 199, 255, 0.12);
+  color: #8bd8ff !important;
+}
+
+.l3-topic-filters {
+  align-items: flex-start;
+}
+
+.l3-filter-menu {
+  position: relative;
+}
+
+.l3-filter-menu-toggle::before {
+  content: "+";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  margin-right: 8px;
+  color: var(--am-text-muted);
+  font-weight: 800;
+}
+
+.l3-filter-menu-toggle[aria-expanded="true"]::before {
+  content: "−";
+}
+
+.l3-filter-menu-panel {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  z-index: 20;
+  display: grid;
+  gap: 8px;
+  min-width: 280px;
+  padding: 12px;
+  border: 1px solid var(--am-border);
+  border-radius: 12px;
+  background: var(--am-bg);
+  box-shadow: 0 16px 36px var(--am-shadow);
+}
+
+.l3-filter-menu-panel[hidden] {
+  display: none !important;
+}
+
+.l3-filter-menu-panel .qanda-filter {
+  justify-content: flex-start;
+  min-height: 30px;
+}
+
+.l3-filter-subpanel {
+  position: static;
+  min-width: 0;
+  margin-top: 8px;
+  box-shadow: none;
+}
+
+html[data-theme="dark"] .l3-filter-menu-panel {
+  background: var(--am-surface);
+  border-color: var(--am-border);
+}
+
 @media (max-width: 720px) {
   .company-facts-table,
   .company-facts-table tbody,
@@ -2304,5 +2399,215 @@ body {
 .main-content p[align="left"] {
   max-width: 100% !important;
   overflow-wrap: anywhere !important;
+}
+
+/* =========================
+   Code blocks
+   ========================= */
+
+.main-content .highlighter-rouge,
+.main-content div[class*="language-"],
+.main-content .highlight,
+.main-content pre.highlight {
+  margin: 1rem 0;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  background: var(--am-code-bg) !important;
+  border: 1px solid var(--am-code-border) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.main-content .highlighter-rouge .highlight,
+.main-content div[class*="language-"] .highlight {
+  margin: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.main-content pre,
+.main-content .highlight pre,
+.main-content .highlighter-rouge pre {
+  white-space: pre !important;
+  word-break: normal !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  padding: 16px 18px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: var(--am-code-text) !important;
+  box-shadow: none !important;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace !important;
+  font-size: 0.92rem !important;
+  line-height: 1.65 !important;
+  tab-size: 2;
+  -webkit-overflow-scrolling: touch;
+}
+
+.main-content pre code,
+.main-content .highlight pre code,
+.main-content .highlighter-rouge pre code {
+  display: block;
+  white-space: inherit !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: inherit !important;
+  font-size: inherit !important;
+  line-height: inherit !important;
+}
+
+html[data-theme="dark"] .main-content .highlight,
+html[data-theme="dark"] .main-content .highlighter-rouge,
+html[data-theme="dark"] .main-content div[class*="language-"],
+html[data-theme="dark"] .main-content pre.highlight {
+  background: var(--am-code-bg) !important;
+  border-color: var(--am-code-border) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    0 16px 36px rgba(0, 0, 0, 0.34) !important;
+}
+
+html[data-theme="dark"] .main-content .highlight code,
+html[data-theme="dark"] .main-content .highlight pre,
+html[data-theme="dark"] .main-content .highlight span,
+html[data-theme="dark"] .main-content .highlighter-rouge code,
+html[data-theme="dark"] .main-content .highlighter-rouge pre,
+html[data-theme="dark"] .main-content .highlighter-rouge span {
+  background: transparent !important;
+}
+
+html[data-theme="dark"] .main-content .highlight code,
+html[data-theme="dark"] .main-content .highlight pre code,
+html[data-theme="dark"] .main-content .highlighter-rouge code,
+html[data-theme="dark"] .main-content .highlighter-rouge pre code {
+  color: var(--am-code-text) !important;
+}
+
+html[data-theme="dark"] .main-content .highlight span,
+html[data-theme="dark"] .main-content .highlighter-rouge span {
+  color: inherit !important;
+}
+
+html[data-theme="dark"] .main-content div.highlighter-rouge,
+html[data-theme="dark"] .main-content div.highlighter-rouge .highlight,
+html[data-theme="dark"] .main-content div.highlighter-rouge pre.highlight,
+html[data-theme="dark"] .main-content div.highlighter-rouge code {
+  background: #0b1118 !important;
+  background-color: #0b1118 !important;
+  background-image: none !important;
+  color: #dce7f3 !important;
+}
+
+html[data-theme="dark"] .main-content div.highlighter-rouge {
+  border: 1px solid rgba(88, 199, 255, 0.16) !important;
+  border-radius: 16px !important;
+}
+
+html[data-theme="dark"] .main-content div.highlighter-rouge .highlight,
+html[data-theme="dark"] .main-content div.highlighter-rouge pre.highlight {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="dark"] .main-content div.highlighter-rouge pre,
+html[data-theme="dark"] .main-content div.highlighter-rouge pre code,
+html[data-theme="dark"] .main-content div.highlighter-rouge .highlight pre,
+html[data-theme="dark"] .main-content div.highlighter-rouge .highlight pre code {
+  background: #0b1118 !important;
+  background-color: #0b1118 !important;
+  background-image: none !important;
+  color: #dce7f3 !important;
+}
+
+html[data-theme="dark"] .main-content div.highlighter-rouge span {
+  color: #dce7f3 !important;
+}
+
+html[data-theme="dark"] .main-content div.highlighter-rouge .k,
+html[data-theme="dark"] .main-content div.highlighter-rouge .kn,
+html[data-theme="dark"] .main-content div.highlighter-rouge .kd,
+html[data-theme="dark"] .main-content div.highlighter-rouge .kr,
+html[data-theme="dark"] .main-content div.highlighter-rouge .kp,
+html[data-theme="dark"] .main-content div.highlighter-rouge .kt {
+  color: #ff7aa2 !important;
+}
+
+html[data-theme="dark"] .main-content div.highlighter-rouge .nn,
+html[data-theme="dark"] .main-content div.highlighter-rouge .nf,
+html[data-theme="dark"] .main-content div.highlighter-rouge .nc {
+  color: #7dd3fc !important;
+}
+
+html[data-theme="dark"] .main-content div.highlighter-rouge .n,
+html[data-theme="dark"] .main-content div.highlighter-rouge .na,
+html[data-theme="dark"] .main-content div.highlighter-rouge .nb,
+html[data-theme="dark"] .main-content div.highlighter-rouge .bp {
+  color: #dce7f3 !important;
+}
+
+html[data-theme="dark"] .main-content div.highlighter-rouge .s,
+html[data-theme="dark"] .main-content div.highlighter-rouge .s1,
+html[data-theme="dark"] .main-content div.highlighter-rouge .s2,
+html[data-theme="dark"] .main-content div.highlighter-rouge .sr,
+html[data-theme="dark"] .main-content div.highlighter-rouge .sa,
+html[data-theme="dark"] .main-content div.highlighter-rouge .dl {
+  color: #a7f3d0 !important;
+}
+
+html[data-theme="dark"] .main-content div.highlighter-rouge .mi,
+html[data-theme="dark"] .main-content div.highlighter-rouge .mf,
+html[data-theme="dark"] .main-content div.highlighter-rouge .il {
+  color: #f9d97b !important;
+}
+
+html[data-theme="dark"] .main-content div.highlighter-rouge .c,
+html[data-theme="dark"] .main-content div.highlighter-rouge .c1,
+html[data-theme="dark"] .main-content div.highlighter-rouge .cm,
+html[data-theme="dark"] .main-content div.highlighter-rouge .cp,
+html[data-theme="dark"] .main-content div.highlighter-rouge .cs {
+  color: #7f8ea3 !important;
+}
+
+.main-content :not(pre) > code {
+  padding: 0.18rem 0.42rem !important;
+  border: 1px solid var(--am-code-border) !important;
+  border-radius: 8px !important;
+  background: var(--am-code-inline-bg) !important;
+  color: var(--am-code-text) !important;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace !important;
+  font-size: 0.88em !important;
+  white-space: normal !important;
+}
+
+.main-content pre::-webkit-scrollbar,
+.main-content .highlight pre::-webkit-scrollbar,
+.main-content .highlighter-rouge pre::-webkit-scrollbar {
+  height: 10px;
+}
+
+.main-content pre::-webkit-scrollbar-thumb,
+.main-content .highlight pre::-webkit-scrollbar-thumb,
+.main-content .highlighter-rouge pre::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(125, 139, 160, 0.45);
+}
+
+.main-content pre::-webkit-scrollbar-track,
+.main-content .highlight pre::-webkit-scrollbar-track,
+.main-content .highlighter-rouge pre::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html[data-theme="dark"] .main-content pre,
+html[data-theme="dark"] .main-content .highlight pre,
+html[data-theme="dark"] .main-content .highlighter-rouge pre {
+  box-shadow: none !important;
 }
 
