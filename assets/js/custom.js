@@ -269,6 +269,7 @@
       const query = searchInput ? searchInput.value.trim().toLowerCase() : "";
       const sections = document.querySelectorAll(".l3-section");
       const emptyState = document.getElementById("l3-empty");
+      const hasExplicitTopic = !!activeFilter;
       let totalVisible = 0;
 
       sections.forEach((section) => {
@@ -286,7 +287,7 @@
           const title = post.getAttribute("data-title") || "";
           const body = post.getAttribute("data-body") || "";
           const haystack = `${topic} ${domain} ${track} ${subtrack} ${title} ${body}`.toLowerCase();
-          const matchesTopic = selectedTopic === "all" || topic === selectedTopic;
+          const matchesTopic = hasExplicitTopic && topic === selectedTopic;
           const matchesQuery = !query || haystack.includes(query);
           const show = matchesTopic && matchesQuery;
 
@@ -306,7 +307,12 @@
         totalVisible += sectionVisible;
       });
 
-      if (emptyState) emptyState.hidden = totalVisible !== 0;
+      if (emptyState) {
+        emptyState.hidden = totalVisible !== 0;
+        emptyState.textContent = hasExplicitTopic
+          ? "No matching learning notes found."
+          : "Select topics to continue.";
+      }
     }
 
     const learningFilters = document.getElementById("l3-topic-filters");
