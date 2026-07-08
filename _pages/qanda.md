@@ -132,6 +132,46 @@ isPost: false
     {% endfor %}
   </section>
 
+  <section class="qanda-section" id="business-posts" aria-labelledby="business-title">
+    <div class="qanda-section-header">
+      <p class="qanda-section-kicker">Biz</p>
+      <h2 id="business-title">Business</h2>
+    </div>
+
+    {% assign displayed_business_types = "" %}
+    {% for post in site.posts %}
+      {% if post.type contains 'business-skills' %}
+        {% assign display_topic = post["sub-topic"] | default: post.topic %}
+        {% assign display_key = post.topic | append: "::" | append: display_topic %}
+        {% unless displayed_business_types contains display_key %}
+          <h3 class="topic-header" data-topic="{{ post.topic }}" data-subtopic="{{ display_topic }}">{{ display_topic }}</h3>
+          {% assign displayed_business_types = displayed_business_types | append: display_key | append: "," %}
+        {% endunless %}
+        <div
+          class="question-entry"
+          data-topic="{{ post.topic }}"
+          data-subtopic="{{ display_topic }}"
+          data-title="{{ post.title | escape }}"
+          data-question="{{ post.question | escape }}"
+          data-answer="{{ post.answer | strip_html | strip_newlines | escape }}"
+        >
+          <button type="button" class="collapsible">
+            <span class="collapsible-content-header">{{ post.title }}</span>
+          </button>
+          <div class="collapsible-content">
+            <div class="answer-entry">
+              <h3>Question</h3>
+              {{ post.question }}
+              <h3>Answer</h3>
+              {{ post.answer | markdownify }}
+              <p><small>Date Added: {{ post.date | date: "%d %B %Y" }}</small></p>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </section>
+
   <section class="qanda-section" id="technical-skills-posts" aria-labelledby="technical-skills-title">
     <div class="qanda-section-header">
       <p class="qanda-section-kicker">Techies</p>
