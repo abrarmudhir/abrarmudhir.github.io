@@ -196,9 +196,48 @@
     // ============================================
     // 4) Topic filters (Q&A) (bind once)
     // ============================================
+    function setQandaMenuState(toggle, panel, expanded) {
+      if (!toggle || !panel) return;
+      toggle.setAttribute("aria-expanded", String(expanded));
+      panel.hidden = !expanded;
+    }
+
+    function syncQandaSubtopicMenu() {
+      const topicFilters = document.getElementById("topic-filters");
+      const subtopicMenu = document.getElementById("qanda-subtopic-filter");
+      const subtopicToggle = document.getElementById("qanda-subtopic-toggle");
+      const subtopicPanel = document.getElementById("qanda-subtopic-panel");
+      if (!topicFilters || !subtopicMenu || !subtopicToggle || !subtopicPanel) return;
+
+      const activeTopic = topicFilters.querySelector("[data-topic].is-active");
+      const selectedTopic = activeTopic ? activeTopic.getAttribute("data-topic") : "all";
+      const subtopicButtons = subtopicPanel.querySelectorAll("[data-subtopic]");
+      let hasVisibleSubtopics = false;
+
+      subtopicButtons.forEach((button) => {
+        const parentTopic = button.getAttribute("data-parent-topic") || "all";
+        const isAllButton = button.getAttribute("data-subtopic") === "all";
+        const show = isAllButton
+          ? selectedTopic !== "all"
+          : selectedTopic !== "all" && parentTopic === selectedTopic;
+
+        button.hidden = !show;
+        if (!isAllButton && show) hasVisibleSubtopics = true;
+      });
+
+      subtopicMenu.hidden = !(selectedTopic !== "all" && hasVisibleSubtopics);
+      if (subtopicMenu.hidden) {
+        setQandaMenuState(subtopicToggle, subtopicPanel, false);
+      }
+    }
+
     function filterQanda() {
-      const activeFilter = document.querySelector("#topic-filters [data-topic].is-active");
-      const selectedTopic = activeFilter ? activeFilter.getAttribute("data-topic") : "all";
+      const activeTopicFilter = document.querySelector("#topic-filters [data-topic].is-active");
+      const activeSubtopicFilter = document.querySelector("#qanda-subtopic-panel [data-subtopic].is-active");
+      const selectedTopic = activeTopicFilter ? activeTopicFilter.getAttribute("data-topic") : "all";
+      const selectedSubtopic = activeSubtopicFilter
+        ? activeSubtopicFilter.getAttribute("data-subtopic")
+        : "all";
       const searchInput = document.getElementById("qanda-search");
       const query = searchInput ? searchInput.value.trim().toLowerCase() : "";
       const sections = document.querySelectorAll(".qanda-section");
@@ -213,24 +252,28 @@
 
         posts.forEach((post) => {
           const topic = post.getAttribute("data-topic") || "";
+          const subtopic = post.getAttribute("data-subtopic") || "";
           const title = post.getAttribute("data-title") || "";
           const question = post.getAttribute("data-question") || "";
           const answer = post.getAttribute("data-answer") || "";
-          const haystack = `${topic} ${title} ${question} ${answer}`.toLowerCase();
+          const haystack = `${topic} ${subtopic} ${title} ${question} ${answer}`.toLowerCase();
           const matchesTopic = selectedTopic === "all" || topic === selectedTopic;
+          const matchesSubtopic =
+            selectedTopic === "all" || selectedSubtopic === "all" || subtopic === selectedSubtopic;
           const matchesQuery = !query || haystack.includes(query);
-          const show = matchesTopic && matchesQuery;
+          const show = matchesTopic && matchesSubtopic && matchesQuery;
 
           post.hidden = !show;
           if (show) {
-            visibleTopics.add(topic);
+            visibleTopics.add(`${topic}::${subtopic}`);
             sectionVisible += 1;
           }
         });
 
         headers.forEach((header) => {
           const topic = header.getAttribute("data-topic") || "";
-          header.hidden = !visibleTopics.has(topic);
+          const subtopic = header.getAttribute("data-subtopic") || "";
+          header.hidden = !visibleTopics.has(`${topic}::${subtopic}`);
         });
 
         section.hidden = sectionVisible === 0;
@@ -243,6 +286,7 @@
     const topicFilters = document.getElementById("topic-filters");
     if (topicFilters && topicFilters.dataset.amBound !== "1") {
       topicFilters.dataset.amBound = "1";
+      const subtopicPanel = document.getElementById("qanda-subtopic-panel");
 
       topicFilters.querySelectorAll("a[data-topic]").forEach((badge) => {
         badge.addEventListener("click", function (event) {
@@ -250,15 +294,71 @@
           topicFilters.querySelectorAll("[data-topic]").forEach((item) => {
             item.classList.toggle("is-active", item === this);
           });
+          if (subtopicPanel) {
+            subtopicPanel.querySelectorAll("[data-subtopic]").forEach((item) => {
+              item.classList.toggle("is-active", item.getAttribute("data-subtopic") === "all");
+            });
+          }
+          syncQandaSubtopicMenu();
           filterQanda();
         });
       });
+    }
+
+    const qandaSubtopicMenu = document.getElementById("qanda-subtopic-filter");
+    if (qandaSubtopicMenu && qandaSubtopicMenu.dataset.amBound !== "1") {
+      qandaSubtopicMenu.dataset.amBound = "1";
+      const subtopicToggle = document.getElementById("qanda-subtopic-toggle");
+      const subtopicPanel = document.getElementById("qanda-subtopic-panel");
+
+      if (subtopicPanel) {
+        subtopicPanel.querySelectorAll("[data-subtopic]").forEach((badge) => {
+          badge.addEventListener("click", function () {
+            subtopicPanel.querySelectorAll("[data-subtopic]").forEach((item) => {
+              item.classList.toggle("is-active", item === this);
+            });
+            setQandaMenuState(subtopicToggle, subtopicPanel, false);
+            filterQanda();
+          });
+        });
+      }
+
+      if (!document.__am_qanda_menu_bound) {
+        document.__am_qanda_menu_bound = true;
+
+        document.addEventListener("click", function (event) {
+          const toggle = event.target.closest("#qanda-subtopic-toggle");
+          const currentToggle = document.getElementById("qanda-subtopic-toggle");
+          const currentPanel = document.getElementById("qanda-subtopic-panel");
+          const currentMenu = document.getElementById("qanda-subtopic-filter");
+
+          if (toggle) {
+            event.preventDefault();
+            if (!currentToggle || !currentPanel || !currentMenu || currentMenu.hidden) return;
+            const next = toggle.getAttribute("aria-expanded") !== "true";
+            setQandaMenuState(currentToggle, currentPanel, next);
+            return;
+          }
+
+          if (
+            currentToggle &&
+            currentPanel &&
+            currentToggle.getAttribute("aria-expanded") === "true" &&
+            !event.target.closest("#qanda-subtopic-filter")
+          ) {
+            setQandaMenuState(currentToggle, currentPanel, false);
+          }
+        });
+      }
+
+      syncQandaSubtopicMenu();
     }
 
     const qandaSearch = document.getElementById("qanda-search");
     if (qandaSearch && qandaSearch.dataset.amBound !== "1") {
       qandaSearch.dataset.amBound = "1";
       qandaSearch.addEventListener("input", filterQanda);
+      syncQandaSubtopicMenu();
       filterQanda();
     }
 
