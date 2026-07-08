@@ -27,7 +27,7 @@ isPost: false
       <a href="#" class="qanda-filter is-active" data-topic="all">All Topics</a>
       {% assign unique_topics = "" %}
       {% for post in site.posts %}
-        {% if post.topic %}
+        {% if post.categories contains 'qanda' and post.topic %}
           {% unless unique_topics contains post.topic %}
             <a href="#" class="qanda-filter" data-topic="{{ post.topic }}">{{ post.topic }}</a>
             {% assign unique_topics = unique_topics | append: post.topic | append: "," %}
@@ -35,6 +35,40 @@ isPost: false
         {% endif %}
       {% endfor %}
     </nav>
+
+    <div id="qanda-subtopic-filter" class="l3-filter-menu qanda-subtopic-menu" hidden>
+      <button
+        type="button"
+        class="qanda-filter l3-filter-menu-toggle"
+        id="qanda-subtopic-toggle"
+        aria-expanded="false"
+        aria-controls="qanda-subtopic-panel"
+      >
+        Subtopics
+      </button>
+      <div id="qanda-subtopic-panel" class="l3-filter-menu-panel" hidden>
+        <button type="button" class="qanda-filter is-active" data-subtopic="all" data-parent-topic="all">
+          All Subtopics
+        </button>
+        {% assign unique_subtopic_keys = "|" %}
+        {% for post in site.posts %}
+          {% if post.categories contains 'qanda' and post.topic and post["sub-topic"] %}
+            {% assign subtopic_key = "|" | append: post.topic | append: "::" | append: post["sub-topic"] | append: "|" %}
+            {% unless unique_subtopic_keys contains subtopic_key %}
+              <button
+                type="button"
+                class="qanda-filter"
+                data-subtopic="{{ post["sub-topic"] }}"
+                data-parent-topic="{{ post.topic }}"
+              >
+                {{ post["sub-topic"] }}
+              </button>
+              {% assign unique_subtopic_keys = unique_subtopic_keys | append: post.topic | append: "::" | append: post["sub-topic"] | append: "|" %}
+            {% endunless %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
   </div>
 
   <section class="qanda-section" id="soft-skills-posts" aria-labelledby="soft-skills-title">
@@ -46,11 +80,20 @@ isPost: false
     {% assign displayed_types = "" %}
     {% for post in site.posts %}
       {% if post.type contains 'soft-skills' %}
-        {% unless displayed_types contains post.topic %}
-          <h3 class="topic-header" data-topic="{{ post.topic }}">{{ post.topic }}</h3>
-          {% assign displayed_types = displayed_types | append: post.topic | append: "," %}
+        {% assign display_topic = post["sub-topic"] | default: post.topic %}
+        {% assign display_key = post.topic | append: "::" | append: display_topic %}
+        {% unless displayed_types contains display_key %}
+          <h3 class="topic-header" data-topic="{{ post.topic }}" data-subtopic="{{ display_topic }}">{{ display_topic }}</h3>
+          {% assign displayed_types = displayed_types | append: display_key | append: "," %}
         {% endunless %}
-        <div class="question-entry" data-topic="{{ post.topic }}" data-title="{{ post.title | escape }}" data-question="{{ post.question | escape }}" data-answer="{{ post.answer | strip_html | strip_newlines | escape }}">
+        <div
+          class="question-entry"
+          data-topic="{{ post.topic }}"
+          data-subtopic="{{ display_topic }}"
+          data-title="{{ post.title | escape }}"
+          data-question="{{ post.question | escape }}"
+          data-answer="{{ post.answer | strip_html | strip_newlines | escape }}"
+        >
           <button type="button" class="collapsible">
             <span class="collapsible-content-header">{{ post.title }}</span>
           </button>
@@ -77,11 +120,20 @@ isPost: false
     {% assign displayed_types = "" %}
     {% for post in site.posts %}
       {% if post.type contains 'technical-skills' %}
-        {% unless displayed_types contains post.topic %}
-          <h3 class="topic-header" data-topic="{{ post.topic }}">{{ post.topic }}</h3>
-          {% assign displayed_types = displayed_types | append: post.topic | append: "," %}
+        {% assign display_topic = post["sub-topic"] | default: post.topic %}
+        {% assign display_key = post.topic | append: "::" | append: display_topic %}
+        {% unless displayed_types contains display_key %}
+          <h3 class="topic-header" data-topic="{{ post.topic }}" data-subtopic="{{ display_topic }}">{{ display_topic }}</h3>
+          {% assign displayed_types = displayed_types | append: display_key | append: "," %}
         {% endunless %}
-        <div class="question-entry" data-topic="{{ post.topic }}" data-title="{{ post.title | escape }}" data-question="{{ post.question | escape }}" data-answer="{{ post.answer | strip_html | strip_newlines | escape }}">
+        <div
+          class="question-entry"
+          data-topic="{{ post.topic }}"
+          data-subtopic="{{ display_topic }}"
+          data-title="{{ post.title | escape }}"
+          data-question="{{ post.question | escape }}"
+          data-answer="{{ post.answer | strip_html | strip_newlines | escape }}"
+        >
           <button type="button" class="collapsible">
             <span class="collapsible-content-header">{{ post.title }}</span>
           </button>

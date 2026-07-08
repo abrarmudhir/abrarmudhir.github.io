@@ -1,0 +1,110 @@
+---
+layout: default
+---
+{% assign resolved_title = page.title | default: page.company | default: page.question %}
+{% assign rendered_content = content | strip %}
+
+<article class="am-post">
+  <header class="am-post-header">
+    <h1>{{ resolved_title }}</h1>
+    {% if page.date %}
+      <p><small>{{ page.date | date: "%d %B %Y" }}</small></p>
+    {% endif %}
+  </header>
+
+  {% if page.question %}
+    <section class="am-post-section">
+      <h2>Question</h2>
+      <p>{{ page.question }}</p>
+    </section>
+  {% endif %}
+
+  {% if page.answer %}
+    <section class="am-post-section">
+      <h2>Answer</h2>
+      {{ page.answer | markdownify }}
+    </section>
+  {% endif %}
+
+  {% if page.overview %}
+    <section class="am-post-section">
+      <h2>Overview</h2>
+      <p>{{ page.overview }}</p>
+    </section>
+  {% endif %}
+
+  {% if page.about %}
+    <section class="am-post-section">
+      <h2>About</h2>
+      {{ page.about | markdownify }}
+    </section>
+  {% endif %}
+
+  {% if page.company or page.location or page.website or page.linkedin or page.careers or page.companies-house or page.founded or page.ceo or page.tech-stack or page.industry or page.size or page.specialties %}
+    <section class="am-post-section">
+      <h2>Details</h2>
+      <dl>
+        {% if page.company %}
+          <dt>Company</dt>
+          <dd>{{ page.company }}</dd>
+        {% endif %}
+        {% if page.location %}
+          <dt>Location</dt>
+          <dd>{{ page.location }}</dd>
+        {% endif %}
+        {% if page.website %}
+          <dt>Website</dt>
+          <dd><a href="{{ page.website }}">{{ page.website }}</a></dd>
+        {% endif %}
+        {% if page.linkedin %}
+          <dt>LinkedIn</dt>
+          <dd><a href="{{ page.linkedin }}">{{ page.linkedin }}</a></dd>
+        {% endif %}
+        {% if page.careers %}
+          <dt>Careers</dt>
+          <dd><a href="{{ page.careers }}">{{ page.careers }}</a></dd>
+        {% endif %}
+        {% if page.companies-house %}
+          <dt>Companies House</dt>
+          <dd><a href="{{ page.companies-house }}">{{ page.companies-house }}</a></dd>
+        {% endif %}
+        {% if page.founded %}
+          <dt>Founded</dt>
+          <dd>{{ page.founded }}</dd>
+        {% endif %}
+        {% if page.ceo %}
+          <dt>CEO</dt>
+          <dd>
+            {% if page.ceo-link %}
+              <a href="{{ page.ceo-link }}">{{ page.ceo }}</a>
+            {% else %}
+              {{ page.ceo }}
+            {% endif %}
+          </dd>
+        {% endif %}
+        {% if page.industry %}
+          <dt>Industry</dt>
+          <dd>{{ page.industry }}</dd>
+        {% endif %}
+        {% if page.size %}
+          <dt>Size</dt>
+          <dd>{{ page.size }}</dd>
+        {% endif %}
+        {% if page.tech-stack %}
+          <dt>Tech Stack</dt>
+          <dd>{{ page.tech-stack }}</dd>
+        {% endif %}
+        {% if page.specialties %}
+          <dt>Specialties</dt>
+          <dd>{{ page.specialties }}</dd>
+        {% endif %}
+      </dl>
+    </section>
+  {% endif %}
+
+  {% if rendered_content != "" %}
+    <section class="am-post-section">
+      {{ content }}
+    </section>
+  {% endif %}
+</article>
