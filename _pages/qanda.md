@@ -25,13 +25,21 @@ isPost: false
 
     <nav id="topic-filters" class="qanda-topic-filters" aria-label="Topic filters">
       <a href="#" class="qanda-filter is-active" data-topic="all">All Topics</a>
-      {% assign unique_topics = "" %}
+      {% assign rendered_topics = "|" %}
+      {% assign qanda_topics_csv = "" %}
       {% for post in site.posts %}
-        {% if post.categories contains 'qanda' and post.topic %}
-          {% unless unique_topics contains post.topic %}
-            <a href="#" class="qanda-filter" data-topic="{{ post.topic }}">{{ post.topic }}</a>
-            {% assign unique_topics = unique_topics | append: post.topic | append: "," %}
+        {% if post.topic %}
+          {% assign topic_key = "|" | append: post.topic | append: "|" %}
+          {% unless rendered_topics contains topic_key %}
+            {% assign qanda_topics_csv = qanda_topics_csv | append: post.topic | append: "|" %}
+            {% assign rendered_topics = rendered_topics | append: post.topic | append: "|" %}
           {% endunless %}
+        {% endif %}
+      {% endfor %}
+      {% assign qanda_topics = qanda_topics_csv | split: "|" | sort %}
+      {% for topic in qanda_topics %}
+        {% if topic != "" %}
+          <a href="#" class="qanda-filter" data-topic="{{ topic }}">{{ topic }}</a>
         {% endif %}
       {% endfor %}
     </nav>
