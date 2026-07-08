@@ -28,7 +28,7 @@ isPost: false
       {% assign rendered_topics = "|" %}
       {% assign qanda_topics_csv = "" %}
       {% for post in site.posts %}
-        {% if post.topic %}
+        {% if post.categories contains 'qanda' and post.topic %}
           {% assign topic_key = "|" | append: post.topic | append: "|" %}
           {% unless rendered_topics contains topic_key %}
             {% assign qanda_topics_csv = qanda_topics_csv | append: post.topic | append: "|" %}
