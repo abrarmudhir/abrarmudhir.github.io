@@ -5,6 +5,7 @@ location: 'Muscat, Oman'
 date: 2026-08-10
 website: 'https://oia.gov.om/en'
 linkedin: 'https://www.linkedin.com/company/oman-investment-authority'
+careers: 'https://oia.gov.om/en/careers'
 overview: >-
       Oman’s sovereign wealth fund, responsible for managing, investing, and growing the Sultanate’s assets locally and internationally.
 about: >-
