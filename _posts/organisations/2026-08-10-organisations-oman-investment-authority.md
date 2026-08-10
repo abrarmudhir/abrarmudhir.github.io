@@ -2,7 +2,7 @@
 layout: post
 company: 'Oman Investment Authority'
 location: 'Muscat, Oman'
-date: 2026-08-11
+date: 2026-08-10
 website: 'https://oia.gov.om/en'
 linkedin: 'https://www.linkedin.com/company/oman-investment-authority'
 overview: >-
