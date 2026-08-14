@@ -18,7 +18,7 @@ about: >-
       Its careers site describes a mission to bring people, passions, and places together, with product, technology, commercial, and operational teams serving travellers, businesses, and communities around the world.<br /><br />
 founded: 2000
 ceo: Matt Goldberg
-ceo-link: https://tripadvisor.mediaroom.com/uk-about-us
+ceo-link: https://www.linkedin.com/in/mattgoldberg01/
 tech-stack: >-
       Web and Mobile Platforms, Search, Recommendations, User-generated Content, Marketplace Technology, Data Analytics, Machine Learning, Cloud Infrastructure, APIs, Trust and Safety Systems
 categories: organisations
