@@ -19,7 +19,7 @@ about: >-
       Sky's technology and data teams support consumer platforms, connectivity services, content production, advertising, product development, and business operations. Its careers materials describe an inclusive environment where media, technology, and customer teams work together to create new products and experiences.<br /><br />
 founded: 1989
 ceo: Dana Strong CBE
-ceo-link: https://skygroup.sky/about/our-company/leadership/dana-strong
+ceo-link: https://www.linkedin.com/in/dana-strong-sky/
 tech-stack: >-
       Streaming Platforms, Connected TV, Broadband Infrastructure, Mobile Services, Cloud Computing, Data Infrastructure, AI, Content Delivery, Digital Advertising, Customer Data Platforms
 categories: organisations
