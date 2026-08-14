@@ -17,7 +17,7 @@ about: >-
       The Open Home Foundation's work spans open-source software, device connectivity, community development, product and UX, ecosystem partnerships, privacy advocacy, and smart-home sustainability.<br /><br />
 founded: 2024
 ceo: Paulus Schoutsen (President)
-ceo-link: https://www.openhomefoundation.org/about/
+ceo-link: https://www.linkedin.com/in/schoutsen/
 tech-stack: >-
       Python, Home Assistant, ESPHome, Open Source, Local APIs, Matter, Zigbee, Z-Wave, MQTT, Voice Assistants, Smart Home Protocols, IoT Integrations
 categories: organisations
