@@ -816,6 +816,11 @@ html[data-theme="dark"] .company-facts-links a:focus {
   font-weight: 600;
 }
 
+.organisations-filter input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.72;
+}
+
 .organisations-filter input:focus,
 .organisations-filter select:focus {
   border-color: var(--am-link);
@@ -840,6 +845,56 @@ html[data-theme="dark"] .company-facts-links a:focus {
   color: var(--am-text-muted);
   font-size: 0.9rem;
   line-height: 1.4;
+}
+
+.organisations-letter-filter {
+  display: grid;
+  grid-column: 1 / -1;
+  gap: 8px;
+}
+
+.organisations-letter-filter > span {
+  color: var(--am-text-muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.organisations-letter-filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.organisations-letter-filter-button {
+  min-width: 36px;
+  min-height: 36px;
+  padding: 6px 9px;
+  border: 1px solid rgba(6, 193, 255, 0.18);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--am-text);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 800;
+  line-height: 1;
+  transition: background-color 0.16s ease, border-color 0.16s ease, color 0.16s ease, transform 0.16s ease;
+}
+
+.organisations-letter-filter-button:hover,
+.organisations-letter-filter-button:focus-visible {
+  border-color: var(--am-link);
+  background: rgba(6, 193, 255, 0.1);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.organisations-letter-filter-button.is-active {
+  border-color: var(--am-link);
+  background: var(--am-link);
+  color: #fff;
 }
 
 html[data-theme="dark"] .organisations-controls {
@@ -888,6 +943,27 @@ html[data-theme="dark"] .organisations-filter input {
 
 html[data-theme="dark"] .organisations-filter input::placeholder {
   color: rgba(199, 213, 227, 0.72);
+}
+
+html[data-theme="dark"] .organisations-letter-filter-button {
+  border-color: rgba(88, 199, 255, 0.22);
+  background: #111821;
+}
+
+html[data-theme="dark"] .organisations-letter-filter-button:hover,
+html[data-theme="dark"] .organisations-letter-filter-button:focus-visible {
+  border-color: #58c7ff;
+  background: rgba(88, 199, 255, 0.14);
+}
+
+html[data-theme="dark"] .organisations-letter-filter-button.is-active {
+  border-color: #58c7ff;
+  background: #0a84b5;
+  color: #fff;
+}
+
+html[data-theme="dark"] .organisations-filter input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
 }
 
 html[data-theme="dark"] .organisations-filter input:hover,

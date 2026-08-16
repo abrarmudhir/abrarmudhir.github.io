@@ -34,12 +34,28 @@ isPost: false
       </label>
       <label class="organisations-filter" for="date-filter">
         <span>Date Added</span>
+        <input id="date-filter" type="date">
+      </label>
+      <label class="organisations-filter" for="sort-filter">
+        <span>Sort by</span>
         <div class="organisations-filter-select-wrap">
-          <select id="date-filter">
-            <option value="all">All dates</option>
+          <select id="sort-filter">
+            <option value="date">Date Added</option>
+            <option value="name">Name</option>
+            <option value="industry">Industry</option>
           </select>
         </div>
       </label>
+      <div class="organisations-letter-filter" aria-label="Filter organisations by first letter">
+        <span>Filter Names</span>
+        <div class="organisations-letter-filter-options" role="group" aria-label="Organisation first letter">
+          <button type="button" class="organisations-letter-filter-button is-active" data-letter="all" aria-pressed="true">All</button>
+          {% assign alphabet = "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z" | split: "," %}
+          {% for letter in alphabet %}
+            <button type="button" class="organisations-letter-filter-button" data-letter="{{ letter | downcase }}" aria-pressed="false">{{ letter }}</button>
+          {% endfor %}
+        </div>
+      </div>
       <p class="organisations-filter-status" id="industry-filter-status">Showing all organisations</p>
     </div>
   </header>
@@ -112,26 +128,22 @@ isPost: false
     const nameFilter = document.getElementById("name-filter");
     const industryFilter = document.getElementById("industry-filter");
     const dateFilter = document.getElementById("date-filter");
+    const sortFilter = document.getElementById("sort-filter");
     const status = document.getElementById("industry-filter-status");
 
-    if (!nameFilter || !industryFilter || !dateFilter || !status) return;
+    if (!nameFilter || !industryFilter || !dateFilter || !sortFilter || !status) return;
 
     const entries = Array.from(document.querySelectorAll(".organisation-entry"));
+    const entriesContainer = document.querySelector(".am-list-page");
+    const letterButtons = Array.from(document.querySelectorAll(".organisations-letter-filter-button"));
+    let selectedLetter = "all";
     const industries = new Map();
-    const dates = new Map();
-
     entries.forEach((entry) => {
       const industryValue = entry.dataset.industry;
       const industryLabel = entry.dataset.industryLabel;
-      const dateValue = entry.dataset.date;
-      const dateLabel = entry.dataset.dateLabel;
 
       if (industryValue && industryLabel && !industries.has(industryValue)) {
         industries.set(industryValue, industryLabel);
-      }
-
-      if (dateValue && dateLabel && !dates.has(dateValue)) {
-        dates.set(dateValue, dateLabel);
       }
     });
 
@@ -144,14 +156,17 @@ isPost: false
         industryFilter.appendChild(option);
       });
 
-    Array.from(dates.entries())
-      .sort((a, b) => b[0].localeCompare(a[0]))
-      .forEach(([value, label]) => {
-        const option = document.createElement("option");
-        option.value = value;
-        option.textContent = label;
-        dateFilter.appendChild(option);
+    const sortEntries = () => {
+      const sortBy = sortFilter.value;
+      const sortedEntries = [...entries].sort((a, b) => {
+        if (sortBy === "date") return (b.dataset.date || "").localeCompare(a.dataset.date || "");
+        if (sortBy === "name") return (a.dataset.company || "").localeCompare(b.dataset.company || "");
+        return (a.dataset.industryLabel || "").localeCompare(b.dataset.industryLabel || "")
+          || (a.dataset.company || "").localeCompare(b.dataset.company || "");
       });
+
+      sortedEntries.forEach((entry) => entriesContainer.appendChild(entry));
+    };
 
     const updateFilter = () => {
       const query = nameFilter.value.trim().toLowerCase();
@@ -161,15 +176,16 @@ isPost: false
 
       entries.forEach((entry) => {
         const matchesIndustry = selectedIndustry === "all" || entry.dataset.industry === selectedIndustry;
-        const matchesDate = selectedDate === "all" || entry.dataset.date === selectedDate;
+        const matchesDate = selectedDate === "" || entry.dataset.date === selectedDate;
         const companyName = entry.dataset.company || "";
         const matchesName = query === "" || companyName.includes(query);
-        const matches = matchesIndustry && matchesDate && matchesName;
+        const matchesLetter = selectedLetter === "all" || companyName.startsWith(selectedLetter);
+        const matches = matchesIndustry && matchesDate && matchesName && matchesLetter;
         entry.hidden = !matches;
         if (matches) visibleCount += 1;
       });
 
-      if (selectedIndustry === "all" && selectedDate === "all" && query === "") {
+      if (selectedIndustry === "all" && selectedDate === "" && query === "" && selectedLetter === "all") {
         status.textContent = `Showing all organisations (${visibleCount})`;
         return;
       }
@@ -178,9 +194,15 @@ isPost: false
       if (selectedIndustry !== "all") {
         filters.push(`in ${industryFilter.options[industryFilter.selectedIndex]?.textContent || "the selected industry"}`);
       }
-      if (selectedDate !== "all") {
-        filters.push(`added on ${dateFilter.options[dateFilter.selectedIndex]?.textContent || "the selected date"}`);
+      if (selectedDate) {
+        const dateLabel = new Intl.DateTimeFormat("en-GB", {
+          day: "2-digit",
+          month: "long",
+          year: "numeric"
+        }).format(new Date(`${selectedDate}T00:00:00`));
+        filters.push(`added on ${dateLabel}`);
       }
+      if (selectedLetter !== "all") filters.push(`starting with ${selectedLetter.toUpperCase()}`);
       if (query) filters.push(`matching "${query}"`);
 
       status.textContent = `Showing ${visibleCount} organisation${visibleCount === 1 ? "" : "s"} ${filters.join(" and ")}`;
@@ -188,7 +210,23 @@ isPost: false
 
     industryFilter.addEventListener("change", updateFilter);
     dateFilter.addEventListener("change", updateFilter);
+    sortFilter.addEventListener("change", function () {
+      sortEntries();
+      updateFilter();
+    });
+    letterButtons.forEach((button) => {
+      button.addEventListener("click", function () {
+        selectedLetter = button.dataset.letter || "all";
+        letterButtons.forEach((item) => {
+          const isActive = item === button;
+          item.classList.toggle("is-active", isActive);
+          item.setAttribute("aria-pressed", String(isActive));
+        });
+        updateFilter();
+      });
+    });
     nameFilter.addEventListener("input", updateFilter);
+    sortEntries();
     updateFilter();
   });
 </script>
