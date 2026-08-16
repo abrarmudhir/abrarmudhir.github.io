@@ -18,7 +18,7 @@ isPost: false
     <div class="organisations-controls" aria-label="Organisation filters">
       <div class="organisations-controls-copy">
         <p class="organisations-controls-eyebrow">Browse by sector</p>
-        <p class="organisations-controls-title">Filter organisations by industry or search by name</p>
+        <p class="organisations-controls-title">Filter organisations by industry or date added, or search by name</p>
       </div>
       <label class="organisations-filter" for="name-filter">
         <span>Name</span>
@@ -32,6 +32,14 @@ isPost: false
           </select>
         </div>
       </label>
+      <label class="organisations-filter" for="date-filter">
+        <span>Date Added</span>
+        <div class="organisations-filter-select-wrap">
+          <select id="date-filter">
+            <option value="all">All dates</option>
+          </select>
+        </div>
+      </label>
       <p class="organisations-filter-status" id="industry-filter-status">Showing all organisations</p>
     </div>
   </header>
@@ -40,7 +48,7 @@ isPost: false
     {% for post in site.posts %}
       {% if post.categories contains 'organisations' %}
         {% unless post.categories contains 'organisations-hidden' %}
-          <div class="organisation-entry" data-industry="{{ post.industry | slugify }}" data-industry-label="{{ post.industry | escape }}" data-company="{{ post.company | downcase | escape }}">
+          <div class="organisation-entry" data-industry="{{ post.industry | slugify }}" data-industry-label="{{ post.industry | escape }}" data-date="{{ post.date | date: '%Y-%m-%d' }}" data-date-label="{{ post.date | date: '%d %B %Y' }}" data-company="{{ post.company | downcase | escape }}">
             <button type="button" class="collapsible">
               <span class="collapsible-content-header">
                 <span>
@@ -102,20 +110,28 @@ isPost: false
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const nameFilter = document.getElementById("name-filter");
-    const filter = document.getElementById("industry-filter");
+    const industryFilter = document.getElementById("industry-filter");
+    const dateFilter = document.getElementById("date-filter");
     const status = document.getElementById("industry-filter-status");
 
-    if (!nameFilter || !filter || !status) return;
+    if (!nameFilter || !industryFilter || !dateFilter || !status) return;
 
     const entries = Array.from(document.querySelectorAll(".organisation-entry"));
     const industries = new Map();
+    const dates = new Map();
 
     entries.forEach((entry) => {
-      const value = entry.dataset.industry;
-      const label = entry.dataset.industryLabel;
+      const industryValue = entry.dataset.industry;
+      const industryLabel = entry.dataset.industryLabel;
+      const dateValue = entry.dataset.date;
+      const dateLabel = entry.dataset.dateLabel;
 
-      if (value && label && !industries.has(value)) {
-        industries.set(value, label);
+      if (industryValue && industryLabel && !industries.has(industryValue)) {
+        industries.set(industryValue, industryLabel);
+      }
+
+      if (dateValue && dateLabel && !dates.has(dateValue)) {
+        dates.set(dateValue, dateLabel);
       }
     });
 
@@ -125,40 +141,53 @@ isPost: false
         const option = document.createElement("option");
         option.value = value;
         option.textContent = label;
-        filter.appendChild(option);
+        industryFilter.appendChild(option);
+      });
+
+    Array.from(dates.entries())
+      .sort((a, b) => b[0].localeCompare(a[0]))
+      .forEach(([value, label]) => {
+        const option = document.createElement("option");
+        option.value = value;
+        option.textContent = label;
+        dateFilter.appendChild(option);
       });
 
     const updateFilter = () => {
       const query = nameFilter.value.trim().toLowerCase();
-      const selected = filter.value;
+      const selectedIndustry = industryFilter.value;
+      const selectedDate = dateFilter.value;
       let visibleCount = 0;
 
       entries.forEach((entry) => {
-        const matchesIndustry = selected === "all" || entry.dataset.industry === selected;
+        const matchesIndustry = selectedIndustry === "all" || entry.dataset.industry === selectedIndustry;
+        const matchesDate = selectedDate === "all" || entry.dataset.date === selectedDate;
         const companyName = entry.dataset.company || "";
         const matchesName = query === "" || companyName.includes(query);
-        const matches = matchesIndustry && matchesName;
+        const matches = matchesIndustry && matchesDate && matchesName;
         entry.hidden = !matches;
         if (matches) visibleCount += 1;
       });
 
-      if (selected === "all" && query === "") {
+      if (selectedIndustry === "all" && selectedDate === "all" && query === "") {
         status.textContent = `Showing all organisations (${visibleCount})`;
         return;
       }
 
-      const selectedLabel = filter.options[filter.selectedIndex]?.textContent || "selected industry";
-      const nameLabel = query ? ` matching "${query}"` : "";
-
-      if (selected === "all") {
-        status.textContent = `Showing ${visibleCount} organisation${visibleCount === 1 ? "" : "s"}${nameLabel}`;
-        return;
+      const filters = [];
+      if (selectedIndustry !== "all") {
+        filters.push(`in ${industryFilter.options[industryFilter.selectedIndex]?.textContent || "the selected industry"}`);
       }
+      if (selectedDate !== "all") {
+        filters.push(`added on ${dateFilter.options[dateFilter.selectedIndex]?.textContent || "the selected date"}`);
+      }
+      if (query) filters.push(`matching "${query}"`);
 
-      status.textContent = `Showing ${visibleCount} organisation${visibleCount === 1 ? "" : "s"} in ${selectedLabel}${nameLabel}`;
+      status.textContent = `Showing ${visibleCount} organisation${visibleCount === 1 ? "" : "s"} ${filters.join(" and ")}`;
     };
 
-    filter.addEventListener("change", updateFilter);
+    industryFilter.addEventListener("change", updateFilter);
+    dateFilter.addEventListener("change", updateFilter);
     nameFilter.addEventListener("input", updateFilter);
     updateFilter();
   });
