@@ -36,6 +36,16 @@ isPost: false
         <span>Date Added</span>
         <input id="date-filter" type="date">
       </label>
+      <label class="organisations-filter" for="sort-filter">
+        <span>Sort by</span>
+        <div class="organisations-filter-select-wrap">
+          <select id="sort-filter">
+            <option value="date">Date Added</option>
+            <option value="name">Name</option>
+            <option value="industry">Industry</option>
+          </select>
+        </div>
+      </label>
       <p class="organisations-filter-status" id="industry-filter-status">Showing all organisations</p>
     </div>
   </header>
@@ -108,11 +118,13 @@ isPost: false
     const nameFilter = document.getElementById("name-filter");
     const industryFilter = document.getElementById("industry-filter");
     const dateFilter = document.getElementById("date-filter");
+    const sortFilter = document.getElementById("sort-filter");
     const status = document.getElementById("industry-filter-status");
 
-    if (!nameFilter || !industryFilter || !dateFilter || !status) return;
+    if (!nameFilter || !industryFilter || !dateFilter || !sortFilter || !status) return;
 
     const entries = Array.from(document.querySelectorAll(".organisation-entry"));
+    const entriesContainer = document.querySelector(".am-list-page");
     const industries = new Map();
     entries.forEach((entry) => {
       const industryValue = entry.dataset.industry;
@@ -131,6 +143,18 @@ isPost: false
         option.textContent = label;
         industryFilter.appendChild(option);
       });
+
+    const sortEntries = () => {
+      const sortBy = sortFilter.value;
+      const sortedEntries = [...entries].sort((a, b) => {
+        if (sortBy === "date") return (b.dataset.date || "").localeCompare(a.dataset.date || "");
+        if (sortBy === "name") return (a.dataset.company || "").localeCompare(b.dataset.company || "");
+        return (a.dataset.industryLabel || "").localeCompare(b.dataset.industryLabel || "")
+          || (a.dataset.company || "").localeCompare(b.dataset.company || "");
+      });
+
+      sortedEntries.forEach((entry) => entriesContainer.appendChild(entry));
+    };
 
     const updateFilter = () => {
       const query = nameFilter.value.trim().toLowerCase();
@@ -172,7 +196,12 @@ isPost: false
 
     industryFilter.addEventListener("change", updateFilter);
     dateFilter.addEventListener("change", updateFilter);
+    sortFilter.addEventListener("change", function () {
+      sortEntries();
+      updateFilter();
+    });
     nameFilter.addEventListener("input", updateFilter);
+    sortEntries();
     updateFilter();
   });
 </script>
