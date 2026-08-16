@@ -816,6 +816,11 @@ html[data-theme="dark"] .company-facts-links a:focus {
   font-weight: 600;
 }
 
+.organisations-filter input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.72;
+}
+
 .organisations-filter input:focus,
 .organisations-filter select:focus {
   border-color: var(--am-link);
@@ -888,6 +893,10 @@ html[data-theme="dark"] .organisations-filter input {
 
 html[data-theme="dark"] .organisations-filter input::placeholder {
   color: rgba(199, 213, 227, 0.72);
+}
+
+html[data-theme="dark"] .organisations-filter input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
 }
 
 html[data-theme="dark"] .organisations-filter input:hover,

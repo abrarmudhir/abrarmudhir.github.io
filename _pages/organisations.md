@@ -34,11 +34,7 @@ isPost: false
       </label>
       <label class="organisations-filter" for="date-filter">
         <span>Date Added</span>
-        <div class="organisations-filter-select-wrap">
-          <select id="date-filter">
-            <option value="all">All dates</option>
-          </select>
-        </div>
+        <input id="date-filter" type="date">
       </label>
       <p class="organisations-filter-status" id="industry-filter-status">Showing all organisations</p>
     </div>
@@ -118,20 +114,12 @@ isPost: false
 
     const entries = Array.from(document.querySelectorAll(".organisation-entry"));
     const industries = new Map();
-    const dates = new Map();
-
     entries.forEach((entry) => {
       const industryValue = entry.dataset.industry;
       const industryLabel = entry.dataset.industryLabel;
-      const dateValue = entry.dataset.date;
-      const dateLabel = entry.dataset.dateLabel;
 
       if (industryValue && industryLabel && !industries.has(industryValue)) {
         industries.set(industryValue, industryLabel);
-      }
-
-      if (dateValue && dateLabel && !dates.has(dateValue)) {
-        dates.set(dateValue, dateLabel);
       }
     });
 
@@ -144,15 +132,6 @@ isPost: false
         industryFilter.appendChild(option);
       });
 
-    Array.from(dates.entries())
-      .sort((a, b) => b[0].localeCompare(a[0]))
-      .forEach(([value, label]) => {
-        const option = document.createElement("option");
-        option.value = value;
-        option.textContent = label;
-        dateFilter.appendChild(option);
-      });
-
     const updateFilter = () => {
       const query = nameFilter.value.trim().toLowerCase();
       const selectedIndustry = industryFilter.value;
@@ -161,7 +140,7 @@ isPost: false
 
       entries.forEach((entry) => {
         const matchesIndustry = selectedIndustry === "all" || entry.dataset.industry === selectedIndustry;
-        const matchesDate = selectedDate === "all" || entry.dataset.date === selectedDate;
+        const matchesDate = selectedDate === "" || entry.dataset.date === selectedDate;
         const companyName = entry.dataset.company || "";
         const matchesName = query === "" || companyName.includes(query);
         const matches = matchesIndustry && matchesDate && matchesName;
@@ -169,7 +148,7 @@ isPost: false
         if (matches) visibleCount += 1;
       });
 
-      if (selectedIndustry === "all" && selectedDate === "all" && query === "") {
+      if (selectedIndustry === "all" && selectedDate === "" && query === "") {
         status.textContent = `Showing all organisations (${visibleCount})`;
         return;
       }
@@ -178,8 +157,13 @@ isPost: false
       if (selectedIndustry !== "all") {
         filters.push(`in ${industryFilter.options[industryFilter.selectedIndex]?.textContent || "the selected industry"}`);
       }
-      if (selectedDate !== "all") {
-        filters.push(`added on ${dateFilter.options[dateFilter.selectedIndex]?.textContent || "the selected date"}`);
+      if (selectedDate) {
+        const dateLabel = new Intl.DateTimeFormat("en-GB", {
+          day: "2-digit",
+          month: "long",
+          year: "numeric"
+        }).format(new Date(`${selectedDate}T00:00:00`));
+        filters.push(`added on ${dateLabel}`);
       }
       if (query) filters.push(`matching "${query}"`);
 
