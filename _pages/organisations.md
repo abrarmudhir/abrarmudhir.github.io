@@ -18,7 +18,7 @@ isPost: false
     <div class="organisations-controls" aria-label="Organisation filters">
       <div class="organisations-controls-copy">
         <p class="organisations-controls-eyebrow">Browse by sector</p>
-        <p class="organisations-controls-title">Filter organisations by industry, location, or date added, or search by name</p>
+        <p class="organisations-controls-title">Filter organisations by industry, headquarters, or date added, or search by name</p>
       </div>
       <label class="organisations-filter" for="name-filter">
         <span>Name</span>
@@ -33,10 +33,10 @@ isPost: false
         </div>
       </label>
       <label class="organisations-filter" for="location-filter">
-        <span>Location</span>
+        <span>Headquarters</span>
         <div class="organisations-filter-select-wrap">
           <select id="location-filter">
-            <option value="all">All locations</option>
+            <option value="all">All headquarters</option>
           </select>
         </div>
       </label>
@@ -221,7 +221,7 @@ isPost: false
         filters.push(`in ${industryFilter.options[industryFilter.selectedIndex]?.textContent || "the selected industry"}`);
       }
       if (selectedLocation !== "all") {
-        filters.push(`located in ${locationFilter.options[locationFilter.selectedIndex]?.textContent || "the selected location"}`);
+        filters.push(`headquartered in ${locationFilter.options[locationFilter.selectedIndex]?.textContent || "the selected headquarters"}`);
       }
       if (selectedDate) {
         const dateLabel = new Intl.DateTimeFormat("en-GB", {
