@@ -18,7 +18,7 @@ isPost: false
     <div class="organisations-controls" aria-label="Organisation filters">
       <div class="organisations-controls-copy">
         <p class="organisations-controls-eyebrow">Browse by sector</p>
-        <p class="organisations-controls-title">Filter organisations by industry or date added, or search by name</p>
+        <p class="organisations-controls-title">Filter organisations by industry, location, or date added, or search by name</p>
       </div>
       <label class="organisations-filter" for="name-filter">
         <span>Name</span>
@@ -29,6 +29,14 @@ isPost: false
         <div class="organisations-filter-select-wrap">
           <select id="industry-filter">
             <option value="all">All industries</option>
+          </select>
+        </div>
+      </label>
+      <label class="organisations-filter" for="location-filter">
+        <span>Location</span>
+        <div class="organisations-filter-select-wrap">
+          <select id="location-filter">
+            <option value="all">All locations</option>
           </select>
         </div>
       </label>
@@ -64,7 +72,7 @@ isPost: false
     {% for post in site.posts %}
       {% if post.categories contains 'organisations' %}
         {% unless post.categories contains 'organisations-hidden' %}
-          <div class="organisation-entry" data-industry="{{ post.industry | slugify }}" data-industry-label="{{ post.industry | escape }}" data-date="{{ post.date | date: '%Y-%m-%d' }}" data-date-label="{{ post.date | date: '%d %B %Y' }}" data-company="{{ post.company | downcase | escape }}">
+          <div class="organisation-entry" data-industry="{{ post.industry | slugify }}" data-industry-label="{{ post.industry | escape }}" data-location="{{ post.location | slugify }}" data-location-label="{{ post.location | escape }}" data-date="{{ post.date | date: '%Y-%m-%d' }}" data-date-label="{{ post.date | date: '%d %B %Y' }}" data-company="{{ post.company | downcase | escape }}">
             <button type="button" class="collapsible">
               <span class="collapsible-content-header">
                 <span>
@@ -127,23 +135,30 @@ isPost: false
   document.addEventListener("DOMContentLoaded", function () {
     const nameFilter = document.getElementById("name-filter");
     const industryFilter = document.getElementById("industry-filter");
+    const locationFilter = document.getElementById("location-filter");
     const dateFilter = document.getElementById("date-filter");
     const sortFilter = document.getElementById("sort-filter");
     const status = document.getElementById("industry-filter-status");
 
-    if (!nameFilter || !industryFilter || !dateFilter || !sortFilter || !status) return;
+    if (!nameFilter || !industryFilter || !locationFilter || !dateFilter || !sortFilter || !status) return;
 
     const entries = Array.from(document.querySelectorAll(".organisation-entry"));
     const entriesContainer = document.querySelector(".am-list-page");
     const letterButtons = Array.from(document.querySelectorAll(".organisations-letter-filter-button"));
     let selectedLetter = "all";
     const industries = new Map();
+    const locations = new Map();
     entries.forEach((entry) => {
       const industryValue = entry.dataset.industry;
       const industryLabel = entry.dataset.industryLabel;
+      const locationValue = entry.dataset.location;
+      const locationLabel = entry.dataset.locationLabel;
 
       if (industryValue && industryLabel && !industries.has(industryValue)) {
         industries.set(industryValue, industryLabel);
+      }
+      if (locationValue && locationLabel && !locations.has(locationValue)) {
+        locations.set(locationValue, locationLabel);
       }
     });
 
@@ -154,6 +169,15 @@ isPost: false
         option.value = value;
         option.textContent = label;
         industryFilter.appendChild(option);
+      });
+
+    Array.from(locations.entries())
+      .sort((a, b) => a[1].localeCompare(b[1]))
+      .forEach(([value, label]) => {
+        const option = document.createElement("option");
+        option.value = value;
+        option.textContent = label;
+        locationFilter.appendChild(option);
       });
 
     const sortEntries = () => {
@@ -171,21 +195,23 @@ isPost: false
     const updateFilter = () => {
       const query = nameFilter.value.trim().toLowerCase();
       const selectedIndustry = industryFilter.value;
+      const selectedLocation = locationFilter.value;
       const selectedDate = dateFilter.value;
       let visibleCount = 0;
 
       entries.forEach((entry) => {
         const matchesIndustry = selectedIndustry === "all" || entry.dataset.industry === selectedIndustry;
+        const matchesLocation = selectedLocation === "all" || entry.dataset.location === selectedLocation;
         const matchesDate = selectedDate === "" || entry.dataset.date === selectedDate;
         const companyName = entry.dataset.company || "";
         const matchesName = query === "" || companyName.includes(query);
         const matchesLetter = selectedLetter === "all" || companyName.startsWith(selectedLetter);
-        const matches = matchesIndustry && matchesDate && matchesName && matchesLetter;
+        const matches = matchesIndustry && matchesLocation && matchesDate && matchesName && matchesLetter;
         entry.hidden = !matches;
         if (matches) visibleCount += 1;
       });
 
-      if (selectedIndustry === "all" && selectedDate === "" && query === "" && selectedLetter === "all") {
+      if (selectedIndustry === "all" && selectedLocation === "all" && selectedDate === "" && query === "" && selectedLetter === "all") {
         status.textContent = `Showing all organisations (${visibleCount})`;
         return;
       }
@@ -193,6 +219,9 @@ isPost: false
       const filters = [];
       if (selectedIndustry !== "all") {
         filters.push(`in ${industryFilter.options[industryFilter.selectedIndex]?.textContent || "the selected industry"}`);
+      }
+      if (selectedLocation !== "all") {
+        filters.push(`located in ${locationFilter.options[locationFilter.selectedIndex]?.textContent || "the selected location"}`);
       }
       if (selectedDate) {
         const dateLabel = new Intl.DateTimeFormat("en-GB", {
@@ -209,6 +238,7 @@ isPost: false
     };
 
     industryFilter.addEventListener("change", updateFilter);
+    locationFilter.addEventListener("change", updateFilter);
     dateFilter.addEventListener("change", updateFilter);
     sortFilter.addEventListener("change", function () {
       sortEntries();
