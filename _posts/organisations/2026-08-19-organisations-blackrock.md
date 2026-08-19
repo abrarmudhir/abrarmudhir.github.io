@@ -3,6 +3,8 @@ layout: post
 company: 'BlackRock'
 location: 'London, England, United Kingdom'
 date: 2026-08-19
+permalink: /organisations/blackrock/
+redirect_from: /organisations/2026/08/19/organisations-blackrock/
 website: 'https://www.blackrock.com/uk'
 linkedin: 'https://www.linkedin.com/company/blackrock/'
 careers: 'https://careers.blackrock.com/'

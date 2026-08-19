@@ -3,6 +3,8 @@ layout: post
 company: 'Uniper'
 location: 'Dusseldorf, Germany'
 date: 2026-06-08
+permalink: /organisations/uniper/
+redirect_from: /organisations/2026/06/08/organisations-uniper/
 website: 'https://www.uniper.energy/'
 linkedin: 'https://www.linkedin.com/company/uniper-se/'
 orgchart: 'https://theorg.com/org/uniper-se'

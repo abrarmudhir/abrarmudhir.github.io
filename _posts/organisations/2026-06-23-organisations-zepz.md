@@ -3,6 +3,8 @@ layout: post
 company: 'Zepz'
 location: 'London, England'
 date: 2026-06-23
+permalink: /organisations/zepz/
+redirect_from: /organisations/2026/06/23/organisations-zepz/
 website: 'https://zepz.io/'
 linkedin: 'https://www.linkedin.com/company/zepzpay'
 careers: 'https://zepz.io/careers/'

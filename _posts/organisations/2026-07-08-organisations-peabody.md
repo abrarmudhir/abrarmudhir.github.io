@@ -3,6 +3,8 @@ layout: post
 company: 'Peabody'
 location: 'London, England'
 date: 2026-07-08
+permalink: /organisations/peabody/
+redirect_from: /organisations/2026/07/08/organisations-peabody/
 website: 'https://www.peabody.org.uk/'
 linkedin: 'https://www.linkedin.com/company/peabody-trust/'
 careers: 'https://careers.peabody.org.uk/v2/jobs'

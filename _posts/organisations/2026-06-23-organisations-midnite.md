@@ -3,6 +3,8 @@ layout: post
 company: 'Midnite'
 location: 'London, England'
 date: 2026-06-23
+permalink: /organisations/midnite/
+redirect_from: /organisations/2026/06/23/organisations-midnite/
 website: 'https://www.midnite.com/'
 careers: 'https://www.midnite.com/jobs'
 overview: >-

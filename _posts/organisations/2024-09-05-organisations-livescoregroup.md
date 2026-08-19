@@ -3,6 +3,8 @@ layout: post
 company: 'LiveScore Group'
 location: 'London, England'
 date: 2024-09-05
+permalink: /organisations/livescoregroup/
+redirect_from: /organisations/2024/09/05/organisations-livescoregroup/
 website: 'https://livescoregroup.com/'
 linkedin: 'https://www.linkedin.com/company/livescoregroup/about/'
 orgchart: 'https://theorg.com/org/livescore'

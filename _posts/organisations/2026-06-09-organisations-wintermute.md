@@ -3,6 +3,8 @@ layout: post
 company: 'Wintermute'
 location: 'London, England'
 date: 2026-06-09
+permalink: /organisations/wintermute/
+redirect_from: /organisations/2026/06/09/organisations-wintermute/
 website: 'https://www.wintermute.com/'
 linkedin: 'https://www.linkedin.com/company/wintermute-trading'
 orgchart: 'https://www.wintermute.com/'

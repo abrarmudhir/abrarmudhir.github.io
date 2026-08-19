@@ -3,6 +3,8 @@ layout: post
 company: 'Mercuria'
 location: 'Geneva, Switzerland'
 date: 2026-06-08
+permalink: /organisations/mercuria/
+redirect_from: /organisations/2026/06/08/organisations-mercuria/
 website: 'https://www.mercuria.com/about-us/at-a-glance/'
 linkedin: 'https://www.linkedin.com/company/mercuria-energy-group'
 orgchart: 'https://theorg.com/org/mercuria'

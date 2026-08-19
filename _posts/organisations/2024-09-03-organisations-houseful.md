@@ -3,6 +3,8 @@ layout: post
 company: 'Houseful Limited'
 location: 'London, England'
 date: 2024-09-03
+permalink: /organisations/houseful/
+redirect_from: /organisations/2024/09/03/organisations-houseful/
 website: 'https://houseful.co.uk/'
 linkedin: 'https://www.linkedin.com/company/housefulgroup/about/'
 orgchart: 'https://theorg.com/org/pay-uk'

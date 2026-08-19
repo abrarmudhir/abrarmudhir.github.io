@@ -3,6 +3,8 @@ layout: post
 company: 'Bloomberg'
 location: 'New York, New York'
 date: 2026-08-14
+permalink: /organisations/bloomberg/
+redirect_from: /organisations/2026/08/14/organisations-bloomberg/
 website: 'https://www.bloomberg.com/'
 linkedin: 'https://www.linkedin.com/company/bloomberg/'
 careers: 'https://www.bloomberg.com/company/careers/'

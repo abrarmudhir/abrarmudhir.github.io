@@ -3,6 +3,8 @@ layout: post
 company: 'Brevan Howard'
 location: 'New York, USA'
 date: 2024-07-29
+permalink: /organisations/brevanhoward-2024/
+redirect_from: /organisations/2024/07/29/organisations-brevanhoward/
 website: 'https://www.brevanhoward.com/'
 overview: >-
       Founded in 2002, Brevan Howard is a leading global alternative investment management platform, 

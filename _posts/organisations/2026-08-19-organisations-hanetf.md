@@ -3,6 +3,8 @@ layout: post
 company: 'HANetf'
 location: 'London, England, United Kingdom'
 date: 2026-08-19
+permalink: /organisations/hanetf/
+redirect_from: /organisations/2026/08/19/organisations-hanetf/
 website: 'https://hanetf.com/'
 linkedin: 'https://www.linkedin.com/company/han-etf'
 careers: 'https://white-label.hanetf.com/careers/'

@@ -3,6 +3,8 @@ layout: post
 company: 'Airfinity'
 location: 'London, England'
 date: 2026-08-11
+permalink: /organisations/airfinity/
+redirect_from: /organisations/2026/08/11/organisations-airfinity/
 website: 'https://www.airfinity.com/'
 linkedin: 'https://www.linkedin.com/company/airfinity-ltd/'
 careers: 'https://www.airfinity.com/careers'

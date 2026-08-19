@@ -76,7 +76,8 @@ isPost: false
             <button type="button" class="collapsible">
               <span class="collapsible-content-header">
                 <span>
-                  <strong><a href="{{ post.website }}" target="_blank">{{ post.company }}</a></strong><br>
+                  <strong><a href="{{ post.website }}" target="_blank">{{ post.company }}</a></strong>
+                  <a class="organisation-expand-button" href="{{ post.url | relative_url }}" aria-label="Open {{ post.company | escape }} in expanded view" title="Open expanded view">↗</a><br>
                   <a href="{{ post.careers }}" target="_blank">Jobs</a>
                 </span>
                 <span>{{ post.date | date: "%d %B %Y" }}</span>

@@ -3,6 +3,8 @@ layout: post
 company: 'Summit Energy Evolution'
 location: 'London, England'
 date: 2026-08-19
+permalink: /organisations/summit-energy-evolution/
+redirect_from: /organisations/2026/08/19/organisations-summit-energy-evolution/
 website: 'https://www.summit-evolution.com/'
 linkedin: 'https://uk.linkedin.com/company/summit-energy-evolution-limited'
 careers: 'https://uk.linkedin.com/company/summit-energy-evolution-limited/jobs/'

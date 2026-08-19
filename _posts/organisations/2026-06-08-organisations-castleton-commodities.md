@@ -3,6 +3,8 @@ layout: post
 company: 'Castleton Commodities'
 location: 'Stamford, Connecticut'
 date: 2026-06-08
+permalink: /organisations/castleton-commodities/
+redirect_from: /organisations/2026/06/08/organisations-castleton-commodities/
 website: 'https://www.cci.com/'
 linkedin: 'https://www.linkedin.com/company/castleton-commodities-international'
 orgchart: 'https://theorg.com/org/cci'

@@ -3,6 +3,8 @@ layout: post
 company: 'Maven Securities'
 location: 'London, England'
 date: 2026-06-09
+permalink: /organisations/maven-securities/
+redirect_from: /organisations/2026/06/09/organisations-maven-securities/
 website: 'https://www.mavensecurities.com/'
 orgchart: 'https://www.mavensecurities.com/about-us/'
 careers: 'https://www.mavensecurities.com/open-positions/'

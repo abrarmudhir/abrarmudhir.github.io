@@ -3,6 +3,8 @@ layout: post
 company: 'Qube Research & Technologies'
 location: 'London, England'
 date: 2026-06-09
+permalink: /organisations/qube-rt/
+redirect_from: /organisations/2026/06/09/organisations-qube-rt/
 website: 'https://www.qube-rt.com/'
 orgchart: 'https://www.qube-rt.com/'
 careers: 'https://www.qube-rt.com/careers/'

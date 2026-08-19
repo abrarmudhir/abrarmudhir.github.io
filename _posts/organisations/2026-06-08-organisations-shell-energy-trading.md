@@ -3,6 +3,8 @@ layout: post
 company: 'Shell Energy Trading'
 location: 'London, England'
 date: 2026-06-08
+permalink: /organisations/shell-energy-trading/
+redirect_from: /organisations/2026/06/08/organisations-shell-energy-trading/
 website: 'https://www.shell.com/business-customers/trading-and-supply.html'
 linkedin: 'https://www.linkedin.com/company/shell'
 orgchart: 'https://theorg.com/org/shell'

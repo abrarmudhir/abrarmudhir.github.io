@@ -3,6 +3,8 @@ layout: post
 company: 'Reactive Markets'
 location: 'London, England, United Kingdom'
 date: 2026-08-18
+permalink: /organisations/reactive-markets/
+redirect_from: /organisations/2026/08/18/organisations-reactive-markets/
 website: 'https://reactivemarkets.com/'
 linkedin: 'https://www.linkedin.com/company/reactivemarkets/'
 orgchart: 'https://www.reactivemarkets.com/team'

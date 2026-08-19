@@ -3,6 +3,8 @@ layout: post
 company: 'Reach PLC'
 location: 'London, England'
 date: 2024-08-20
+permalink: /organisations/reach/
+redirect_from: /organisations/2024/08/20/organisations-reach/
 website: 'https://www.reachplc.com/'
 linkedin: 'https://www.linkedin.com/company/reach-plc/about/'
 orgchart: 'https://theorg.com/org/reachplc'

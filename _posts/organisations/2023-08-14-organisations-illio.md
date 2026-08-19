@@ -3,6 +3,8 @@ layout: post
 company: 'Illio'
 location: 'London, GB'
 date: 2023-08-14
+permalink: /organisations/illio/
+redirect_from: /organisations/2023/08/14/organisations-illio/
 website: 'http://www.illio.com'
 overview: >-
       Wealth Insights that make sense to everyone

@@ -3,6 +3,8 @@ layout: post
 company: 'Tokio Marine'
 location: 'Tokyo, Japan'
 date: 2024-08-09
+permalink: /organisations/tmhcc/
+redirect_from: /organisations/2024/08/09/organisations-tmhcc/
 website: 'https://www.tmhcc.com/en-us'
 overview: >-
       Tokio Marine HCC is a member of the Tokio Marine Group of Companies.

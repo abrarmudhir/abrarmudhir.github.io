@@ -3,6 +3,8 @@ layout: post
 company: 'Standard Life'
 location: 'Birmingham, England'
 date: 2026-08-14
+permalink: /organisations/standard-life/
+redirect_from: /organisations/2026/08/14/organisations-standard-life/
 website: 'https://www.standardlife.co.uk/'
 linkedin: 'https://www.linkedin.com/company/standard-life/'
 careers: 'https://www.standardlifeplc.com/careers'

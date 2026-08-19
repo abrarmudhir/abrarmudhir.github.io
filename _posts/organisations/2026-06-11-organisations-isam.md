@@ -3,6 +3,8 @@ layout: post
 company: 'iSAM'
 location: 'London, England'
 date: 2026-06-11
+permalink: /organisations/isam/
+redirect_from: /organisations/2026/06/11/organisations-isam/
 website: 'https://isam.com/'
 careers: 'https://isam.com/careers/'
 companies-house: 'https://find-and-update.company-information.service.gov.uk/company/06817754'

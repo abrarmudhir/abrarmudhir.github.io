@@ -3,6 +3,8 @@ layout: post
 company: 'NextWave Consulting'
 location: 'London, England'
 date: 2026-08-10
+permalink: /organisations/nextwave/
+redirect_from: /organisations/2026/08/10/organisations-nextwave/
 website: 'https://www.nxwave.com/'
 linkedin: 'https://www.linkedin.com/company/nextwave-consulting'
 careers: 'https://www.nxwave.com/careers'

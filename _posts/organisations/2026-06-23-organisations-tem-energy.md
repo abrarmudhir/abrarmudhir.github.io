@@ -3,6 +3,8 @@ layout: post
 company: 'tem'
 location: 'London, England'
 date: 2026-06-23
+permalink: /organisations/tem-energy/
+redirect_from: /organisations/2026/06/23/organisations-tem-energy/
 website: 'https://www.tem.energy/'
 linkedin: 'https://www.linkedin.com/company/tem-energy/'
 careers: 'https://www.tem.energy/join-our-mission'

@@ -3,6 +3,8 @@ layout: post
 company: 'BP Trading & Shipping'
 location: 'London, England'
 date: 2026-06-08
+permalink: /organisations/bp-trading-shipping/
+redirect_from: /organisations/2026/06/08/organisations-bp-trading-shipping/
 website: 'https://www.bp.com/en/global/corporate/careers/students-and-graduates/career-areas-for-students/supply-trading-and-shipping.html'
 linkedin: 'https://www.linkedin.com/company/bp'
 orgchart: 'https://theorg.com/org/bp'

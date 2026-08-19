@@ -3,6 +3,8 @@ layout: post
 company: 'Symmetry Investments'
 location: 'Hong Kong'
 date: 2026-08-19
+permalink: /organisations/symmetry-investments/
+redirect_from: /organisations/2026/08/19/organisations-symmetry-investments/
 website: 'https://symmetryinvestments.com/'
 linkedin: 'https://www.linkedin.com/company/symmetry-investments-uk-llp/'
 orgchart: 'https://theorg.com/org/symmetry-investments'

@@ -3,6 +3,8 @@ layout: post
 company: 'Brevan Howard'
 location: 'London, England'
 date: 2026-01-06
+permalink: /organisations/brevanhoward/
+redirect_from: /organisations/2026/01/06/organisations-brevanhoward/
 website: 'https://www.brevanhoward.com/'
 linkedin: 'https://www.linkedin.com/company/brevan-howard/about/'
 orgchart: 'https://theorg.com/org/brevanhoward'

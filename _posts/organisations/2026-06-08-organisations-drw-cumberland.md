@@ -3,6 +3,8 @@ layout: post
 company: 'DRW / Cumberland'
 location: 'Chicago, Illinois'
 date: 2026-06-08
+permalink: /organisations/drw-cumberland/
+redirect_from: /organisations/2026/06/08/organisations-drw-cumberland/
 website: 'https://www.drw.com/'
 linkedin: 'https://www.linkedin.com/company/drw'
 orgchart: 'https://theorg.com/org/drw'

@@ -3,6 +3,8 @@ layout: post
 company: 'Barclays'
 location: 'London, England, United Kingdom'
 date: 2026-08-16
+permalink: /organisations/barclays/
+redirect_from: /organisations/2026/08/16/organisations-barclays/
 website: 'https://home.barclays/'
 linkedin: 'https://www.linkedin.com/company/barclays-bank/'
 careers: 'https://search.jobs.barclays/'

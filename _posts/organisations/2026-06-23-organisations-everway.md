@@ -3,6 +3,8 @@ layout: post
 company: 'Everway'
 location: 'Antrim, Northern Ireland'
 date: 2026-06-23
+permalink: /organisations/everway/
+redirect_from: /organisations/2026/06/23/organisations-everway/
 website: 'https://www.everway.com/en-gb/'
 linkedin: 'https://www.linkedin.com/company/everway-global/'
 careers: 'https://www.everway.com/en-gb/careers/'

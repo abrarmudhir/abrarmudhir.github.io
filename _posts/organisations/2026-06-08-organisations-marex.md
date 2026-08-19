@@ -3,6 +3,8 @@ layout: post
 company: 'Marex'
 location: 'New York, New York'
 date: 2026-06-08
+permalink: /organisations/marex/
+redirect_from: /organisations/2026/06/08/organisations-marex/
 website: 'https://www.marex.com/about-us/'
 linkedin: 'https://www.linkedin.com/company/marex-global'
 orgchart: 'https://theorg.com/org/marex-com'

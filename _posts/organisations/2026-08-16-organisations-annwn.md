@@ -3,6 +3,8 @@ layout: post
 company: 'Annwn'
 location: 'London, England, United Kingdom'
 date: 2026-08-16
+permalink: /organisations/annwn/
+redirect_from: /organisations/2026/08/16/organisations-annwn/
 website: 'https://annwn.ai/'
 careers: 'https://annwn.ai/jobs'
 companies-house: 'https://find-and-update.company-information.service.gov.uk/company/17128358'

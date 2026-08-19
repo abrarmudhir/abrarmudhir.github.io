@@ -3,6 +3,8 @@ layout: post
 company: 'WalletConnect'
 location: 'Remote, Global'
 date: 2026-08-18
+permalink: /organisations/walletconnect/
+redirect_from: /organisations/2026/08/18/organisations-walletconnect/
 website: 'https://walletconnect.com/'
 linkedin: 'https://www.linkedin.com/company/walletconnect/'
 orgchart: 'https://walletconnect.com/about'

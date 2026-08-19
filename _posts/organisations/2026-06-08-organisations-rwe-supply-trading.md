@@ -3,6 +3,8 @@ layout: post
 company: 'RWE Supply & Trading'
 location: 'Essen, Germany'
 date: 2026-06-08
+permalink: /organisations/rwe-supply-trading/
+redirect_from: /organisations/2026/06/08/organisations-rwe-supply-trading/
 website: 'https://www.rwe.com/en/the-group/rwest/'
 linkedin: 'https://www.linkedin.com/company/rwe-'
 orgchart: 'https://theorg.com/org/rwe'

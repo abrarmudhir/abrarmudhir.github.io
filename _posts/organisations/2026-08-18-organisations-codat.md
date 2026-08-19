@@ -3,6 +3,8 @@ layout: post
 company: 'Codat'
 location: 'London, England, United Kingdom'
 date: 2026-08-18
+permalink: /organisations/codat/
+redirect_from: /organisations/2026/08/18/organisations-codat/
 website: 'https://codat.io/'
 linkedin: 'https://www.linkedin.com/company/codat-limited/'
 orgchart: 'https://www.linkedin.com/company/codat-limited/'

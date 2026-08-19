@@ -3,6 +3,8 @@ layout: post
 company: 'EDF Trading'
 location: 'London, England'
 date: 2026-06-08
+permalink: /organisations/edf-trading/
+redirect_from: /organisations/2026/06/08/organisations-edf-trading/
 website: 'https://www.edftrading.com/'
 linkedin: 'https://www.linkedin.com/company/edf-trading'
 orgchart: 'https://theorg.com/org/edf-trading'

@@ -3,6 +3,8 @@ layout: post
 company: 'DXC Luxoft'
 location: 'Zug, Switzerland'
 date: 2026-06-08
+permalink: /organisations/luxoft/
+redirect_from: /organisations/2026/06/08/organisations-luxoft/
 website: 'https://www.luxoft.com/'
 linkedin: 'https://www.linkedin.com/company/luxoft'
 orgchart: 'https://theorg.com/org/dxctechnology'

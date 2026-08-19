@@ -3,6 +3,8 @@ layout: post
 company: 'Super Payments'
 location: 'Victoria, London, England'
 date: 2026-08-19
+permalink: /organisations/super-payments/
+redirect_from: /organisations/2026/08/19/organisations-super-payments/
 website: 'https://www.superpayments.com/gb/'
 linkedin: 'https://uk.linkedin.com/company/superpayments'
 careers: 'https://www.superpayments.com/careers'

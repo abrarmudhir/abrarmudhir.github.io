@@ -3,6 +3,8 @@ layout: post
 company: 'Statkraft'
 location: 'Oslo, Norway'
 date: 2026-06-08
+permalink: /organisations/statkraft/
+redirect_from: /organisations/2026/06/08/organisations-statkraft/
 website: 'https://www.statkraft.com/'
 linkedin: 'https://www.linkedin.com/company/statkraft/'
 orgchart: 'https://theorg.com/org/statkraft-as'

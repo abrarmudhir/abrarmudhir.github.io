@@ -3,6 +3,8 @@ layout: post
 company: 'Open Home Foundation'
 location: 'Switzerland'
 date: 2026-08-14
+permalink: /organisations/open-home-foundation/
+redirect_from: /organisations/2026/08/14/organisations-open-home-foundation/
 website: 'https://www.openhomefoundation.org/'
 careers: 'https://jobs.ashbyhq.com/openhomefoundation/'
 overview: >-

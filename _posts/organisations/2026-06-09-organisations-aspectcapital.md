@@ -3,6 +3,8 @@ layout: post
 company: 'Aspect Capital'
 location: 'London, England'
 date: 2026-06-09
+permalink: /organisations/aspectcapital/
+redirect_from: /organisations/2026/06/09/organisations-aspectcapital/
 website: 'https://www.aspectcapital.com/'
 linkedin: 'https://www.linkedin.com/company/aspect-capital/'
 orgchart: 'https://www.aspectcapital.com/about/team/'

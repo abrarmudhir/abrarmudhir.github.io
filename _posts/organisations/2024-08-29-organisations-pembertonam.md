@@ -3,6 +3,8 @@ layout: post
 company: 'Pemberton Asset Management'
 location: 'London, England'
 date: 2024-08-29
+permalink: /organisations/pembertonam/
+redirect_from: /organisations/2024/08/29/organisations-pembertonam/
 website: 'https://www.pembertonam.com'
 linkedin: 'https://www.linkedin.com/company/pemberton-asset-management'
 orgchart: 'https://theorg.com/org/pemberton-asset-management-group'

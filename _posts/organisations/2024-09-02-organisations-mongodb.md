@@ -3,6 +3,8 @@ layout: post
 company: 'MongoDB'
 location: 'New York, USA'
 date: 2024-09-02
+permalink: /organisations/mongodb/
+redirect_from: /organisations/2024/09/02/organisations-mongodb/
 website: 'https://www.mongodb.com/'
 linkedin: 'https://www.linkedin.com/company/mongodbinc/about/'
 orgchart: 'https://theorg.com/org/mongodb'

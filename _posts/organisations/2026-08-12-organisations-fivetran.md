@@ -3,6 +3,8 @@ layout: post
 company: 'Fivetran'
 location: 'Oakland, California'
 date: 2026-08-12
+permalink: /organisations/fivetran/
+redirect_from: /organisations/2026/08/12/organisations-fivetran/
 website: 'https://www.fivetran.com/'
 linkedin: 'https://www.linkedin.com/company/fivetran/'
 orgchart: 'https://theorg.com/org/fivetran'

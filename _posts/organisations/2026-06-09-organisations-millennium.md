@@ -3,6 +3,8 @@ layout: post
 company: 'Millennium'
 location: 'New York, New York'
 date: 2026-06-09
+permalink: /organisations/millennium/
+redirect_from: /organisations/2026/06/09/organisations-millennium/
 website: 'https://www.mlp.com/'
 linkedin: 'https://www.linkedin.com/company/millennium-partners'
 orgchart: 'https://www.mlp.com/people/leadership/'

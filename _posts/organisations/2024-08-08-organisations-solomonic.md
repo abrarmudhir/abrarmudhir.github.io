@@ -3,6 +3,8 @@ layout: post
 company: 'Solomonic Ltd'
 location: 'London, England'
 date: 2024-08-08
+permalink: /organisations/solomonic/
+redirect_from: /organisations/2024/08/08/organisations-solomonic/
 website: 'https://www.solomonic.co.uk/'
 overview: >-
       Data powered litigation intelligence.

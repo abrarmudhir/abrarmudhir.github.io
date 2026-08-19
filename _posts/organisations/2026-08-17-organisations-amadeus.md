@@ -3,6 +3,8 @@ layout: post
 company: 'Amadeus'
 location: 'Madrid, Spain'
 date: 2026-08-17
+permalink: /organisations/amadeus/
+redirect_from: /organisations/2026/08/17/organisations-amadeus/
 website: 'https://amadeus.com/en'
 linkedin: 'https://www.linkedin.com/company/amadeus'
 careers: 'https://amadeus.com/en/careers/overview'

@@ -3,6 +3,8 @@ layout: post
 company: 'Macquarie Commodities'
 location: 'London, England'
 date: 2026-06-08
+permalink: /organisations/macquarie-commodities/
+redirect_from: /organisations/2026/06/08/organisations-macquarie-commodities/
 website: 'https://www.macquarie.com/us/en/about/company/commodities-and-global-markets.html'
 linkedin: 'https://www.linkedin.com/company/macquarie-group'
 orgchart: 'https://theorg.com/org/macquarie-group'

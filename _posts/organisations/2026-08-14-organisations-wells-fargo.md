@@ -3,6 +3,8 @@ layout: post
 company: 'Wells Fargo'
 location: 'San Francisco, California'
 date: 2026-08-14
+permalink: /organisations/wells-fargo/
+redirect_from: /organisations/2026/08/14/organisations-wells-fargo/
 website: 'https://www.wellsfargo.com/'
 linkedin: 'https://www.linkedin.com/company/wellsfargo/'
 careers: 'https://www.wellsfargojobs.com/'

@@ -3,6 +3,8 @@ layout: post
 company: 'Vitality'
 location: 'London, England, United Kingdom'
 date: 2026-08-16
+permalink: /organisations/vitality/
+redirect_from: /organisations/2026/08/16/organisations-vitality/
 website: 'https://www.vitality.co.uk/'
 linkedin: 'https://uk.linkedin.com/company/vitalityuk'
 careers: 'https://recruit.vitality.co.uk/'
