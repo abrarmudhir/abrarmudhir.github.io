@@ -75,7 +75,11 @@ layout: default
         {% if page.ceo %}
           <dt>CEO</dt>
           <dd>
-            {% if page.ceo-link %}
+            {% if page.ceo-links %}
+              {% for ceo in page.ceo-links %}
+                <a href="{{ ceo.url }}">{{ ceo.name }}</a>{% unless forloop.last %} &amp; {% endunless %}
+              {% endfor %}
+            {% elsif page.ceo-link %}
               <a href="{{ page.ceo-link }}">{{ page.ceo }}</a>
             {% else %}
               {{ page.ceo }}

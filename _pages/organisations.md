@@ -98,7 +98,17 @@ isPost: false
                     <td>{{ post.industry }}</td>
                     <td>{{ post.founded }}</td>
                     <td>{{ post.size | number_with_delimiter: "," }}</td>
-                    <td><a href="{{ post.ceo-link }}" target="_blank">{{ post.ceo }}</a></td>
+                    <td>
+                      {% if post.ceo-links %}
+                        {% for ceo in post.ceo-links %}
+                          <a href="{{ ceo.url }}" target="_blank">{{ ceo.name }}</a>{% unless forloop.last %} &amp; {% endunless %}
+                        {% endfor %}
+                      {% elsif post.ceo-link %}
+                        <a href="{{ post.ceo-link }}" target="_blank">{{ post.ceo }}</a>
+                      {% else %}
+                        {{ post.ceo }}
+                      {% endif %}
+                    </td>
                     <td class="company-facts-links">
                       {% if post.linkedin %}
                       <a href="{{ post.linkedin }}" target="_blank">LinkedIn</a>
