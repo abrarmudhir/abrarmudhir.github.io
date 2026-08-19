@@ -3,6 +3,8 @@ layout: post
 company: 'GSR'
 location: 'London, England'
 date: 2026-06-09
+permalink: /organisations/gsr/
+redirect_from: /organisations/2026/06/09/organisations-gsr/
 website: 'https://www.gsr.io/'
 linkedin: 'https://www.linkedin.com/company/gsr-markets/'
 orgchart: 'https://www.gsr.io/our-team'

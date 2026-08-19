@@ -3,6 +3,8 @@ layout: post
 company: 'Pay.UK'
 location: 'London, England'
 date: 2024-08-21
+permalink: /organisations/payuk/
+redirect_from: /organisations/2024/08/21/organisations-payuk/
 website: 'https://www.wearepay.uk/'
 linkedin: 'https://www.linkedin.com/company/pay-uk/about/'
 orgchart: 'https://theorg.com/org/pay-uk'

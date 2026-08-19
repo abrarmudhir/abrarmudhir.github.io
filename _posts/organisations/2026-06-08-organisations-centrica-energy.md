@@ -3,6 +3,8 @@ layout: post
 company: 'Centrica Energy'
 location: 'London, England'
 date: 2026-06-08
+permalink: /organisations/centrica-energy/
+redirect_from: /organisations/2026/06/08/organisations-centrica-energy/
 website: 'https://centricaenergy.com/'
 linkedin: 'https://www.linkedin.com/company/centricaenergy'
 orgchart: 'https://theorg.com/org/centrica-energy'

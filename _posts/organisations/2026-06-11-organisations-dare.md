@@ -3,6 +3,8 @@ layout: post
 company: 'Dare'
 location: 'London, England'
 date: 2026-06-11
+permalink: /organisations/dare/
+redirect_from: /organisations/2026/06/11/organisations-dare/
 website: 'https://www.dare.global/'
 linkedin: 'https://www.linkedin.com/company/wearedare'
 careers: 'https://www.dare.global/careers/'

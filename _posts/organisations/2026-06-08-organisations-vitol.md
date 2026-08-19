@@ -3,6 +3,8 @@ layout: post
 company: 'Vitol'
 location: 'Rotterdam, Netherlands'
 date: 2026-06-08
+permalink: /organisations/vitol/
+redirect_from: /organisations/2026/06/08/organisations-vitol/
 website: 'https://www.vitol.com/about/'
 linkedin: 'https://www.linkedin.com/company/vitol-b.v./'
 orgchart: 'https://theorg.com/org/vitol'

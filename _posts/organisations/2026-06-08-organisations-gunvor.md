@@ -3,6 +3,8 @@ layout: post
 company: 'Gunvor'
 location: 'Geneva, Switzerland'
 date: 2026-06-08
+permalink: /organisations/gunvor/
+redirect_from: /organisations/2026/06/08/organisations-gunvor/
 website: 'https://gunvorgroup.com/'
 linkedin: 'https://www.linkedin.com/company/gunvor-group'
 orgchart: 'https://theorg.com/org/gunvor-group'

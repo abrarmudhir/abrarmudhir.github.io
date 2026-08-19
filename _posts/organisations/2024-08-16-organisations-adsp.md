@@ -3,6 +3,8 @@ layout: post
 company: 'Applied Data Science Partners'
 location: 'City of London, England'
 date: 2024-08-16
+permalink: /organisations/adsp/
+redirect_from: /organisations/2024/08/16/organisations-adsp/
 website: 'https://adsp.ai/'
 linkedin: 'https://www.linkedin.com/company/applied-data-science/about/'
 careers: 'https://adsp.ai/careers/'

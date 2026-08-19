@@ -3,6 +3,8 @@ layout: post
 company: 'Carwow'
 location: 'London, England'
 date: 2026-06-23
+permalink: /organisations/carwow/
+redirect_from: /organisations/2026/06/23/organisations-carwow/
 website: 'https://www.carwow.co.uk/'
 linkedin: 'https://www.linkedin.com/company/carwow/'
 careers: 'https://www.carwow.co.uk/jobs'

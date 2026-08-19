@@ -3,6 +3,8 @@ layout: post
 company: 'Tripadvisor'
 location: 'Needham, Massachusetts'
 date: 2026-08-14
+permalink: /organisations/tripadvisor/
+redirect_from: /organisations/2026/08/14/organisations-tripadvisor/
 website: 'https://www.tripadvisor.co.uk/'
 linkedin: 'https://www.linkedin.com/company/tripadvisor/'
 careers: 'https://careers.tripadvisor.com/'

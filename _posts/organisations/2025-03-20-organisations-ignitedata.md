@@ -3,6 +3,8 @@ layout: post
 company: 'IgniteData'
 location: 'Berkshire, England'
 date: 2025-03-20
+permalink: /organisations/ignitedata/
+redirect_from: /organisations/2025/03/20/organisations-ignitedata/
 website: 'https://ignitedata.com/'
 linkedin: 'https://www.linkedin.com/company/ignite-data/about/'
 orgchart: 'https://theorg.com/org/ignitedata'

@@ -3,6 +3,8 @@ layout: post
 company: 'Sky'
 location: 'Osterley, England'
 date: 2026-08-14
+permalink: /organisations/sky/
+redirect_from: /organisations/2026/08/14/organisations-sky/
 website: 'https://www.sky.com/'
 linkedin: 'https://www.linkedin.com/company/sky/'
 careers: 'https://careers.sky.com/'

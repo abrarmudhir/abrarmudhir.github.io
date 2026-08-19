@@ -594,6 +594,28 @@ html[data-theme="dark"] .read-more-link {
   gap: 8px;
 }
 
+.organisation-expand-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.35rem;
+  height: 1.35rem;
+  margin-left: 0.35rem;
+  border: 1px solid var(--am-border);
+  border-radius: 999px;
+  color: var(--am-link);
+  font-size: 0.82rem;
+  line-height: 1;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.organisation-expand-button:hover,
+.organisation-expand-button:focus {
+  background: var(--am-surface-strong);
+  text-decoration: none;
+}
+
 .company-facts-links a,
 .company-facts-links .organisation-share-button {
   display: inline-flex;

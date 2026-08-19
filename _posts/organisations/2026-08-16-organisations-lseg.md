@@ -3,6 +3,8 @@ layout: post
 company: 'LSEG'
 location: 'London, England, United Kingdom'
 date: 2026-08-16
+permalink: /organisations/lseg/
+redirect_from: /organisations/2026/08/16/organisations-lseg/
 website: 'https://www.lseg.com/en'
 linkedin: 'https://www.linkedin.com/company/london-stock-exchange-group/'
 careers: 'https://www.lseg.com/en/careers'

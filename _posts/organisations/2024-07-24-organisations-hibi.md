@@ -3,6 +3,8 @@ layout: post
 company: 'Hibi'
 location: 'London, GB'
 date: 2024-07-24
+permalink: /organisations/hibi/
+redirect_from: /organisations/2024/07/24/organisations-hibi/
 website: 'https://hibi.health'
 overview: >-
       Helping families of children with additional needs to manage, coordinate & navigate care.

@@ -3,6 +3,8 @@ layout: post
 company: 'NHS England'
 location: 'London, England'
 date: 2026-06-08
+permalink: /organisations/nhs/
+redirect_from: /organisations/2026/06/08/organisations-nhs/
 website: 'https://www.england.nhs.uk/'
 linkedin: 'https://www.linkedin.com/company/nhs-england'
 orgchart: 'https://theorg.com/org/nhs'

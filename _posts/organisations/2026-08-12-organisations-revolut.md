@@ -3,6 +3,8 @@ layout: post
 company: 'Revolut'
 location: 'London, England'
 date: 2026-08-12
+permalink: /organisations/revolut/
+redirect_from: /organisations/2026/08/12/organisations-revolut/
 website: 'https://www.revolut.com/'
 linkedin: 'https://www.linkedin.com/company/revolut/'
 orgchart: 'https://theorg.com/org/revolut'

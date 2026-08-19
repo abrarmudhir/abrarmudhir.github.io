@@ -3,6 +3,8 @@ layout: post
 company: 'DataRobot'
 location: 'Boston, Massachusetts, United States'
 date: 2026-08-17
+permalink: /organisations/datarobot/
+redirect_from: /organisations/2026/08/17/organisations-datarobot/
 website: 'https://www.datarobot.com/'
 linkedin: 'https://www.linkedin.com/company/datarobot/'
 careers: 'https://www.datarobot.com/careers/'

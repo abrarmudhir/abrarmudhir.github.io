@@ -3,6 +3,8 @@ layout: post
 company: 'TP ICAP'
 location: 'London, England'
 date: 2026-06-08
+permalink: /organisations/tpicap/
+redirect_from: /organisations/2026/06/08/organisations-tpicap/
 website: 'https://tpicap.com/'
 linkedin: 'https://www.linkedin.com/company/tp-icap'
 orgchart: 'https://theorg.com/org/tp-icap'

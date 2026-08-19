@@ -3,6 +3,8 @@ layout: post
 company: 'Searchland'
 location: 'London, England, United Kingdom'
 date: 2026-08-19
+permalink: /organisations/searchland/
+redirect_from: /organisations/2026/08/19/organisations-searchland/
 website: 'https://searchland.co.uk/'
 linkedin: 'https://www.linkedin.com/company/searchlandhq'
 careers: 'https://searchland.co.uk/careers'

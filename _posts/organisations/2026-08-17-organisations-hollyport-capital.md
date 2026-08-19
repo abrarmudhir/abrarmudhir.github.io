@@ -3,6 +3,8 @@ layout: post
 company: 'Hollyport Capital'
 location: 'London, England, United Kingdom'
 date: 2026-08-17
+permalink: /organisations/hollyport-capital/
+redirect_from: /organisations/2026/08/17/organisations-hollyport-capital/
 website: 'https://hollyportcapital.com/'
 linkedin: 'https://www.linkedin.com/company/hollyport-capital'
 companies-house: 'https://find-and-update.company-information.service.gov.uk/company/OC319297'

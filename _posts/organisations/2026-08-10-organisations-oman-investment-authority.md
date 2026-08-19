@@ -3,6 +3,8 @@ layout: post
 company: 'Oman Investment Authority'
 location: 'Muscat, Oman'
 date: 2026-08-10
+permalink: /organisations/oman-investment-authority/
+redirect_from: /organisations/2026/08/10/organisations-oman-investment-authority/
 website: 'https://oia.gov.om/en'
 linkedin: 'https://www.linkedin.com/company/oman-investment-authority'
 careers: 'https://oia.gov.om/en/careers'

@@ -3,6 +3,8 @@ layout: post
 company: 'Trafigura'
 location: 'Singapore'
 date: 2026-06-08
+permalink: /organisations/trafigura/
+redirect_from: /organisations/2026/06/08/organisations-trafigura/
 website: 'https://www.trafigura.com/'
 linkedin: 'https://www.linkedin.com/company/trafigura'
 orgchart: 'https://theorg.com/org/trafigura-group'

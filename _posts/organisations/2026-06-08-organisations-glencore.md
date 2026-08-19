@@ -3,6 +3,8 @@ layout: post
 company: 'Glencore'
 location: 'Baar, Switzerland'
 date: 2026-06-08
+permalink: /organisations/glencore/
+redirect_from: /organisations/2026/06/08/organisations-glencore/
 website: 'https://www.glencore.com/'
 linkedin: 'https://www.linkedin.com/company/glencore'
 orgchart: 'https://theorg.com/org/glencore'

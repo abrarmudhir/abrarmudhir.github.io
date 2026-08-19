@@ -3,6 +3,8 @@ layout: post
 company: 'BJSS'
 location: 'Leeds, West Yorkshire, GB'
 date: 2024-07-29
+permalink: /organisations/bjss/
+redirect_from: /organisations/2024/07/29/organisations-bjss/
 website: 'https://www.bjss.com/'
 overview: >-
       We're a technology and engineering consultancy helping clients deliver solutions used by millions of people every 

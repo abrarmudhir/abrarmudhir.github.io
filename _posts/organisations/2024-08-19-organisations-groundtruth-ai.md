@@ -3,6 +3,8 @@ layout: post
 company: 'GroundTruth AI'
 location: 'London, England'
 date: 2024-08-19
+permalink: /organisations/groundtruth-ai/
+redirect_from: /organisations/2024/08/19/organisations-groundtruth-ai/
 website: 'https://groundtruthai.net/'
 linkedin: 'https://www.linkedin.com/company/groundtruth-ai/about/'
 orgchart: 'https://theorg.com/org/groundtruth'

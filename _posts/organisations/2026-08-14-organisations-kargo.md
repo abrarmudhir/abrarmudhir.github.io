@@ -3,6 +3,8 @@ layout: post
 company: 'Kargo'
 location: 'New York, New York'
 date: 2026-08-14
+permalink: /organisations/kargo/
+redirect_from: /organisations/2026/08/14/organisations-kargo/
 website: 'https://www.kargo.com/'
 linkedin: 'https://www.linkedin.com/company/kargo/'
 careers: 'https://www.kargo.com/careers'

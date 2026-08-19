@@ -3,6 +3,8 @@ layout: post
 company: 'Arenko Group'
 location: 'London, England'
 date: 2024-08-14
+permalink: /organisations/arenko/
+redirect_from: /organisations/2024/08/14/organisations-arenko/
 website: 'https://arenko.group/'
 linkedin: 'https://www.linkedin.com/company/arenko-cleantech'
 orgchart: 'https://theorg.com/org/arenko-group'

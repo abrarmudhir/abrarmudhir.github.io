@@ -3,6 +3,8 @@ layout: post
 company: 'M&G'
 location: 'London, England'
 date: 2025-12-21
+permalink: /organisations/mandg/
+redirect_from: /organisations/2025/12/21/organisations-mandg/
 website: 'https://www.mandg.com/investments/gb'
 linkedin: 'https://www.linkedin.com/company/mandgplc/'
 orgchart: 'https://theorg.com/org/mandg'

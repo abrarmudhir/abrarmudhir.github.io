@@ -3,6 +3,8 @@ layout: post
 company: 'Bank of America'
 location: 'Charlotte, North Carolina'
 date: 2026-06-11
+permalink: /organisations/bank-of-america/
+redirect_from: /organisations/2026/06/11/organisations-bank-of-america/
 website: 'https://www.bankofamerica.com/'
 linkedin: 'https://www.linkedin.com/company/bank-of-america'
 orgchart: 'https://theorg.com/org/bank-of-america'

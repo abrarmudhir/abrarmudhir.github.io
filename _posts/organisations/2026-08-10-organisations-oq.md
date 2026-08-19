@@ -3,6 +3,8 @@ layout: post
 company: 'OQ'
 location: 'Muscat, Oman'
 date: 2026-08-10
+permalink: /organisations/oq/
+redirect_from: /organisations/2026/08/10/organisations-oq/
 website: 'https://oq.com/en'
 linkedin: 'https://www.linkedin.com/company/thisisoq'
 careers: 'https://oq.com/en/careers'

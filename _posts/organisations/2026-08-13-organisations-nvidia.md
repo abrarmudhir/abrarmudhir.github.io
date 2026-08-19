@@ -3,6 +3,8 @@ layout: post
 company: 'NVIDIA'
 location: 'Santa Clara, California'
 date: 2026-08-13
+permalink: /organisations/nvidia/
+redirect_from: /organisations/2026/08/13/organisations-nvidia/
 website: 'https://www.nvidia.com/en-gb/'
 linkedin: 'https://www.linkedin.com/company/nvidia/'
 careers: 'https://www.nvidia.com/en-gb/about-nvidia/careers/'

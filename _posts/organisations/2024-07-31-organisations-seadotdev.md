@@ -3,6 +3,8 @@ layout: post
 company: 'sea.dev'
 location: 'London, UK'
 date: 2024-07-31
+permalink: /organisations/seadotdev/
+redirect_from: /organisations/2024/07/31/organisations-seadotdev/
 website: 'https://www.sea.dev/'
 overview: >-
       sea.dev is the developer and provider of certain technology that can be used by its Partners and their 

@@ -3,6 +3,8 @@ layout: post
 company: 'G-Research'
 location: 'London, England'
 date: 2026-06-09
+permalink: /organisations/g-research/
+redirect_from: /organisations/2026/06/09/organisations-g-research/
 website: 'https://www.gresearch.com/'
 linkedin: 'https://www.linkedin.com/company/g-research/'
 orgchart: 'https://www.gresearch.com/about/about-us/'

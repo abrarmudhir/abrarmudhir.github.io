@@ -3,6 +3,8 @@ layout: post
 company: 'Just Eat'
 location: 'London, England, United Kingdom'
 date: 2026-08-18
+permalink: /organisations/just-eat/
+redirect_from: /organisations/2026/08/18/organisations-just-eat/
 website: 'https://www.just-eat.co.uk/'
 linkedin: 'https://www.linkedin.com/company/just-eat-takeaway-com/'
 orgchart: 'https://newsroom.justeattakeaway.com/en-WW/about/'

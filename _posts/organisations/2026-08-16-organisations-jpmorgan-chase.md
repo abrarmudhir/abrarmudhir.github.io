@@ -3,6 +3,8 @@ layout: post
 company: 'JPMorgan Chase'
 location: 'New York, New York, United States'
 date: 2026-08-16
+permalink: /organisations/jpmorgan-chase/
+redirect_from: /organisations/2026/08/16/organisations-jpmorgan-chase/
 website: 'https://www.jpmorgan.com/global'
 linkedin: 'https://www.linkedin.com/company/jpmorganchase/'
 careers: 'https://www.jpmorganchase.com/careers'

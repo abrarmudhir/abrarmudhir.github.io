@@ -3,6 +3,8 @@ layout: post
 company: 'Humanoid'
 location: 'London, England, United Kingdom'
 date: 2026-08-16
+permalink: /organisations/humanoid/
+redirect_from: /organisations/2026/08/16/organisations-humanoid/
 website: 'https://thehumanoid.ai/'
 linkedin: 'https://www.linkedin.com/company/humanoidai/'
 careers: 'https://thehumanoid.ai/careers/'

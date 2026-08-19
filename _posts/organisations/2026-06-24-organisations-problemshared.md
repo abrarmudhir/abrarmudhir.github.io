@@ -3,6 +3,8 @@ layout: post
 company: 'ProblemShared'
 location: 'London, England'
 date: 2026-06-24
+permalink: /organisations/problemshared/
+redirect_from: /organisations/2026/06/24/organisations-problemshared/
 website: 'https://www.problemshared.net/'
 linkedin: 'https://www.linkedin.com/company/problemshareduk/'
 careers: 'https://careers.problemshared.net/'
