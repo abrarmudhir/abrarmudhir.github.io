@@ -594,7 +594,8 @@ html[data-theme="dark"] .read-more-link {
   gap: 8px;
 }
 
-.company-facts-links a {
+.company-facts-links a,
+.company-facts-links .organisation-share-button {
   display: inline-flex;
   align-items: center;
   min-height: 28px;
@@ -609,9 +610,16 @@ html[data-theme="dark"] .read-more-link {
 }
 
 .company-facts-links a:hover,
-.company-facts-links a:focus {
+.company-facts-links a:focus,
+.company-facts-links .organisation-share-button:hover,
+.company-facts-links .organisation-share-button:focus {
   background: var(--am-surface-strong);
   text-decoration: none;
+}
+
+.organisation-share-button {
+  color: var(--am-link);
+  cursor: pointer;
 }
 
 html[data-theme="dark"] .company-facts-table {
@@ -629,14 +637,17 @@ html[data-theme="dark"] .company-facts-table td {
   color: var(--am-text);
 }
 
-html[data-theme="dark"] .company-facts-links a {
+html[data-theme="dark"] .company-facts-links a,
+html[data-theme="dark"] .company-facts-links .organisation-share-button {
   background: #0f1720;
   border-color: var(--am-border);
   color: var(--am-link) !important;
 }
 
 html[data-theme="dark"] .company-facts-links a:hover,
-html[data-theme="dark"] .company-facts-links a:focus {
+html[data-theme="dark"] .company-facts-links a:focus,
+html[data-theme="dark"] .company-facts-links .organisation-share-button:hover,
+html[data-theme="dark"] .company-facts-links .organisation-share-button:focus {
   background: var(--am-surface-strong);
 }
 
