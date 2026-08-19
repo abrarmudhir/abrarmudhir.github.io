@@ -119,6 +119,7 @@ isPost: false
                       {% if post.companies-house %}
                       <a href="{{ post.companies-house }}" target="_blank">Companies House</a>
                       {% endif %}
+                      <button type="button" class="organisation-share-button" data-share-url="{{ post.url | relative_url }}" data-share-title="{{ post.company | escape }}" aria-label="Share {{ post.company | escape }}">Share</button>
                     </td>
                   </tr>
                 </table>
@@ -266,6 +267,39 @@ isPost: false
       });
     });
     nameFilter.addEventListener("input", updateFilter);
+
+    document.querySelectorAll(".organisation-share-button").forEach((button) => {
+      button.addEventListener("click", async function () {
+        const url = new URL(this.dataset.shareUrl, window.location.origin).href;
+        const title = this.dataset.shareTitle || "Organisation";
+        const originalLabel = this.textContent;
+
+        try {
+          if (navigator.share) {
+            await navigator.share({ title, url });
+            return;
+          }
+
+          await navigator.clipboard.writeText(url);
+          this.textContent = "Copied";
+        } catch (error) {
+          if (error && error.name === "AbortError") return;
+
+          const input = document.createElement("input");
+          input.value = url;
+          document.body.appendChild(input);
+          input.select();
+          document.execCommand("copy");
+          input.remove();
+          this.textContent = "Copied";
+        }
+
+        window.setTimeout(() => {
+          this.textContent = originalLabel;
+        }, 1800);
+      });
+    });
+
     sortEntries();
     updateFilter();
   });
