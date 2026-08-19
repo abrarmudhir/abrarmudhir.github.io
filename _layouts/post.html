@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-{% assign resolved_title = page.title | default: page.company | default: page.question %}
+{% assign resolved_title = page.company | default: page.title | default: page.question %}
 {% assign rendered_content = content | strip %}
 
 <article class="am-post">
