@@ -221,6 +221,54 @@
       }
     });
 
+    document.querySelectorAll(".quiz-collection").forEach((collection) => {
+      if (collection.dataset.amNavigationBound === "1") return;
+      collection.dataset.amNavigationBound = "1";
+
+      const panels = collection.querySelectorAll(".quiz-question-panel");
+      const navigationButtons = collection.querySelectorAll(".quiz-question-nav-button");
+      const previous = collection.querySelector(".quiz-page-previous");
+      const next = collection.querySelector(".quiz-page-next");
+      const progressValue = collection.querySelector(".quiz-progress-value");
+      const progressFill = collection.querySelector(".quiz-progress-fill");
+
+      function showQuestion(index) {
+        panels.forEach((panel, panelIndex) => {
+          panel.hidden = panelIndex !== index;
+        });
+        navigationButtons.forEach((button, buttonIndex) => {
+          const isActive = buttonIndex === index;
+          button.classList.toggle("is-active", isActive);
+          button.setAttribute("aria-current", isActive ? "step" : "false");
+        });
+        if (progressValue) progressValue.textContent = `${index + 1} / ${panels.length}`;
+        if (progressFill) progressFill.style.width = `${((index + 1) / panels.length) * 100}%`;
+        if (previous) previous.disabled = index === 0;
+        if (next) {
+          next.disabled = index === panels.length - 1;
+          next.textContent = index === panels.length - 1 ? "Final question" : "Next question";
+        }
+      }
+
+      navigationButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+          showQuestion(Number(this.dataset.quizIndex));
+        });
+      });
+      if (previous) {
+        previous.addEventListener("click", function () {
+          const activeIndex = Array.from(navigationButtons).findIndex((button) => button.classList.contains("is-active"));
+          if (activeIndex > 0) showQuestion(activeIndex - 1);
+        });
+      }
+      if (next) {
+        next.addEventListener("click", function () {
+          const activeIndex = Array.from(navigationButtons).findIndex((button) => button.classList.contains("is-active"));
+          if (activeIndex < panels.length - 1) showQuestion(activeIndex + 1);
+        });
+      }
+    });
+
     // ============================================
     // 3) Read more (bind once per link)
     // ============================================
