@@ -7,7 +7,7 @@ domain: Cloud
 track: Microsoft Azure
 subtrack: Certifications
 topic: Azure Security Engineer
-practice_url: /l3/2026/08/22/l3-azure-security-engineer-practice/
+practice_url: /azure-security-engineer-practice/
 ---
 Study notes and interactive question practice for the Azure Security Engineer Associate (AZ-500) certification.
 
