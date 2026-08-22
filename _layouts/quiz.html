@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<article class="am-post quiz-page">
+  <header class="am-post-header quiz-page-header">
+    <p class="quiz-eyebrow">{{ page.domain }} · {{ page.track }} · {{ page.subtrack }}</p>
+    <h1>{{ page.title }}</h1>
+    <p class="quiz-page-intro">Select one answer. Your result and the explanation will appear immediately.</p>
+  </header>
+
+  <section class="quiz-question" aria-labelledby="quiz-question-title">
+    <p class="quiz-question-number">Question {{ page.question_number }}</p>
+    <h2 id="quiz-question-title">{{ page.question }}</h2>
+
+    <fieldset class="quiz-options">
+      <legend>Choose the best answer</legend>
+      {% for option in page.options %}
+        <label class="quiz-option">
+          <input class="quiz-option-input" type="radio" name="answer" value="{{ forloop.index }}" data-correct="{{ option.correct }}">
+          <span class="quiz-option-marker" aria-hidden="true">{{ 'ABCD' | slice: forloop.index0 }}</span>
+          <span class="quiz-option-text">{{ option.text }}</span>
+        </label>
+      {% endfor %}
+    </fieldset>
+
+    {% assign correct_option = page.options | where: "correct", true | first %}
+    <section class="quiz-feedback" aria-live="polite" hidden>
+      <p class="quiz-feedback-status"></p>
+      <p class="quiz-feedback-answer"><strong>Correct answer:</strong> <span>{{ correct_option.text }}</span></p>
+      <p class="quiz-feedback-explanation">{{ page.explanation }}</p>
+      <p class="quiz-feedback-clue"><strong>Exam clue:</strong> {{ page.exam_clue }}</p>
+      <p class="quiz-feedback-remember"><strong>Remember:</strong> {{ page.remember }}</p>
+    </section>
+
+    <button class="quiz-reset" type="button">Try again</button>
+  </section>
+</article>

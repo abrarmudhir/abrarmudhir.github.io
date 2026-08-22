@@ -172,6 +172,56 @@
     });
 
     // ============================================
+    // 2) Interactive certification quizzes
+    // ============================================
+    document.querySelectorAll(".quiz-question").forEach((quiz) => {
+      if (quiz.dataset.amBound === "1") return;
+      quiz.dataset.amBound = "1";
+
+      const options = quiz.querySelectorAll(".quiz-option");
+      const inputs = quiz.querySelectorAll(".quiz-option-input");
+      const feedback = quiz.querySelector(".quiz-feedback");
+      const status = quiz.querySelector(".quiz-feedback-status");
+      const reset = quiz.querySelector(".quiz-reset");
+
+      inputs.forEach((input) => {
+        input.addEventListener("change", function () {
+          const isCorrect = this.dataset.correct === "true";
+
+          options.forEach((option) => {
+            const optionInput = option.querySelector(".quiz-option-input");
+            const isOptionCorrect = optionInput && optionInput.dataset.correct === "true";
+            option.classList.toggle("is-selected", optionInput === this);
+            option.classList.toggle("is-correct", Boolean(isOptionCorrect));
+            option.classList.toggle("is-incorrect", optionInput === this && !isCorrect);
+          });
+
+          if (feedback) {
+            feedback.hidden = false;
+            feedback.classList.toggle("is-correct", isCorrect);
+            feedback.classList.toggle("is-incorrect", !isCorrect);
+          }
+          if (status) status.textContent = isCorrect ? "Correct" : "Not quite";
+        });
+      });
+
+      if (reset) {
+        reset.addEventListener("click", function () {
+          inputs.forEach((input) => {
+            input.checked = false;
+          });
+          options.forEach((option) => {
+            option.classList.remove("is-selected", "is-correct", "is-incorrect");
+          });
+          if (feedback) {
+            feedback.hidden = true;
+            feedback.classList.remove("is-correct", "is-incorrect");
+          }
+        });
+      }
+    });
+
+    // ============================================
     // 3) Read more (bind once per link)
     // ============================================
     document.querySelectorAll(".read-more-link").forEach(function (link) {
@@ -369,7 +419,7 @@
       const query = searchInput ? searchInput.value.trim().toLowerCase() : "";
       const sections = document.querySelectorAll(".l3-section");
       const emptyState = document.getElementById("l3-empty");
-      const hasExplicitTopic = !!activeFilter;
+      const hasExplicitTopic = !!activeFilter && selectedTopic !== "all";
       let totalVisible = 0;
 
       sections.forEach((section) => {
@@ -387,7 +437,7 @@
           const title = post.getAttribute("data-title") || "";
           const body = post.getAttribute("data-body") || "";
           const haystack = `${topic} ${domain} ${track} ${subtrack} ${title} ${body}`.toLowerCase();
-          const matchesTopic = hasExplicitTopic && topic === selectedTopic;
+          const matchesTopic = !hasExplicitTopic || topic === selectedTopic;
           const matchesQuery = !query || haystack.includes(query);
           const show = matchesTopic && matchesQuery;
 
@@ -409,92 +459,23 @@
 
       if (emptyState) {
         emptyState.hidden = totalVisible !== 0;
-        emptyState.textContent = hasExplicitTopic
-          ? "No matching learning notes found."
-          : "Select topics to continue.";
+        emptyState.textContent = "No matching learning notes found.";
       }
     }
 
     const learningFilters = document.getElementById("l3-topic-filters");
     if (learningFilters && learningFilters.dataset.amBound !== "1") {
       learningFilters.dataset.amBound = "1";
-      const domainToggle = document.getElementById("l3-filter-domain-toggle");
-      const domainPanel = document.getElementById("l3-filter-domain-panel");
-      const trackToggle = document.getElementById("l3-filter-track-toggle");
-      const trackPanel = document.getElementById("l3-filter-track-panel");
-      const subtrackToggle = document.getElementById("l3-filter-subtrack-toggle");
-      const subtrackPanel = document.getElementById("l3-filter-subtrack-panel");
-
-      function setMenuState(toggle, panel, expanded) {
-        if (!toggle || !panel) return;
-        toggle.setAttribute("aria-expanded", String(expanded));
-        panel.hidden = !expanded;
-      }
-
       learningFilters.querySelectorAll("[data-topic]").forEach((badge) => {
         badge.addEventListener("click", function (event) {
           if (this.tagName === "A") event.preventDefault();
           learningFilters.querySelectorAll("[data-topic]").forEach((item) => {
             item.classList.toggle("is-active", item === this);
+            item.setAttribute("aria-pressed", String(item === this));
           });
-          if (domainToggle && this !== domainToggle) {
-            setMenuState(domainToggle, domainPanel, false);
-            setMenuState(trackToggle, trackPanel, false);
-            setMenuState(subtrackToggle, subtrackPanel, false);
-          }
           filterLearning();
         });
       });
-
-      if (!document.__am_learning_menu_bound) {
-        document.__am_learning_menu_bound = true;
-
-        document.addEventListener("click", function (event) {
-          const toggle = event.target.closest(
-            "#l3-filter-domain-toggle, #l3-filter-track-toggle, #l3-filter-subtrack-toggle"
-          );
-          if (!toggle) return;
-
-          event.preventDefault();
-
-          const currentDomainToggle = document.getElementById("l3-filter-domain-toggle");
-          const currentDomainPanel = document.getElementById("l3-filter-domain-panel");
-          const currentTrackToggle = document.getElementById("l3-filter-track-toggle");
-          const currentTrackPanel = document.getElementById("l3-filter-track-panel");
-          const currentSubtrackToggle = document.getElementById("l3-filter-subtrack-toggle");
-          const currentSubtrackPanel = document.getElementById("l3-filter-subtrack-panel");
-
-          const setCurrentMenuState = (currentToggle, currentPanel, expanded) => {
-            if (!currentToggle || !currentPanel) return;
-            currentToggle.setAttribute("aria-expanded", String(expanded));
-            currentPanel.hidden = !expanded;
-          };
-
-          if (toggle.id === "l3-filter-domain-toggle") {
-            const next = toggle.getAttribute("aria-expanded") !== "true";
-            setCurrentMenuState(currentDomainToggle, currentDomainPanel, next);
-            if (!next) {
-              setCurrentMenuState(currentTrackToggle, currentTrackPanel, false);
-              setCurrentMenuState(currentSubtrackToggle, currentSubtrackPanel, false);
-            }
-            return;
-          }
-
-          if (toggle.id === "l3-filter-track-toggle") {
-            const next = toggle.getAttribute("aria-expanded") !== "true";
-            setCurrentMenuState(currentTrackToggle, currentTrackPanel, next);
-            if (!next) {
-              setCurrentMenuState(currentSubtrackToggle, currentSubtrackPanel, false);
-            }
-            return;
-          }
-
-          if (toggle.id === "l3-filter-subtrack-toggle") {
-            const next = toggle.getAttribute("aria-expanded") !== "true";
-            setCurrentMenuState(currentSubtrackToggle, currentSubtrackPanel, next);
-          }
-        });
-      }
     }
 
     const learningSearch = document.getElementById("l3-search");
