@@ -1,0 +1,57 @@
+---
+layout: default
+---
+{% assign quiz_posts = site.posts | where: "topic", page.topic | where: "quiz", true | sort: "question_number" %}
+<article class="am-post quiz-page quiz-collection" data-quiz-total="{{ quiz_posts.size }}">
+  <header class="am-post-header quiz-page-header">
+    <p class="quiz-eyebrow">{{ page.domain }} · {{ page.track }} · {{ page.subtrack }}</p>
+    <h1>{{ page.title }}</h1>
+    <p class="quiz-page-intro">Choose an answer to reveal the explanation, then use the question navigation to continue.</p>
+  </header>
+
+  {% if quiz_posts.size > 0 %}
+    <section class="quiz-progress" aria-label="Practice progress">
+      <span class="quiz-progress-value">1 / {{ quiz_posts.size }}</span>
+      <div class="quiz-progress-track" aria-hidden="true"><span class="quiz-progress-fill" style="width: {{ 100.0 | divided_by: quiz_posts.size }}%"></span></div>
+    </section>
+
+    <nav class="quiz-question-navigation" aria-label="Question navigation">
+      {% for quiz_post in quiz_posts %}
+        <button type="button" class="quiz-question-nav-button{% if forloop.first %} is-active{% endif %}" data-quiz-index="{{ forloop.index0 }}" aria-current="{% if forloop.first %}step{% else %}false{% endif %}">{{ quiz_post.question_number }}</button>
+      {% endfor %}
+    </nav>
+
+    {% for quiz_post in quiz_posts %}
+      {% assign correct_option = quiz_post.options | where: "correct", true | first %}
+      <section class="quiz-question quiz-question-panel" data-quiz-index="{{ forloop.index0 }}" aria-labelledby="quiz-question-{{ quiz_post.question_number }}"{% unless forloop.first %} hidden{% endunless %}>
+        <p class="quiz-question-number">Question {{ quiz_post.question_number }}</p>
+        <h2 id="quiz-question-{{ quiz_post.question_number }}">{{ quiz_post.question }}</h2>
+        <fieldset class="quiz-options">
+          <legend>Choose the best answer</legend>
+          {% for option in quiz_post.options %}
+            <label class="quiz-option">
+              <input class="quiz-option-input" type="radio" name="answer-{{ quiz_post.question_number }}" value="{{ forloop.index }}" data-correct="{{ option.correct }}">
+              <span class="quiz-option-marker" aria-hidden="true">{{ 'ABCD' | slice: forloop.index0 }}</span>
+              <span class="quiz-option-text">{{ option.text }}</span>
+            </label>
+          {% endfor %}
+        </fieldset>
+        <section class="quiz-feedback" aria-live="polite" hidden>
+          <p class="quiz-feedback-status"></p>
+          <p class="quiz-feedback-answer"><strong>Correct answer:</strong> <span>{{ correct_option.text }}</span></p>
+          <p class="quiz-feedback-explanation">{{ quiz_post.explanation }}</p>
+          <p class="quiz-feedback-clue"><strong>Exam clue:</strong> {{ quiz_post.exam_clue }}</p>
+          <p class="quiz-feedback-remember"><strong>Remember:</strong> {{ quiz_post.remember }}</p>
+        </section>
+        <button class="quiz-reset" type="button">Try again</button>
+      </section>
+    {% endfor %}
+
+    <div class="quiz-pagination">
+      <button class="quiz-page-button quiz-page-previous" type="button" disabled>Previous</button>
+      <button class="quiz-page-button quiz-page-next" type="button">Next question</button>
+    </div>
+  {% else %}
+    <p>No practice questions have been added yet.</p>
+  {% endif %}
+</article>
