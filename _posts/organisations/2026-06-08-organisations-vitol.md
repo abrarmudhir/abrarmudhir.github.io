@@ -18,7 +18,7 @@ about: >-
       As of June 8, 2026, Vitol's LinkedIn profile states that the group has around 1,800 colleagues representing more than 75 nationalities and operates from more than 40 offices worldwide. Vitol says it trades over 8 million barrels per day of crude oil and products and charters around 6,000 ship voyages a year. Russell Hardy is the Group CEO. For UK records, Vitol Broking Limited provides a current Companies House link tied to the London office at Nova South.<br /><br />
 founded: 1966
 ceo: Russell Hardy
-ceo-link: https://www.vitol.com/press-release-vitol-appoints-russell-hardy-group-ceo/
+ceo-link: https://www.linkedin.com/in/russell-hardy-71046718/
 tech-stack: >-
       Python, SQL, C++, Trading Analytics, Shipping Analytics, Risk Management Systems, Power Trading Platforms, Carbon Market Analytics, Market Data
 categories: organisations
