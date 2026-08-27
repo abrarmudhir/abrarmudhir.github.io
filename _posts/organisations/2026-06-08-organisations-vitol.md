@@ -13,9 +13,9 @@ companies-house: 'https://find-and-update.company-information.service.gov.uk/com
 overview: >-
       A global energy and commodities company with major trading, logistics, shipping, infrastructure, and transition investment capabilities.
 about: >-
-      Vitol describes itself as a global energy and commodities company active across oil, power, renewables, and carbon. Its public materials emphasise large-scale trading and distribution, logistics expertise, and ownership of energy infrastructure that supports supply and demand flows worldwide.<br /><br />
+      Vitol is a leader in the energy sector with a presence across the spectrum: from oil through to power, renewables and carbon. From 40 offices worldwide, we seek to add value across the energy supply chain, including deploying our scale and market understanding to help facilitate the energy transition. To date, we have committed over $2 billion of capital to renewable projects, and are identifying and developing low-carbon opportunities around the world.<br /><br />
 
-      As of June 8, 2026, Vitol's LinkedIn profile states that the group has around 1,800 colleagues representing more than 75 nationalities and operates from more than 40 offices worldwide. Vitol says it trades over 8 million barrels per day of crude oil and products and charters around 6,000 ship voyages a year. Russell Hardy is the Group CEO. For UK records, Vitol Broking Limited provides a current Companies House link tied to the London office at Nova South.<br /><br />
+      Our people are our business. Talent is precious to us and we create an environment in which individuals can reach their full potential, unhindered by hierarchy. Our team comprises more than 65 nationalities and we are committed to developing and sustaining a diverse work force. Learn more about us <a href="https://www.vitol.com/about/">here</a>.
 founded: 1966
 ceo: Russell Hardy
 ceo-link: https://www.linkedin.com/in/russell-hardy-71046718/
