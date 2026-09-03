@@ -1,25 +1,17 @@
 ---
 layout: post
-title: 'Senior Python Developer - CONTRACT'
+title: 'Senior Python Developer — Contract'
 company: 'Pemberton Asset Management'
 location: 'London, UK'
-date: 2024-09-09
-end-date: 2025-05-16
 link: 'https://pembertonam.com/'
-skills: >-
-      • Domain (Private Credit, Fund Analytics, Carry, and Time-Series Modelling) 
-      • API Development (Python, FAST API) 
-      • User Interfaces (Dash, Plotly, HTMX) 
-      • Cloud (Azure)
-      • Databases (SQL Server)
-      • Collaboration (Stakeholder Engagement, Mentoring, Technical Leadership)
+skills: 'Domain (private credit, fund analytics, carry, time-series modelling); API Development (Python, FastAPI); User Interfaces (Dash, Plotly, HTMX); Cloud (Azure); Databases (SQL Server); Collaboration (stakeholder engagement, mentoring, technical leadership)'
+date: 2024-09-01
+end-date: 2025-05-01
 categories: experience
 isPost: true
-tags: [experience]
+tags: [experience, contract, python, fastapi, private-credit, fund-analytics]
 ---
 
-Leading the architecture, design, and development of a fund analytics platform.
+Led the architecture, requirements analysis and development of a Python-based fund analytics platform, replacing approximately 20 spreadsheet models with a governed application using FastAPI, SQL Server and Dash.
 
-**ACHIEVEMENTS**:
-- > __Fund Model Development__ - Built a full-stack Fund Model application with a FastAPI backend and Dash frontend, 
-      replacing ~20 Excel-based models with a unified Python solution for carry calculations and forecasting.
+Worked directly with investment stakeholders to understand workflows and business rules, translate them into application requirements and validate calculation outputs. Designed reusable APIs and data models for carry calculations, forecasting and fund analytics.

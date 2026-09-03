@@ -3,21 +3,15 @@ layout: post
 title: 'Quantitative Developer'
 company: 'Brevan Howard Asset Management'
 location: 'London, UK'
-date: 2026-02-01
 link: 'https://brevanhoward.com/'
-skills: >-
-      - Data Engineering (Python, SQL, data pipelines, batch/real-time ingestion, data quality)
-      - Cloud & DevOps (AWS, Docker, CI/CD, production support)
-      - Databases (Snowflake, MongoDB, NoSQL)
-      - Tools (Dash, Prefect)
-      - Front Office Analytics (Trading data, portfolio analytics, market data, multi-asset financial datasets)
-      - Analytics Domains (Fixed Income Credit, MONIS, Convertible Bonds)
-      - Collaboration (Portfolio managers, traders, analysts, stakeholder engagement, ownership)
+skills: 'Software & Data Engineering (Python, SQL, data pipelines, batch/real-time ingestion, data quality); AI-Assisted Engineering (Cursor, Claude, Codex); Cloud & DevOps (AWS, Docker, CI/CD, production support); Databases (Snowflake, MongoDB, NoSQL); Tools (Dash, Prefect); Front Office Analytics (trading data, portfolio analytics, market data, multi-asset financial datasets); Analytics Domains (fixed-income credit, MONIS, convertible bonds)'
+date: 2026-02-01
+end-date: 2026-08-01
 categories: experience
 isPost: true
-tags: [experience, python, sql, aws, snowflake, mongodb, trading]
+tags: [experience, quantitative-development, python, aws, snowflake, mongodb, ai-assisted-engineering]
 ---
 
-Design and build front-office data and analytics platforms for investment and trading teams, using Python,
-cloud-native pipelines, Snowflake, MongoDB, Docker, and AWS to support research, trading, portfolio
-decision-making, and production data operations.
+Designed and developed production Python applications, data services and analytics platforms for front-office investment and trading teams. Built scalable cloud-native services and pipelines across AWS, Snowflake and MongoDB, translating complex investment requirements into reliable, supportable technology solutions.
+
+Used AI-assisted engineering tools including Cursor, Claude and Codex to accelerate development, testing, refactoring and technical analysis while maintaining production engineering standards.

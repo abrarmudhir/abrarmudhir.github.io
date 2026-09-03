@@ -3,26 +3,18 @@ layout: post
 title: 'Senior Technical Consultant, Professional Services'
 company: 'Golden Source Limited'
 location: 'London, UK'
+link: 'https://www.thegoldensource.com/'
+skills: 'Full Stack (Python, JEE, PL/SQL, Oracle, R); GoldenSource EDM (Orchestrator, Workflows, Mapping Designer, Market Data Solution)'
 date: 2016-07-01
 end-date: 2017-11-01
-link: 'https://www.thegoldensource.com/'
-skills: >-
-      • Full Stack (Python, JEE, PSSQL (Oracle), R)  
-      • Golden Source EDM (Orchestrator, Workflows, Mapping Designer, Market Data Solution)
 categories: experience
 isPost: true
-tags: [experience]
+tags: [experience, financial-services, market-data, golden-source, risk-analytics]
 ---
 
-Worked as a senior technical consultant and SME and led GoldenSource implementations for clients. Led a 4-person team 
-to validate intraday pricing rates, curves, and surfaces in a Reference and Market Data Project. 
-Led a 4-month Fundamental Review of the Trading Book (FRTB) Proof of Concept (POC).
+Senior technical consultant and subject-matter expert leading GoldenSource implementations. Led a four-person team validating intraday pricing rates, curves and surfaces for a reference- and market-data project, and led a four-month Fundamental Review of the Trading Book (FRTB) proof of concept.
 
-**ACHIEVEMENTS**:
-- > __Project: Siemens Financial Services, Market Data Solution Implementation__ - Built a reusable Murex connector and 
-      R analytics library with potential for sale to other clients. Utilized WebFOCUS (GS Insight) for BI reports, 
-      enhancing data accuracy and reporting efficiency.
-- > __Project: ICBC Standard Bank, Fundamental Review of Trading PoC__ - Integrated C libraries for scenario generation, 
-      enabling stress testing and output storage in the Golden Source Risk Master Data Model. Supported FRTB, 
-      showcasing advanced risk management.
+**Selected work**
 
+- **Siemens Financial Services:** Built a reusable Murex connector and R analytics library, with WebFOCUS (GS Insight) BI reporting.
+- **ICBC Standard Bank FRTB proof of concept:** Integrated C-based scenario-generation libraries for stress testing and persisted results in the GoldenSource Risk Master Data Model.

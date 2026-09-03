@@ -20,7 +20,7 @@ about: >-
       Robin Vince has been President and Chief Executive Officer since 2022. BNY operates globally, including across Europe, the Middle East and Africa.
 founded: 1784
 ceo: Robin Vince
-ceo-link: https://www.linkedin.com/in/robinvince/
+ceo-link: https://www.linkedin.com/in/robin-vince/
 tech-stack: >-
       Financial Markets Technology, Cloud Computing, Data Analytics, Artificial Intelligence, Digital Assets, Payments Technology, Custody Platforms, Asset Servicing, Cybersecurity, APIs
 categories: organisations

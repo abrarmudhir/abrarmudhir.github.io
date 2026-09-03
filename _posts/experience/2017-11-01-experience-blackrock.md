@@ -1,33 +1,22 @@
 ---
 layout: post
-title: 'Associate, Senior Data Engineer of Aladdin Core Data'
+title: 'Associate, Senior Data Engineer — Aladdin Core Data'
 company: 'BlackRock'
 location: 'London, UK'
+link: 'https://www.blackrock.com/uk'
+skills: 'Data Engineering (data modelling, data lake, Hadoop, Apache Spark); Full Stack (Python, Java, C#, Spring Boot); Practices (Agile, BDD, TDD); DevOps (Git, Sonar); Scheduling (Autosys)'
 date: 2017-11-01
 end-date: 2019-03-01
-link: 'https://www.blackrock.com/uk'
-skills: >-
-      • Data Engineering (Data Modelling, Data Lake, Hadoop, Apache Spark) 
-      • Full Stack (Python, Java, C#, Spring Boot) 
-      • Practices (Agile, BDD, TDD) • DevOps (GIT, Sonar) 
-      • Scheduling (Autosys)
 categories: experience
 isPost: true
-tags: [experience]
+tags: [experience, data-engineering, aladdin, hadoop, spark, python]
 ---
 
-Worked as a Senior Data Engineer, served internal investment teams, and fulfilled data product needs.
+Senior Data Engineer serving internal investment teams and delivering data products.
 
-**ACHIEVEMENTS**:
-- > __Project: Large Datasets Pipelines__ - Increased data processing efficiency through the development of PySpark 
-      and Scala data pipelines, effectively managing large datasets on the Hadoop Distributed File System (HDFS).
-- > __Project: Python Web Scrappers__ - Created a Java and Spring-based scraping framework, enabling rapid prototyping 
-      of new scrapers with reusable components. Enhanced data ingestion and crawling efficiency using Python 
-      and Java scrapers.
-- > __Project: Decommissioning of Data Management Platform (DMP)__ - Re-architected J2EE monolithic data platform 
-      into Python microservices for enhanced scalability. Developed flexible data models and pipelines, creating 
-      an internal Data Lake for efficient storage and accessibility of datasets from multiple sources.
-- > __Project: Decommissioning of MALT Refinery, Timeseries MIS__ - Revamped time-series data catalog management, 
-      replacing a C# desktop app with an advanced web application. Employed Angular for the front end and Java Spring 
-      Boot for the back end, achieving improved accessibility and usability.
+**Selected work**
 
+- **Data Management Platform decommissioning:** Re-architected a mission-critical J2EE/Java monolith into scalable Python microservices and reusable data services, defining application interfaces, data models and integration patterns.
+- **Large-dataset pipelines:** Developed PySpark and Scala pipelines for large datasets on the Hadoop Distributed File System (HDFS).
+- **Web scrapers:** Designed a reusable Java/Spring framework for external data acquisition, helping teams introduce integrations with standard components.
+- **MALT Refinery and Timeseries MIS decommissioning:** Modernised a legacy C# desktop application into a distributed Angular and Java Spring Boot platform.
