@@ -1,30 +1,21 @@
 ---
 layout: post
-title: 'Associate, Senior Quant Developer of Model-Based Fixed Income'
+title: 'Associate, Senior Quant Developer — Model-Based Fixed Income'
 company: 'BlackRock'
 location: 'London, UK'
+link: 'https://www.blackrock.com/uk'
+skills: 'Data Engineering (Informatica, J2SE/JEE, JavaScript); Quant Stack (MATLAB, SAS, R, C#); BI (Power BI, Tableau, SAP Business Objects); Scheduling (Autosys)'
 date: 2010-08-01
 end-date: 2014-07-01
-link: 'https://www.blackrock.com/uk'
-skills: >-
-      • Data Engineering (Informatica, J2SE/JEE, JavaScript) 
-      • Quant Stack (MATLAB, SAS, R, C#) 
-      • BI (PowerBI, Tableau, SAP Business Objects) 
-      • Scheduling (Autosys)
 categories: experience
 isPost: true
-tags: [experience, data-engineering]
+tags: [experience, quantitative-development, fixed-income, investment-models, data-engineering]
 ---
 
-Worked as a quant developer, implemented fixed-income investment models, optimizing efficiency, ensuring accurate data 
-feeds, and managing the entire model lifecycle from development to production.
+Implemented fixed-income investment models, improving efficiency and data feeds while managing the full model lifecycle from development through production.
 
-**ACHIEVEMENTS**:
-- > __Project: Common Alpha-Gen (CAGE) Platform__ - Developed core features to enable quant function encapsulation in 
-      SAS, R, and MATLAB. Executed the integration of task graphs with investment systems.
-- > __Project: Model Implementation__ - Collaborated on Model Implementation and Back-Testing with Quant analyst 
-      researchers. Implemented alpha, risk, and t-cost models in MATLAB, SAS, and R for a Fixed Income platform, 
-      improving model efficiency and accuracy.
-- > __Project: Data Management Platform__ - Engineered Data Management tools for efficient slicing and dicing of 
-      input data, delivering Tableau reports for front-office portfolio managers to enhance monthly attribution and 
-      investment dataset views.
+**Selected work**
+
+- **Common Alpha-Gen (CAGE) Platform:** Developed a reusable quantitative execution framework for models written in SAS, R and MATLAB, integrated with enterprise investment systems.
+- **Model productionisation:** Collaborated with quantitative researchers to implement, back-test and productionise alpha, risk and transaction-cost models in a fixed-income investment platform.
+- **Data Management Platform:** Built data-management tools for slicing and dicing input data and Tableau reports for front-office portfolio managers' attribution and investment-dataset views.

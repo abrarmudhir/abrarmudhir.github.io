@@ -1,37 +1,22 @@
 ---
 layout: post
-title: 'Vice President - Regional Team Lead of SFI Alpha Generation'
+title: 'Vice President — Regional Team Lead, SFI Alpha Generation'
 company: 'BlackRock'
 location: 'London, UK'
+link: 'https://www.blackrock.com/uk'
+skills: 'Leadership (change management, people management, project management); Practices (Agile, BDD, TDD); Quant Stack (Python, Pandas, NumPy, Numba, Dask, Java, C#, MATLAB, SAS); BI (Tableau, Power BI); Cloud (Azure, Azure VM, Azure Functions); Scheduling (Autosys)'
 date: 2021-08-01
 end-date: 2023-02-01
-link: 'https://www.blackrock.com/uk'
-skills: >-
-      • Leadership (Change Management, People Management, Project Management) 
-      • Practices (Agile, BDD, TDD) 
-      • Quant Stack (Python, Pandas, NumPy, Numba, Dask, Java, C#, MATLAB, SAS) 
-      • BI (Tableau, Microsoft Power BI) • Cloud (Microsoft Azure, Azure VM, Azure Functions) 
-      • Scheduling (Autosys)
 categories: experience
 isPost: true
-tags: [experience]
+tags: [experience, leadership, quantitative-development, aladdin, python, fixed-income]
 ---
 
-Lead engineer for the investment model platform, focusing on team development and people management. 
-Collaborated with the Fixed Income team to implement and back-test alpha models, and built front-office solutions for 
-pre-trade, trade capture, and reporting.
+Lead Engineer for a mission-critical investment-modelling platform used by fixed-income investment teams. Led engineers while remaining hands-on with Python development, quantitative-model implementation, platform architecture, APIs and secure enterprise engineering.
 
-**ACHIEVEMENTS**:
-- > __Technical Leadership & Team Development__ - Mentored and developed a team of engineers, including 3 Senior 
-      Quant developers, fostering their career growth and technical skills.
-- > __BAU: Model Implementation__ - Worked with Quant Analysts to implement and enhance various models on the Pythonic 
-      alpha platform, including alpha, transaction cost, risk models, and optimizers. Managed cross-team 
-      implementations for Equities, Macro, Credit (structured), and Innovation, ensuring successful deployment across 
-      different asset classes. Enhanced the alpha framework with robust back-testing capabilities. Integrated INTEX 
-      Wrapper APIs for analysis of mortgage-backed assets.
-- > __Project: Aladdin Alpha Platform (Dynamic Flow)__ - Led the development of Aladdin Alpha Platform, emphasizing 
-      scalable design and reusability. Integrated with Snowflake for enhanced efficiency.
-- > __Project: Defence in Depth__ - Executed a comprehensive security upgrade for six major investment applications, 
-      redesigning components for secure architectures. Implemented secure APIs across diverse languages, including .NET, 
-      MATLAB, Perl, Python, and Java.
+**Selected work**
 
+- **Technical leadership and engineering standards:** Led and mentored three Senior Quant Developers, established engineering practices, supported architecture decisions and coordinated delivery across investment teams.
+- **Quantitative model engineering:** Partnered with Quant Researchers to productionise alpha, transaction-cost, risk and optimisation models across fixed income, equities, macro and credit, and enhanced model back-testing and validation.
+- **Aladdin Alpha Platform (Dynamic Flow):** Led reusable component development and integrated Snowflake-based data capabilities to improve scalability and analytical workflows.
+- **Defence in Depth:** Led security modernisation across six mission-critical investment applications, redesigning interfaces and implementing secure APIs across Python, Java, .NET, MATLAB and Perl.

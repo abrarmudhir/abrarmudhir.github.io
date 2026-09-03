@@ -3,30 +3,19 @@ layout: post
 title: 'Senior Developer, Trading Technology'
 company: 'Rapid Addition Limited'
 location: 'London, UK'
+link: 'https://rapidaddition.com/'
+skills: 'Full Stack (Java, .NET, C#, ASP.NET); FIX (protocol, engine, certification); Middleware (Microsoft BizTalk); Cloud (Microsoft Azure)'
 date: 2014-10-01
 end-date: 2016-07-01
-link: 'https://rapidaddition.com/'
-skills: >-
-      • Full Stack (Java, .NET (C#, ASP.NET) 
-      • FIX (Protocol/Engine, Certification)  
-      • Middleware (Microsoft BizTalk) 
-      • Cloud (Microsoft Azure)
 categories: experience
 isPost: true
-tags: [experience]
+tags: [experience, trading-technology, fix, fast, java, dotnet]
 ---
 
-Worked as a senior developer, implementing core functionalities for low-latency FIX engine libraries in both Java 
-and C#. Contributed new full-stack ASIC reporting product, utilizing FIX protocol. 
-Extended RA ShortCut – FIX for BizTalk, enhancing performance and resolving bugs.
+Developed mission-critical, low-latency trading infrastructure in Java and C#, implementing core functionality in commercial FIX/FAST engine libraries for electronic market connectivity.
 
-**ACHIEVEMENTS**:
-- > __Project: RA FIX Engine__ - Improved Java and C# FIX engine libraries with new API features, reduced error rates 
-      through code reviews, and increased test coverage. Developed trading solutions, FIX, and FAST engines, 
-      streamlining processes, and enhancing stakeholder satisfaction.
-- > __Project: RA ASIC Short Reporting Tool__ - Implemented a Full-stack solution for submitting short-selling reports 
-      to ASIC, enhancing efficiency through optimized FIX protocol utilization. Utilized ASP.NET and C# for the front 
-      end and MSSQL for the back end, ensuring seamless deployment on Azure Cloud, and reducing deployment time.
-- > __Project: RA ShortCut – FIX for BizTalk__ - Enhanced core functionality, achieving measurable improvements in 
-      system performance and successfully resolving reported bugs.
+**Selected work**
 
+- **RA FIX Engine:** Improved API functionality, code quality and test coverage through engineering reviews and automated testing; developed trading, FIX and FAST-engine capabilities.
+- **RA ASIC Short Reporting Tool:** Built a full-stack application for ASIC short-selling reports, using ASP.NET and C# with SQL Server and Azure deployment.
+- **RA ShortCut — FIX for BizTalk:** Extended the product's core functionality, improved performance and resolved defects.

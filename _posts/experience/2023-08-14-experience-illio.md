@@ -1,35 +1,22 @@
 ---
 layout: post
 title: 'Senior Data Engineer'
-company: 'illio Technology Ltd'
+company: 'Illio Technology Ltd'
 location: 'London, UK'
-date: 2023-08-14
-end-date: 2024-07-31
 link: 'https://www.illio.com/'
-skills: >-
-      • Data Engineering on AWS (AWS Glue (ETL, Crawlers, Catalog, Workflow), Apache Airflow, Python, Pandas, SQL Alchemy, Fast API, Lambda, PostgreSQL, Data Lake - S3) 
-      • Full Stack (Python, React, Kotlin, Kubernetes) 
-      • DevOps (AWS CDK, GitLab) 
-      • Cloud (AWS (EC2, SNS, SQS, RDS, Redshift)
+skills: 'Data Engineering on AWS (Glue, Airflow, Python, Pandas, SQLAlchemy, FastAPI, Lambda, PostgreSQL, S3); Full Stack (Python, React, Kotlin, Kubernetes); DevOps (AWS CDK, GitLab); Cloud (EC2, SNS, SQS, RDS, Redshift)'
+date: 2023-08-01
+end-date: 2024-07-01
 categories: experience
 isPost: true
-tags: [experience]
+tags: [experience, data-engineering, aws, airflow, fastapi, financial-markets]
 ---
 
-Led the architecture and implementation of AWS-based ETL pipelines and Analytics platform, designing and developing 
-data integrations and products.
+Led the architecture and development of a cloud-native analytics and application platform, combining Python, APIs, AWS serverless technologies, microservices and data engineering.
 
-**ACHIEVEMENTS**:
-- > __Technical Leadership & Team Development__ - Built the data function from the ground up, hiring and developing a 
-      team that included a mid-level data engineer and a data scientist. Provided technical leadership, coaching, 
-      and mentorship.
-- > __Project: Serverless Data Pipelines__ - Implementing cloud-native ETL pipelines and a Data Analytics and Insights 
-      platform by leveraging key AWS services and Apache Airflow for Orchestration.
-- > __Project: Data Integrations and APIs__ - Building data integrations with market data providers and brokers. 
-      Building data APIs using a microservices architecture, deploying Docker and Kubernetes for container 
-      orchestration. Leveraging Fast API and Functions as a Service on AWS Lambda with API Gateway for efficient and 
-      modular API development.
-- > __Project: Analytics and Insights__ - Building an analytics and insights framework to facilitate faster 
-      time-to-market of Pythonic functions. Implementing analytics for Equities, FX, and Fund/ETF asset classes, 
-      focusing on financial markets and client multi-asset portfolios, including Cryptocurrencies.
+**Selected work**
 
+- **Technical leadership and team development:** Built the data function from the ground up, hiring and developing a mid-level Data Engineer and a Data Scientist, and providing technical leadership, coaching and mentoring.
+- **Serverless data pipelines:** Implemented cloud-native ETL pipelines and a Data Analytics and Insights platform using AWS services and Apache Airflow orchestration.
+- **Data integrations and APIs:** Designed Python/FastAPI microservices and REST APIs for external financial-data providers and brokers, deployed through Docker/Kubernetes and AWS Lambda/API Gateway.
+- **Analytics and Insights:** Built a framework for faster delivery of Python analytics across equities, FX and fund/ETF asset classes for multi-asset portfolios, including cryptocurrencies.

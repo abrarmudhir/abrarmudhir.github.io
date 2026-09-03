@@ -1,29 +1,20 @@
 ---
 layout: post
-title: 'Full Stack Developer'
-company: 'Atlantis Solutions for ESA'
+title: 'Full Stack Developer — Long-Term Contract'
+company: 'Atlantis Solutions BV for the European Space Agency'
 location: 'Didcot, UK'
+link: 'https://www.esa.int/'
+skills: 'Full Stack (Java, React, Spring Boot, Node.js, MariaDB); Practices (Agile, BDD, TDD); CMS (SharePoint); BI (Microsoft Power BI); Private Cloud (private network, Kubernetes, Docker, LDAP)'
 date: 2020-01-01
 end-date: 2021-01-01
-link: 'https://www.esa.int/'
-skills: >-
-      • Full Stack (Java, React, Spring Boot, Node.js, MariaDB) 
-      • Practices (Agile, BDD, TDD) 
-      • CMS (SharePoint) 
-      • BI (Microsoft Power BI) 
-      • Private Cloud (Private Network, Kubernetes, Docker, LDAP)
 categories: experience
 isPost: true
-tags: [experience]
+tags: [experience, contract, european-space-agency, java, spring-boot, react]
 ---
 
-Worked on a twelve-month contract with the European Space Agency (ESA), contributing to the Advanced Research in 
-Telecommunications Systems Management Information System (ARTES MIS) project.
+Worked on a twelve-month European Space Agency contract, contributing to the Advanced Research in Telecommunications Systems Management Information System (ARTES MIS).
 
-**ACHIEVEMENTS**:
-- > __Project: ARTES MIS__ - Developed a Java and Spring Boot backend API, along with a JSF front-end application, 
-      to manage 350+ research and development activities within the ARTES MIS project for the TIA Directorate.
-- > __BAU: Best Practices Rollout__ - Created secure, clean code on ESA cloud infrastructure, providing user training, 
-      and resolving technical issues. Migrated applications to a common environment for tools harmonization across TIA, 
-      contributing to knowledge exchange with team members and IT professionals.
+**Selected work**
 
+- **ARTES MIS:** Designed and developed Java/Spring Boot REST services and React/JSF applications supporting more than 350 European Space Agency R&D activities in a secure private-cloud enterprise environment.
+- **Best-practice rollout:** Helped migrate applications to a common cloud environment, standardising development practices and improving maintainability, supportability and cross-team knowledge sharing.
