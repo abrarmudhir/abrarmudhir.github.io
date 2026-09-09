@@ -1,0 +1,9 @@
+repos:
+  - repo: local
+    hooks:
+      - id: black
+        name: Black
+        entry: uv run --locked black
+        language: system
+        types: [python]
+        files: ^_includes/py/

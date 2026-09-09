@@ -102,6 +102,27 @@ bundle exec jekyll build
 bundle exec jekyll serve --livereload --port 4001
 ```
 
+## Python development
+
+Install the Python development tools and enable the Git pre-commit hook:
+
+```powershell
+uv sync --locked
+uv run pre-commit install
+```
+
+Black automatically formats staged Python files under `_includes/py` before
+each commit. If it changes files, review and stage them, then commit again.
+Run these commands from the repository root to format or check all Python samples:
+
+```powershell
+uv run black _includes/py
+uv run pre-commit run --all-files
+```
+
+Each clone needs to run `uv run pre-commit install` once. Keep `uv` on your PATH
+so the hook can run from your terminal or Git client.
+
 ## Directory Structure
 
 `_data`: store data files for things like skills, projects, work history, and so on.

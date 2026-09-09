@@ -76,9 +76,9 @@ def main() -> None:
 
     for number, (intervals, new_interval, expected) in enumerate(test_cases, start=1):
         actual = Solution.insert(intervals, new_interval)
-        assert actual == expected, (
-            f"Sample {number} failed: expected {expected}, got {actual}"
-        )
+        assert (
+            actual == expected
+        ), f"Sample {number} failed: expected {expected}, got {actual}"
         print(f"Sample {number} passed: {actual}")
 
 
