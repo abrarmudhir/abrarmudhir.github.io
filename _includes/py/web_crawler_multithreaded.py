@@ -115,7 +115,9 @@ Follow-up questions:
     - How would you determine that the entire distributed crawl is finished?
 """
 
+from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
 from typing import List, Protocol
+from urllib.parse import urlsplit
 
 
 class HtmlParser(Protocol):
@@ -132,4 +134,39 @@ class Solution:
     # Preserve the parameter names required by the problem's signature.
     # noinspection PyPep8Naming
     def crawl(self, startUrl: str, htmlParser: HtmlParser) -> List[str]:
-        pass
+        """Fetch reachable same-host pages once each, using up to 16 workers.
+
+        Workers only fetch links. The calling thread owns discovery and task
+        scheduling, so checking and recording URLs needs no shared-state lock.
+        Pending requests include queued and running work; crawling ends only
+        after every result has been processed and no requests remain.
+
+        Parser errors propagate to the caller, and the executor always shuts
+        down its workers before this method exits.
+        """
+        starting_hostname = urlsplit(startUrl).hostname
+        discovered_urls = {startUrl}
+
+        with ThreadPoolExecutor(max_workers=16) as executor:
+            pending_requests = {executor.submit(htmlParser.getUrls, startUrl)}
+
+            while pending_requests:
+                completed_requests, pending_requests = wait(
+                    pending_requests, return_when=FIRST_COMPLETED
+                )
+
+                for completed_request in completed_requests:
+                    for linked_url in completed_request.result():
+                        if linked_url in discovered_urls:
+                            continue
+                        if urlsplit(linked_url).hostname != starting_hostname:
+                            continue
+
+                        # Record before submitting so another result cannot
+                        # schedule a second request for the same URL.
+                        discovered_urls.add(linked_url)
+                        pending_requests.add(
+                            executor.submit(htmlParser.getUrls, linked_url)
+                        )
+
+        return list(discovered_urls)
