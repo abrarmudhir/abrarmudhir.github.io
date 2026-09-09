@@ -170,3 +170,74 @@ class Solution:
                         )
 
         return list(discovered_urls)
+
+
+class ExampleHtmlParser:
+    """Serve a fixed example graph locally, without making HTTP requests.
+
+    The graph is built before crawling and only read by worker threads.
+    This test double stands in for the parser supplied by the problem.
+    """
+
+    def __init__(self, urls: list[str], edges: list[list[int]]) -> None:
+        self.links_by_url: dict[str, list[str]] = {url: [] for url in urls}
+        for source_index, destination_index in edges:
+            self.links_by_url[urls[source_index]].append(urls[destination_index])
+
+    # Preserve the supplied parser API's method name.
+    # noinspection PyPep8Naming
+    def getUrls(self, url: str) -> list[str]:
+        """Return a copy of the outgoing links for an example page."""
+        return self.links_by_url[url].copy()
+
+
+# HTTP URLs are the example inputs specified by the problem.
+# noinspection HttpUrlsUsage
+def main() -> None:
+    """Run both problem examples and verify results independently of order."""
+    example_inputs = [
+        {
+            "urls": [
+                "http://news.yahoo.com",
+                "http://news.yahoo.com/news",
+                "http://news.yahoo.com/news/topics/",
+                "http://news.google.com",
+                "http://news.yahoo.com/us",
+            ],
+            "edges": [[2, 0], [2, 1], [3, 2], [3, 1], [0, 4]],
+            "start_url": "http://news.yahoo.com/news/topics/",
+            "expected": [
+                "http://news.yahoo.com",
+                "http://news.yahoo.com/news",
+                "http://news.yahoo.com/news/topics/",
+                "http://news.yahoo.com/us",
+            ],
+        },
+        {
+            "urls": [
+                "http://news.yahoo.com",
+                "http://news.yahoo.com/news",
+                "http://news.yahoo.com/news/topics/",
+                "http://news.google.com",
+            ],
+            "edges": [[0, 2], [2, 1], [3, 2], [3, 1], [3, 0]],
+            "start_url": "http://news.google.com",
+            "expected": ["http://news.google.com"],
+        },
+    ]
+
+    for example_number, example in enumerate(example_inputs, start=1):
+        parser = ExampleHtmlParser(example["urls"], example["edges"])
+        actual_urls = sorted(Solution().crawl(example["start_url"], parser))
+        expected_urls = sorted(example["expected"])
+        assert actual_urls == expected_urls, (
+            f"Example {example_number} failed: "
+            f"expected {expected_urls}, got {actual_urls}"
+        )
+        print(f"Example {example_number} passed:")
+        for crawled_url in actual_urls:
+            print(f"  {crawled_url}")
+
+
+if __name__ == "__main__":
+    main()
